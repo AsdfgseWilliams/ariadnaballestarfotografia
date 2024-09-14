@@ -1,0 +1,94 @@
+---
+import 'node_modules/@glidejs/glide/dist/css/glide.core.min.css'
+const OPINIONS = [
+  {
+    title: '"Gran profesional y mejor persona"',
+    content: [
+      "Han sido todo facilidades con ella.",
+      "Muy sensible a nuestras necesidades y muy fácil trabajar con ella.",
+      "La hemos recomendado y si volviésemos a necesitar a alguien contaríamos con ella sin dudar.",
+      "Una persona muy dulce que lo refleja en su trabajo.",
+    ],
+    author: "- CRISTINA & TONI -",
+  },
+  {
+    title: '"Fue muy cercana y profesional, haciéndonos sentir muy cómodos y con total confianza."',
+    content: [
+      "Inmejorable.",
+      "Estamos encantados con Ariadna, supo captar a la perfección nuestro estilo. Fue muy cercana y profesional, haciéndonos sentir muy cómodos y con total confianza. El día de la boda nos tranquilizó y ayudó en todo momento.",
+      "Elegimos tanto fotos como vídeo, y la calidad ha sido inmejorable.",
+      "Nos entregó todo el material muy pronto, precioso y personalizado hasta el más mínimo detalle. Estamos muy agradecidos por todo y la recomendamos 1000%. Esperamos volver a trabajar con ella.",
+      "¡Gracias por formar parte de nuestro gran día!",
+    ],
+    author: "- MARTA & ESMAIL -",
+  },
+  {
+    title: '"Sentimiento en imágenes"',
+    content: [
+      "Ariadna es comprensiva y atenta.",
+      "No perdió detalle de la boda. Y no notamos que estaba allí.",
+      "Sabe captar el momento exacto y guiarte para que las imágenes describan tu.",
+      "Ve con claridad el ángulo para las fotos y saca a relucir lo mejor del evento en cada imagen.",
+      "Le coges cariño y todo.",
+    ],
+    author: "- DIANA & GEMI –",
+  },
+];
+---
+
+<section class="bg-cover bg-center bg-no-repeat relative justify-center py-20" style="background-blend-mode: multiply; background-color: #313b41; background-image: url('/public/img/fondo-opiniones.webp');">
+        <div class="flex flex-col justify-center items-center">
+            <img src="/public/img/quote.webp" class="w-20">
+            <div class="max-w-[1200px] mx-auto mt-10">
+                <div class="glide flex items-center">
+                  <!-- Arrow izquierda -->
+                  <div class="glide__arrows" data-glide-el="controls">
+                    <button id="arrow" class="glide__arrow glide__arrow--left" data-glide-dir="<">                      
+                      <img src="/public/img/arrow-white.webp" alt="arrow-left" class="w-9 rotate-90">
+                    </button>
+                  </div>  
+                  
+                  <!-- Track con las opiniones -->
+                  <div class="glide__track flex-1" data-glide-el="track">
+                    <ul class="glide__slides text-white text-center">
+                      {OPINIONS.map((opinion) => (
+                        <li class="glide__slide">
+                          <h2 class="text-4xl">{opinion.title}</h2>
+                          {opinion.content.map((paragraph) => (
+                            <p class="mt-5 text-base leading-5">{paragraph}</p>
+                          ))}
+                          <p class="text-lg font-bold mt-8">{opinion.author}</p>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  
+                  <!-- Arrow derecha -->
+                  <div class="glide__arrows" data-glide-el="controls">
+                    <button id="arrow" class="glide__arrow glide__arrow--right" data-glide-dir=">">
+                      <img src="/public/img/arrow-white.webp" alt="arrow-right" class="w-9 -rotate-90">
+                    </button>
+                  </div>
+                </div>                 
+              </div>
+        </div>
+        <!-- Columna izquierda -->
+        <div class="absolute top-1/2 left-0 transform -translate-y-1/2 border-r border-white w-[70px] h-full flex items-center justify-center">
+            <p class="text-white transform -rotate-90 whitespace-nowrap uppercase tracking-[2px] font-medium">LOVELY NOTES</p>
+        </div>
+        <!-- Columna derecha -->
+        <div class="absolute top-1/2 right-0 transform -translate-y-1/2 border-l border-white w-[70px] h-full flex items-center justify-center">
+            <p class="text-white transform rotate-90 whitespace-nowrap uppercase tracking-[2px] font-medium">LOVELY NOTES</p>
+        </div>
+
+
+        
+    </section>
+
+    <script>
+        import Glide from "@glidejs/glide";
+        const slider = new Glide('.glide',{
+            type: 'carousel',
+        }).mount()
+      </script>
+  

@@ -1,0 +1,121 @@
+---
+interface Props {
+	title: string;
+	description: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<title>{title}</title>
+		<meta name="description" content={"Fotógrafa de bodas en Barcelona. Capturo momentos auténticos para tu día especial. Contacta para un reportaje excepcional.Astro description"} />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/public/cropped-logo.webp" />
+
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	@font-face {
+		font-family: "Claster";
+		src: url('/public/Fonts/Claster Oleander.otf') format('opentype');
+		font-style: normal;
+		font-display: swap;
+
+	}
+
+	@font-face {
+		font-family: "EBGaramond";
+		src: url('/public/Fonts/EBGaramond-Italic-VariableFont_wght.ttf') format('truetype');
+		font-style: italic;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: "EBGaramond";
+		src: url('/public/Fonts/EBGaramond-VariableFont_wght.ttf') format('truetype');
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: "Overpass";
+		src: url('/public/Fonts/Overpass-Italic-VariableFont_wght.ttf') format('truetype');
+		font-style: italic;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: "Overpass";
+		src: url('/public/Fonts/Overpass-VariableFont_wght.ttf') format('truetype');
+		font-style: normal;
+		font-display: swap;
+	}
+
+	html{
+		background: #f4f4f6;
+	}
+	body {
+		font-family: 'Overpass', sans-serif;
+		font-size: 14px;
+		color: #222;
+	}
+
+	h1{
+		font-family: 'Claster', serif;
+		font-size: 90px;
+	}
+	h2{
+		font-family: 'Claster', serif;
+		font-size: 45px;
+	}
+	h3{
+		font-family: 'Claster', serif;
+		font-size: 30px;
+	}
+	h4{
+		font-family: 'Claster', serif;
+		font-size: 20px;
+	}
+	button{
+		font-family: 'Overpass', sans-serif;
+		font-size: 12px;
+		text-transform: uppercase;
+		padding-top: 10px !important;
+    	padding-right: 25px !important;
+    	padding-bottom: 10px !important;
+    	padding-left: 25px !important;
+		letter-spacing: 3px;
+		background-color: #798a9b;
+		color: #fff;
+		border: 1px solid #798a9b;
+		transition: 0.3s ease;
+	}
+	button:hover{
+		background-color: transparent;
+		color: #222;
+		border:1px solid #222;
+		
+	}
+
+	button#arrow{
+		background: none;
+		border: none;
+		outline: none;
+		cursor: pointer;
+		padding: 0;
+	}
+
+	button#arrow:hover {
+		background: none;
+		border: none;
+	}
+
+
+</style>
