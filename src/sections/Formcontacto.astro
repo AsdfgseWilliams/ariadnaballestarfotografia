@@ -1,42 +1,54 @@
-<form id="contactForm" action="https://formspree.io/f/xeojykgg" method="POST" class="bg-gray-100 p-8 max-w-3xl mx-auto">
-    <h2 class="mb-6">FORMULARIO</h2>
-    
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <input type="text" name="nombre" placeholder="Nombre" required class="p-3 border" />
-        <input type="email" name="_replyto" placeholder="Email" required class="p-3 border" />
-        <input type="tel" name="telefono" placeholder="Teléfono" required class="p-3 border" />
-        <input type="date" name="fecha_evento" required class="p-3 border" />
-        
-        <input type="text" name="lugar_evento" placeholder="¿Dónde será?" required class="p-3 border" />
-        
-        <select name="reserva" required class="p-3 border">
-            <option value="">¿Qué quieres reservar?</option>
-            <option value="boda">Boda</option>
-            <option value="sesion_pareja">Sesión de pareja</option>
-            <option value="sesion_individual">Sesión individual</option>
-            <option value="sesion_familiar">Sesión en familia</option>
-            <option value="otros">Otros</option>
-        </select>
-  
-        <select name="conocido" required class="p-3 border col-span-2">
-            <option value="">¿Dónde me has conocido?</option>
-            <option value="instagram">Instagram</option>
-            <option value="google">Google</option>
-            <option value="recomendacion">Recomendación</option>
-        </select>
-    </div>
-    
-    <input type="text" name="_gotcha" style="display:none" />
-    
-    <textarea name="detalles" rows="4" placeholder="Cuéntame más detalles" class="mt-6 p-3 border w-full"></textarea>
-  
-    <div class="mt-6">
-        <label>
-            <input type="checkbox" name="politica_privacidad" required />
-            Por favor, revisa la política de privacidad.
-        </label>
-    </div>
-    <input type="hidden" name="_next" value="https://ariadnaballestar.com/gracias" />
-    <button type="submit" class="mt-6 bg-gray-500 text-white p-3 hover:bg-gray-700">Enviar</button>
-</form>
+---
+---
 
+<form 
+    id="contactForm" 
+    action="https://formspree.io/f/xeojykgg" 
+    method="POST" 
+    class="py-24 mx-auto flex flex-col justify-center items-center" 
+    style="background-image: url('/img/flor-formulario.png'); background-color: #d1d7d9; background-size: contain; background-position: center; background-repeat: no-repeat;"
+>
+    <div class="max-w-7xl w-full">
+        <h2 class="mb-10 text-center text-6xl">FORMULARIO</h2>
+    
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-9">
+            <input type="text" name="nombre" placeholder="Nombre" required class="p-4 border" />
+            <input type="email" name="_replyto" placeholder="Email" required class=" p-4 border" />
+            <input type="tel" name="telefono" placeholder="Teléfono" required class=" p-4 border" />
+            <input type="date" name="fecha_evento" required class=" p-4 border" />
+            
+            <input type="text" name="lugar_evento" placeholder="¿Dónde será?" required class=" p-4 border" />
+            
+            <select name="reserva" required class=" p-4 border">
+                <option value="">¿Qué quieres reservar?</option>
+                <option value="boda">Boda</option>
+                <option value="sesion_pareja">Sesión de pareja</option>
+                <option value="sesion_individual">Sesión individual</option>
+                <option value="sesion_familiar">Sesión en familia</option>
+                <option value="otros">Otros</option>
+            </select>
+    
+            <select name="conocido" required class=" p-4 border col-span-2">
+                <option value="">¿Dónde me has conocido?</option>
+                <option value="instagram">Instagram</option>
+                <option value="google">Google</option>
+                <option value="recomendacion">Recomendación</option>
+            </select>
+        </div>
+        
+        <input type="text" name="_gotcha" style="display:none" />
+        
+        <textarea name="detalles" rows="4" placeholder="Cuéntame más detalles" class="mt-6  p-4 border w-full"></textarea>
+    
+        <div class="mt-6">
+            <label>
+                <input type="checkbox" name="politica_privacidad" required />
+                Por favor, revisa la política de privacidad.
+            </label>
+        </div>
+        
+        <input type="hidden" name="_next" value="https://ariadnaballestar.com/gracias" />
+        
+        <button type="submit" class="mt-6 bg-gray-500 text-white  p-4 hover:bg-gray-700">Enviar</button>
+    </div>
+</form>
