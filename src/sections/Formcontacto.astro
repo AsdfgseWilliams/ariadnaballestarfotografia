@@ -12,14 +12,14 @@
         <h2 class="mb-10 text-center text-6xl">FORMULARIO</h2>
     
         <div class="grid grid-cols-1 md:grid-cols-2 gap-9">
-            <input type="text" name="nombre" placeholder="Nombre" required class="p-4 border" />
-            <input type="email" name="_replyto" placeholder="Email" required class=" p-4 border" />
-            <input type="tel" name="telefono" placeholder="Teléfono" required class=" p-4 border" />
-            <input type="date" name="fecha_evento" required class=" p-4 border" />
+            <input type="text" name="nombre" placeholder="Nombre" required class="p-4 border-none outline-none" />
+            <input type="email" name="_replyto" placeholder="Email" required class="p-4 border-none outline-none" />
+            <input type="tel" name="telefono" placeholder="Teléfono" required class="p-4 border-none outline-none" />
+            <input type="date" name="fecha_evento" required class="p-4 border-none outline-none" />
             
-            <input type="text" name="lugar_evento" placeholder="¿Dónde será?" required class=" p-4 border" />
+            <input type="text" name="lugar_evento" placeholder="¿Dónde será?" required class="p-4 border-none outline-none" />
             
-            <select name="reserva" required class=" p-4 border">
+            <select name="reserva" required class="p-4 border-none outline-none">
                 <option value="">¿Qué quieres reservar?</option>
                 <option value="boda">Boda</option>
                 <option value="sesion_pareja">Sesión de pareja</option>
@@ -28,7 +28,7 @@
                 <option value="otros">Otros</option>
             </select>
     
-            <select name="conocido" required class=" p-4 border col-span-2">
+            <select name="conocido" required class="p-4 border-none outline-none col-span-2">
                 <option value="">¿Dónde me has conocido?</option>
                 <option value="instagram">Instagram</option>
                 <option value="google">Google</option>
@@ -38,17 +38,27 @@
         
         <input type="text" name="_gotcha" style="display:none" />
         
-        <textarea name="detalles" rows="4" placeholder="Cuéntame más detalles" class="mt-6  p-4 border w-full"></textarea>
+        <textarea name="detalles" rows="4" placeholder="Cuéntame más detalles" class="mt-6 p-4 w-full border-none outline-none"></textarea>
     
         <div class="mt-6">
             <label>
-                <input type="checkbox" name="politica_privacidad" required />
+                <input type="checkbox" name="politica_privacidad" required class="mr-2" />
                 Por favor, revisa la política de privacidad.
             </label>
         </div>
         
         <input type="hidden" name="_next" value="https://ariadnaballestar.com/gracias" />
         
-        <button type="submit" class="mt-6 bg-gray-500 text-white  p-4 hover:bg-gray-700">Enviar</button>
+        <button type="submit" class="mt-6">Enviar</button>
     </div>
 </form>
+
+<style>
+    input:focus,
+    select:focus,
+    textarea:focus {
+        border: none !important;  
+        outline: none !important; 
+        box-shadow: none !important;
+    }
+</style>
