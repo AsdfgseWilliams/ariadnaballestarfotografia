@@ -2,11 +2,22 @@
 import Layout from 'src/layouts/Layout.astro';
 import Footer from 'src/sections/Footer.astro';
 import Nav from 'src/sections/Nav.astro';
+import Heroprecios from 'src/sections/Heroprecios.astro';
+import CTA2 from 'src/sections/CTA2.astro';
 ---
 <Layout title='Paquetes y Precios de Fotografía de Bodas en Barcelona' 
 description='Descubre nuestros paquetes de fotografía de bodas en Barcelona. Calidad y estilo para tu día especial.' 
 keywords="precios fotografía bodas Barcelona, paquetes fotografía bodas, tarifas fotografia barcelona">
 	<Nav />
+	<Heroprecios />
+	<CTA2  backgroundImage="/img/25.webp" 
+    title="NO PUEDO ESPERAR PARA CAPTURAR EL DÍA DE VUESTRA BODA" 
+    paragraph="Inmortalizando vuestra historia de amor con cada clic, capturando momentos llenos de magia y emoción." 
+    buttonText="Trabajemos juntos" />
+	<CTA2  backgroundImage="/img/24.webp" 
+    title="?Lista para empezar? !Hagámoslo!" 
+    paragraph="Estoy a un e-mail de distancia" 
+    buttonText="Contáctame" />
 	<Footer />
 </Layout>
 
