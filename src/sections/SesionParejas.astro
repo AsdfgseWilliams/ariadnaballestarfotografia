@@ -73,40 +73,4 @@
         </section>
     </div>
 </section>
-<script>
-    const slides = document.querySelectorAll('.fade');
-    const dots = document.querySelectorAll('.dot');
-    const prevButton = document.getElementById('prev');
-    const nextButton = document.getElementById('next');
-    let currentIndex = 0;
 
-    function showSlide(index) {
-        slides.forEach((slide, i) => {
-            slide.classList.toggle('active', i === index);
-            dots[i].classList.toggle('bg-gray-800', i === index);
-            dots[i].classList.toggle('bg-gray-300', i !== index);
-        });
-    }
-
-    function nextSlide() {
-        currentIndex = (currentIndex + 1) % slides.length;
-        showSlide(currentIndex);
-    }
-
-    function prevSlide() {
-        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-        showSlide(currentIndex);
-    }
-
-    dots.forEach((dot, i) => {
-        dot.addEventListener('click', () => {
-            currentIndex = i;
-            showSlide(currentIndex);
-        });
-    });
-
-    prevButton.addEventListener('click', prevSlide);
-    nextButton.addEventListener('click', nextSlide);
-
-    setInterval(nextSlide, 3000); // Cambiar automáticamente cada 3 segundos
-</script>
