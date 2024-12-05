@@ -2,34 +2,34 @@
 const slides = [
   {
     title: "Mini sesión",
-    description: "Un aniversario, un cumpleaños, una fiesta o cualquier motivo íntimo son momentos especiales que os queréis regalar y disfrutar. ¡Quiero acompañaros para hacerlo realidad!",
+    description: "¿Te imaginas compartir una sesión de fotos con las personas que dan sentido a tu vida? ¡Te aseguro que lo pasaréis en grande y tendréis un recuerdo entrañable!",
     details: ["30 min", "Galería online", "Una localización", "+40 fotos editadas", "1 GIF", "Entrega en dos semanas"],
-    price: "150€",
+    price: "180€",
   },
   {
     title: "Reportaje",
-    description: "Un aniversario, un cumpleaños, una fiesta o cualquier motivo íntimo son momentos especiales que os queréis regalar y disfrutar. ¡Quiero acompañaros para hacerlo realidad!",
+    description: "¿Te imaginas compartir una sesión de fotos con las personas que dan sentido a tu vida? ¡Te aseguro que lo pasaréis en grande y tendréis un recuerdo entrañable!",
     details: ["50-60 min", "Galería online", "Una localización", "+80 fotos editadas", "3 GIFs", "Entrega en dos semanas"],
-    price: "200€",
+    price: "230€",
   },
   {
     title: "Experiencia",
-    description: "Un aniversario, un cumpleaños, una fiesta o cualquier motivo íntimo son momentos especiales que os queréis regalar y disfrutar. ¡Quiero acompañaros para hacerlo realidad!",
+    description: "¿Te imaginas compartir una sesión de fotos con las personas que dan sentido a tu vida? ¡Te aseguro que lo pasaréis en grande y tendréis un recuerdo entrañable!",
     details: ["1.5 horas", "Galería online", "Dos localizaciones", "+120 fotos editadas", "5 GIFs", "Entrega en dos semanas"],
-    price: "300€",
+    price: "330€",
   },
 ];
 ---
 
-<section class="bg-cover bg-no-repeat py-24 bg-center" style="background-image: url('/img/25.webp'), linear-gradient(90deg, rgba(255,255,255,0.65) 50%, #ffffff 50%); background-blend-mode: overlay;">
+<section class="bg-cover bg-no-repeat py-24 bg-center" style="background-image: url('/img/32.webp'), linear-gradient(-90deg, rgba(255,255,255,0.65) 50%, #ffffff 50%); background-blend-mode: overlay;">
   <div class="max-w-7xl mx-auto">
     <section class="grid grid-cols-1 md:grid-cols-3 gap-10 p-8">
       <div class="flex justify-center items-start">
-        <img src="/img/5.webp" alt="Ariadna" class="w-full h-auto">
+        <img src="/img/34.webp" alt="Ariadna" class="w-full h-auto">
       </div>
       <div>
-        <h2>SESIÓN DE PAREJAS Y COMPROMISOS</h2>
-        <img src="/img/31.webp" alt="Ariadna" class="w-full h-auto">
+        <h2>SESIÓN DE FOTOS FAMILIAR</h2>
+        <img src="/img/33.webp" alt="Ariadna" class="w-full h-auto">
       </div>
       <div class="flex flex-col justify-center items-center text-sm">
         <div class="relative w-full max-w-3xl h-auto">
@@ -37,7 +37,7 @@ const slides = [
           <div class="slider">
             {slides.map((slide, index) => (
               <div
-                class={`absolute inset-0 fade flex flex-col justify-center text-gray-800 bg-white p-4 ${
+                class={`absolute inset-0 fade flex flex-col justify-center text-gray-800 p-4 ${
                   index === 0 ? "active" : ""
                 }`}
               >
