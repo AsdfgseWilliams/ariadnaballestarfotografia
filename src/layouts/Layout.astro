@@ -1,4 +1,6 @@
 ---
+import Footer from 'src/sections/Footer.astro';
+import Nav from 'src/sections/Nav.astro';
 interface Props {
 	title: string;
 	description: string;
@@ -20,7 +22,9 @@ const { title, description, keywords } = Astro.props;
 
 	</head>
 	<body>
+		<Nav />
 		<slot />
+		<Footer />
 	</body>
 </html>
 <style is:global>
@@ -62,6 +66,7 @@ const { title, description, keywords } = Astro.props;
 
 	html{
 		background: #f4f4f6;
+		scroll-behavior: smooth;
 	}
 	body {
 		font-family: 'Overpass', sans-serif;
@@ -85,6 +90,8 @@ const { title, description, keywords } = Astro.props;
 		font-family: 'Claster', serif;
 		font-size: 20px;
 	}
+
+	
 	button{
 		font-family: 'Overpass', sans-serif;
 		font-size: 12px;
@@ -157,14 +164,14 @@ const { title, description, keywords } = Astro.props;
 		color: #222;
 		border: 1px solid #222;
 	}
-	#prev {
+	#prevFamiliar, #prevParejas, #prevPersonal {
 		position: absolute;
 		top: 50%;
 		left: -40px;
 		transform: translateY(-50%);
 	}
 
-	#next {
+	#nextFamiliar, #nextParejas, #nextPersonal {
 		position: absolute;
 		top: 50%;
 		right: -40px;
@@ -172,7 +179,7 @@ const { title, description, keywords } = Astro.props;
 	}
 
 
-	#prev, #next {
+	#prevFamiliar, #nextFamiliar, #prevParejas, #nextParejas, #prevPersonal, #nextPersonal {
 		font-size: 24px;
 		padding: 0;
 		background-color: transparent;
@@ -181,22 +188,21 @@ const { title, description, keywords } = Astro.props;
 		
 	}
 
-	#prev:hover, #next:hover {
+	#prevFamiliar:hover, #nextFamiliar:hover, #prevParejas:hover, #nextParejas:hover, #prevPersonal:hover, #nextPersonal:hover {
 		background-color: transparent;
 		border: none;
 	}
 	.dot {
-  width: 8px;
-  height: 8px;
-  background-color: #f6f6f4;
-  border: none;
-  padding: 0;
-  margin: 0;
-}
+		width: 8px;
+		height: 8px;
+		background-color: #f6f6f4;
+		border: none;
+		padding: 0;
+		margin: 0;
+	}
 
-.dot.active {
-  background-color: #222;
-}
-
+	.dot.active {
+		background-color: #222;
+	}
 
 </style>

@@ -1,0 +1,18 @@
+---
+type Props = {
+  pageTitle: string;
+  allPosts: MarkdownInstance<Record<string, any>>[];
+};
+
+const { pageTitle, allPosts }: Props = Astro.props;
+---
+<!-- Usar pageTitle y allPosts dentro de BaseLayout -->
+<h1>{pageTitle}</h1>
+<section>
+  {allPosts.map((post) => (
+    <article key={post.url}>
+      <h2>{post.frontmatter.title}</h2>
+      <p>{post.frontmatter.excerpt}</p>
+    </article>
+  ))}
+</section>

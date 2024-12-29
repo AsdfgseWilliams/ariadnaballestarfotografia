@@ -1,0 +1,141 @@
+---
+import Layout from "./Layout.astro";
+const { frontmatter } = Astro.props;
+const { title, pubDate, author, image, tags, gallery, proveedores, content } = frontmatter;
+const formattedDate = new Date(pubDate).toLocaleDateString();
+
+// Recuperar todos los posts
+const allPosts = await Astro.glob('/src/pages/posts/*.md');
+
+// Filtrar para obtener posts relacionados (puedes usar cualquier criterio, aquí simplemente filtramos por etiquetas)
+const relatedPosts = allPosts.filter(post => 
+  post.frontmatter.tags?.some((tag: string) => tags?.includes(tag))
+).slice(0, 3); // Mostrar solo 3 artículos relacionados
+
+
+// Define las props para SEO
+const seoProps = {
+  title: title || "Título por defecto",
+  description: content || "Descripción por defecto",  // Usamos content para la descripción
+  keywords: tags?.join(", ") || "palabras clave por defecto",
+};
+
+---
+
+<Layout {...seoProps}>
+  <div class="bg-white py-[4%]">
+    <!-- Contenido del post -->
+    <article class="w-7xl max-w-[80%] mx-auto">
+      <header class="flex p-[4%] bg-cover bg-center bg-no-repeat h-64 justify-start items-center"
+      style={`background-image: url(${image?.src || '/img/2.webp'}), linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)); background-blend-mode: overlay;`}>
+        <h1 class="text-5xl">{title}</h1>
+        
+      </header>
+
+      <!-- Imagen destacada (si hay) -->
+      
+
+      <section class="grid grid-cols-1 md:grid-cols-4 gap-10">
+        <div class="md:col-span-1 py-32 pl-16 flex items-center">
+          <!-- Proveedores -->
+          <section class="proveedores">
+            <ul class="font-eb italic text-lg text-slate-900 leading-[2.3em]">
+              {proveedores?.map((proveedor: any) => (
+                <li>
+                  <p>
+                    {proveedor.tipo}: 
+                    {proveedor.tipo === "Novios" || proveedor.tipo === "Fecha" ? (
+                      <span>{proveedor.detalles?.nombres || proveedor.detalles?.fecha}</span>
+                    ) : (
+                      <a 
+                        href={proveedor.detalles?.enlace || "#"} 
+                        target="_blank" 
+                        class="text-[#798a9b]"
+                      >
+                        {proveedor.detalles?.nombre}
+                      </a>
+                    )}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </section>
+        </div>
+        <div class="md:col-span-3 leading-[2.3em] my-16 px-16 border-l-[1px] border-l-black">
+          <slot />  
+        </div> 
+      </section>
+
+      <!-- Galería de imágenes -->
+      <section class="gallery grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        {gallery?.map((photo: any) => (
+            <img 
+            src={photo.src} 
+            alt={photo.alt}
+            width="400" 
+            height="284"
+            class="w-full h-[284px] object-cover" />
+        ))}
+      </section>
+
+      <!-- Etiquetas (si hay) -->
+      {tags && (
+        <footer class="my-16">
+          <p><strong>Etiquetas:</strong> {tags.join(", ")}</p>
+          <p><strong>Publicado el:</strong> {formattedDate}</p>
+        <p><strong>Autor:</strong> {author}</p>
+        </footer>
+      )}
+
+       <!-- Botones de navegación -->
+       <section class="flex justify-between py-8">
+        <!-- Botón anterior -->
+        <span class="nav-previous">
+          <a href={frontmatter.previousPost} rel="prev">
+            <span class="meta-nav">← </span><span class="nav-label">ARTÍCULO ANTERIOR</span>
+          </a>
+        </span>
+      
+        <!-- Botón siguiente -->
+        <span class="nav-next">
+          <a href={frontmatter.nextPost} rel="next">
+            <span class="nav-label">SIGUIENTE ARTÍCULO</span><span class="meta-nav"> →</span>
+          </a>
+        </span>
+      </section>
+
+       <!-- Artículos Relacionados -->
+       <section class="bg-white py-10">
+        <h2 class="text-3xl text-center mb-6">Artículos Relacionados</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[3%] max-w-[1240px] mx-auto p-5">
+          {relatedPosts.map((post) => {
+            const imageSrc = post.frontmatter.image?.src || '/img/default-image.jpg'; 
+
+            return (
+              <a href={post.url} class="overflow-hidden flex flex-col transform transition-transform duration-300 hover:-translate-y-3">
+                <div class="w-full h-auto overflow-hidden">
+                  <img
+                    decoding="async"
+                    src={imageSrc}
+                    alt={post.frontmatter.title}
+                    class="w-full max-h-[450px] object-cover"
+                    width="800"
+                    height="450"
+                  />
+                </div>
+                <div class="text-center my-2">
+                  {post.frontmatter.tags?.map((tag: string) => (
+                    <span class="font-semibold uppercase text-xs tracking-wide text-[#666] mx-1">{tag}</span>
+                  ))}
+                </div>
+                <h2 class="text-3xl text-center">{post.frontmatter.title}</h2>
+              </a>
+            );
+          })}
+        </div>
+      </section>
+
+    </article>
+  </div>
+</Layout>
+

@@ -1,0 +1,141 @@
+---
+---
+
+<section class="bg-white py-16">
+    <div class="max-w-7xl mx-auto">
+      <section class="grid grid-cols-1 md:grid-cols-2 gap-10 p-8">
+        
+        <div class="flex flex-col justify-center text-sm">
+          <h2>SESIÓN DE FOTOS PERSONAL</h2>
+          <div class="">
+            <div class="relative w-full max-w-3xl h-auto">
+              <!-- Slides -->
+                <div class="slider" id="slider-personal">
+                <!-- Aquí se renderizan los slides mediante JavaScript -->
+                </div>
+                <a href="#contactForm" class="link-button mt-8">
+                    ¡Reserva tu sesión!
+                </a>
+  
+              <!-- Navigation Arrows -->
+              <button class="absolute top-1/2 left-2 transform -translate-y-1/2" id="prevPersonal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 6l-6 6l6 6" /></svg>
+              </button>
+              <button class="absolute top-1/2 right-2 transform -translate-y-1/2" id="nextPersonal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center items-start">
+          <img src="/img/35.webp" alt="Ariadna" class="w-auto h-[70vh]">
+        </div>
+      </section>
+    </div>
+</section>
+<style>
+        .slider {
+    position: relative;
+    width: 100%;
+    height: auto;  /* Aseguramos que el alto sea automático */
+    overflow: hidden; /* Esto asegura que las diapositivas fuera de la vista no se muestren */
+    }
+
+    .slider .fade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* Las diapositivas no activas están ocultas */
+    transition: opacity 0.5s ease-in-out;
+    display: none; /* Por defecto no se muestran */
+    }
+
+    .slider .active {
+    opacity: 1; /* La diapositiva activa es visible */
+    display: block; /* Solo se muestra la diapositiva activa */
+    }
+
+</style>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const sliderPersonal = document.getElementById("slider-personal");
+
+    if (sliderPersonal) {
+        const slidesPersonal = [
+        {
+            title: "Mini Sesión",
+            description: "¿Eres modelo y quieres ampliar tu book? ¿Tu marca necesita fotos para publicidad? ¿Quieres sorprender a alguien con un recuerdo tuyo o simplemente te apetece concederte el deseo de tener unas fotos bonitas? ¡Prepárate para conseguir las fotos con las que sueñas!",
+            details: ["30 min", "Galería online", "Una localización", "+40 fotos editadas", "1 GIF", "Entrega en una semana"],
+            price: "150€",
+        },
+        {
+            title: "Reportaje",
+            description: "¿Eres modelo y quieres ampliar tu book? ¿Tu marca necesita fotos para publicidad? ¿Quieres sorprender a alguien con un recuerdo tuyo o simplemente te apetece concederte el deseo de tener unas fotos bonitas? ¡Prepárate para conseguir las fotos con las que sueñas!",
+            details: ["50-60 min", "Galería online", "Una localizació", "+80 fotos editadas", "3 GIFs", "Entrega en una semana"],
+            price: "200€",
+        },
+        {
+            title: "Experiencia",
+            description: "¿Eres modelo y quieres ampliar tu book? ¿Tu marca necesita fotos para publicidad? ¿Quieres sorprender a alguien con un recuerdo tuyo o simplemente te apetece concederte el deseo de tener unas fotos bonitas? ¡Prepárate para conseguir las fotos con las que sueñas!",
+            details: ["1,5 horas", "Galería online", "Dos localizaciones", "+120 fotos editadas", "5 GIFs","Entrega en una semana"],
+            price: "300€",
+        },
+        ];
+
+        slidesPersonal.forEach((slide) => {
+        const slideDiv = document.createElement("div");
+        slideDiv.classList.add("fade", "flex", "flex-col", "justify-center", "text-gray-800", "p-4");
+
+        slideDiv.innerHTML = `
+            <h3 class="text-5xl">${slide.title}</h3>
+            <p class="mt-4">${slide.description}</p>
+            <ul class="mt-4">
+            ${slide.details.map((detail) => `<li>• ${detail}</li>`).join('')}
+            </ul>
+            <hr class="my-4 bg-slate-900">
+            <p class="font-claster text-4xl">${slide.price}</p>
+        `;
+
+        sliderPersonal.appendChild(slideDiv);
+        });
+
+        let currentSlidePersonal = 0;
+
+        const slidesPersonalElements = sliderPersonal.querySelectorAll(".fade");
+        slidesPersonalElements.forEach((slide, index) => {
+        if (index === 0) {
+            slide.classList.add("active");
+            (slide as HTMLElement).style.display = "block";
+        } else {
+            slide.classList.remove("active");
+            (slide as HTMLElement).style.display = "none";
+        }
+        });
+
+        function showSlidePersonal(index: number) {
+            if (sliderPersonal) {
+        const slides = sliderPersonal.querySelectorAll(".fade");
+        (slides[currentSlidePersonal] as HTMLElement).classList.remove("active");
+        (slides[currentSlidePersonal] as HTMLElement).style.display = "none";
+        currentSlidePersonal = (index + slides.length) % slides.length;
+        (slides[currentSlidePersonal] as HTMLElement).classList.add("active");
+        (slides[currentSlidePersonal] as HTMLElement).style.display = "block";
+    } else {
+        console.error("sliderPersonal is null or undefined");
+    }
+    }
+        const prevPersonalButton = document.getElementById("prevPersonal");
+        const nextPersonalButton = document.getElementById("nextPersonal");
+
+        if (prevPersonalButton) {
+        prevPersonalButton.addEventListener("click", () => showSlidePersonal(currentSlidePersonal - 1));
+        }
+
+        if (nextPersonalButton) {
+        nextPersonalButton.addEventListener("click", () => showSlidePersonal(currentSlidePersonal + 1));
+        }
+    }
+    });
+</script>
