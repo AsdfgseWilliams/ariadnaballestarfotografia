@@ -1,0 +1,76 @@
+---
+---
+<section class="grid grid-cols-1 md:grid-cols-3 gap-0 max-w-7xl mx-auto gap-x-[5%] items-center">
+    <div class="border-r-[1px] border-x-black h-full flex flex-col justify-center py-24 pr-7">
+        <h2 class="pb-4"><span class="rotate-180 inline-block ">?</span>QUÉ ME HACE DIFERENTE?</h2>
+        <p class="pb-4">Imágenes que hablan</p>
+        <p class="pb-4">Con mi estilo natural retrataré los complementos, el lugar, la luz… Todas las imágenes cuentan vuestra historia de amor. </p>
+        <p class="pb-4">Vosotros, los protagonistas, y los invitados sois puro sentimiento que eternizaré.</p>
+        <p class="pb-4">Quiero que viváis con intensidad cada minuto del día.</p>
+        <p class="pb-10">Del resto me ocupo yo.</p>
+        <div class="">
+        <div class="flex mb-4">
+            <img src="/public/img/check.png" alt="check" class="h-6 w-6 mr-4">
+            <p>
+                Conexión y empatía para capturar vuestra autenticidad en fotos únicas.
+            </p>
+        </div>
+        <div class="flex mb-4">
+            <img src="/public/img/check.png" alt="check" class="h-6 w-6 mr-4">
+            <p>¡
+                Fotografía de bodas de calidad con experiencia y excelencia técnica.
+            </p>
+        </div>
+        <div class="flex mb-4">
+            <img src="/public/img/check.png" alt="check" class="h-6 w-6 mr-4">
+            <p>
+                Creatividad: Imágenes únicas que reflejen vuestra historia de amor auténtica.
+            </p>
+        </div>
+        <div class="flex mb-4">
+            <img src="/public/img/check.png" alt="check" class="h-6 w-6 mr-4">
+            <p>
+                La más importante: Compromiso <br>
+                <span class="underline font-bold">Vuestra satisfacción es mi mayor satisfacción.</span>
+            </p>
+        </div>
+        <a href="#contacto" class="link-button mt-8">
+            ¡Sí quiero!
+        </a>
+    </div>
+
+    </div>
+    <div>
+        <img src="/public/img/11.webp" alt="preboda en barcelona" class="">
+    </div>
+        <div class="relative w-full max-w-[400px] h-[500px] overflow-hidden">
+            <img id="retrato-img1" src="/img/40.webp" alt="Retrato" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100">
+            <img id="retrato-img2" src="/img/41.webp" alt="Retrato" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0">
+        </div>           
+    </section>
+
+    <script>
+        const retratoImages = ["/img/40.webp", "/img/41.webp"];
+        let retratoIndex = 0;
+        let activeImage = 1;
+      
+        function changeImage() {
+          const img1 = document.getElementById("retrato-img1") as HTMLImageElement;
+          const img2 = document.getElementById("retrato-img2") as HTMLImageElement;
+      
+          // Alternar las imágenes visibles
+          const currentImg = activeImage === 1 ? img1 : img2;
+          const nextImg = activeImage === 1 ? img2 : img1;
+      
+          retratoIndex = (retratoIndex + 1) % retratoImages.length;
+      
+          nextImg.src = retratoImages[retratoIndex];
+          nextImg.style.opacity = "1"; // Mostrar la nueva imagen
+          currentImg.style.opacity = "0"; // Ocultar la imagen actual
+      
+          // Alternar la imagen activa
+          activeImage = activeImage === 1 ? 2 : 1;
+        }
+      
+        setInterval(changeImage, 5000);
+      </script>

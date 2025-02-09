@@ -9,7 +9,12 @@ console.log(allPosts);
   description="Fotografía única en Barcelona: sesiones para parejas, familias e individuales. Capturamos momentos auténticos con estilo elegante."
   keywords="fotógrafa en Barcelona, sesiones fotográficas Barcelona, fotos de pareja Barcelona, fotografía familiar Barcelona, sesiones de fotos en Barcelona, fotografía de bodas Barcelona, fotos románticas Barcelona, retratos Barcelona"
 >
-    <section class="bg-white py-10">
+    <section class="bg-white pb-10">
+        <div class="mb-[4%] bg-cover bg-center bg-no-repeat mx-auto min-h-36 py-[6vw] bg-white/70 bg-blend-overlay" style="background-image: url(/public/img/36.webp); ">
+            <h1 class="text-4xl text-center py-10 font-claster uppercase">
+                Blog de un fotógrafo de bodas en Barcelona
+            </h1>
+        </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[3%] max-w-[1240px] mx-auto p-5">
         {allPosts.map((post) => {
         const imageSrc = post.frontmatter.image?.src || '/img/default-image.jpg'; 

@@ -4,10 +4,12 @@ import SesionParejas from 'src/sections/SesionParejas.astro';
 import SesionPersonal from 'src/sections/SesionPersonal.astro';
 import SesionFamiliar from 'src/sections/SesionFamiliar.astro';
 import Formcontacto from 'src/sections/Formcontacto.astro';
+import Herosesiones from 'src/sections/Herosesiones.astro';
 ---
 <Layout title='Sesiones de fotos en Barcelona: Individuales, de Pareja y Familiares' 
 description='Sesiones fotográficas únicas en Barcelona para individuales, parejas y familias. Capturamos tu esencia.' 
 keywords="sesiones individuales Barcelona, fotografía personal, fotos de pareja en Barcelona, sesiones románticas, fotografía familiar Barcelona, sesiones familiares">
+	<Herosesiones />	
 	<SesionParejas />
 	<SesionPersonal />
 	<SesionFamiliar />
@@ -15,5 +17,7 @@ keywords="sesiones individuales Barcelona, fotografía personal, fotos de pareja
 </Layout>
 
 <style>
-
+body{
+	background-color: white !important;
+}
 </style>
