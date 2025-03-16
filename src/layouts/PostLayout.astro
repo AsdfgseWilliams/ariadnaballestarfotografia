@@ -5,7 +5,7 @@ const { title, pubDate, author, image, tags, gallery, proveedores, content } = f
 const formattedDate = new Date(pubDate).toLocaleDateString();
 
 // Recuperar todos los posts
-const allPosts = await Astro.glob('/src/pages/posts/*.md');
+const allPosts = await Astro.glob('/src/pages/posts/*.{md,mdx}');
 
 // Filtrar para obtener posts relacionados (puedes usar cualquier criterio, aquí simplemente filtramos por etiquetas)
 const relatedPosts = allPosts.filter(post => 
@@ -25,16 +25,14 @@ const seoProps = {
 <Layout {...seoProps}>
   <div class="bg-white py-[4%]">
     <!-- Contenido del post -->
-    <article class="w-7xl max-w-[80%] mx-auto">
-      <header class="flex p-[4%] bg-cover bg-center bg-no-repeat h-64 justify-start items-center"
-      style={`background-image: url(${image?.src || '/img/2.webp'}), linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)); background-blend-mode: overlay;`}>
+    <article class="max-w-7xl w-[80%] mx-auto">
+      <header class="flex p-[4%] justify-start items-center min-h-72"
+      style={`background-image: url(${image?.src || '/img/2.webp'}), linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)); background-blend-mode: overlay; background-size: cover; background-position: center; background-repeat: no-repeat;`}>
         <h1 class="text-5xl">{title}</h1>
         
       </header>
 
       <!-- Imagen destacada (si hay) -->
-      
-
       <section class="grid grid-cols-1 md:grid-cols-4 gap-10">
         <div class="md:col-span-1 py-32 pl-16 flex items-center">
           <!-- Proveedores -->
@@ -68,14 +66,17 @@ const seoProps = {
 
       <!-- Galería de imágenes -->
       <section class="gallery grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {gallery?.map((photo: any) => (
-            <img 
-            src={photo.src} 
-            alt={photo.alt}
-            width="400" 
-            height="284"
-            class="w-full h-[284px] object-cover" />
-        ))}
+        {gallery
+          ?.sort(() => Math.random() - 0.5)
+          .map((photo: any) => (
+            <img
+              src={photo.src}
+              alt={photo.alt}
+              width="400"
+              height="284"
+              class="w-full h-[284px] object-cover"
+            />
+          ))}
       </section>
 
       <!-- Etiquetas (si hay) -->

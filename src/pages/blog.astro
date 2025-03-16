@@ -1,6 +1,6 @@
 ---
 import Layout from 'src/layouts/Layout.astro';
-const allPosts = await Astro.glob('/src/pages/posts/*.md');
+const allPosts = await Astro.glob('/src/pages/posts/*.{md,mdx}');
 
 console.log(allPosts);
 ---
@@ -26,9 +26,7 @@ console.log(allPosts);
                 decoding="async"
                 src={imageSrc}
                 alt={post.frontmatter.title}
-                class="w-full max-h-[450px] object-cover"
-                width="800"
-                height="450"
+                class="w-full h-[450px] object-cover"
                 />
             </div>
             <div class="text-center my-2">

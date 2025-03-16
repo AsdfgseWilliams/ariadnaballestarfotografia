@@ -8,6 +8,7 @@ interface Props {
 }
 
 const { title, description, keywords } = Astro.props;
+
 ---
 
 <!doctype html>
@@ -19,12 +20,33 @@ const { title, description, keywords } = Astro.props;
 		<meta name="keywords" content={keywords} /> 
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/cropped-logo.webp" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 	</head>
 	<body>
 		<Nav />
 		<slot />
+		<a href="https://wa.me/+34654712346?text=¡Hola%20Ari!%20Me%20gustaría%20saber%20más%20información%20sobre%20" 
+			id="btn-whatsapp" 
+			class="float-wa" 
+			target="_blank">
+			<i class="fa fa-whatsapp" style=""></i>
+			<span class="whatsapp-message">Hola 👋 <br>¿En qué puedo ayudarte?</span>
+		</a>
+
 		<Footer />
+
+		<!-- Script que actualiza el enlace de WhatsApp con el título de la página -->
+		<script>
+			// Obtén el título de la página actual
+			var pageTitle = document.title;
+			
+			// Encuentra el enlace de WhatsApp y haz una afirmación de tipo
+			var whatsappLink = document.getElementById('btn-whatsapp') as HTMLAnchorElement;
+
+			// Al cargar la página, actualiza el href con el título de la página
+			whatsappLink.href = `https://wa.me/+34654712346?text=¡Hola%20Ari!%20Me%20gustaría%20saber%20más%20información%20sobre%20${encodeURIComponent(pageTitle)}`;
+		</script>
 	</body>
 </html>
 <style is:global>
@@ -164,6 +186,51 @@ const { title, description, keywords } = Astro.props;
 		color: #222;
 		border: 1px solid #222;
 	}
+
+	/* Botón flotante de WhatsApp */
+	.float-wa {
+		position: fixed;
+		width: 60px;
+		height: 60px;
+		bottom: 40px;
+		right: 40px;
+		background-color: #25d366;
+		color: #FFF;
+		border-radius: 50px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 40px;
+		z-index: 100;
+	}
+
+	/* Mensaje emergente que aparece al hacer hover */
+	.whatsapp-message {
+		position: absolute;
+		top: -80px; /* Ajusta la posición hacia arriba */
+		left: 0%;
+		transform: translateX(-50%);
+		background-color: #25d366;
+		color: #FFF;
+		border-radius: 5px;
+		padding: 10px;
+		font-size: 14px;
+		white-space: nowrap;
+		display: none; /* Se oculta inicialmente */
+		z-index: 101;
+		text-align: center;
+	}
+
+	/* Mostrar el mensaje cuando se hace hover */
+	.float-wa:hover .whatsapp-message {
+		display: block;
+	}
+
+	/* Estilo del ícono de WhatsApp */
+	.fa-whatsapp {
+		font-size: 30px;
+	}
+
 	#prevFamiliar, #prevParejas, #prevPersonal {
 		position: absolute;
 		top: 50%;
