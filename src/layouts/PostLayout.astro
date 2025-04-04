@@ -1,25 +1,31 @@
 ---
 import Layout from "./Layout.astro";
-const { frontmatter } = Astro.props;
+
+const { frontmatter, url: currentUrl } = Astro.props;
 const { title, pubDate, author, image, tags, gallery, proveedores, content } = frontmatter;
-const formattedDate = new Date(pubDate).toLocaleDateString();
 
-// Recuperar todos los posts
-const allPosts = await Astro.glob('/src/pages/posts/*.{md,mdx}');
+// Recuperar todos los posts y ordenarlos por fecha (de más reciente a más antiguo)
+const allPosts = (await Astro.glob('/src/pages/posts/*.{md,mdx}'))
+  .sort((a, b) => new Date(b.frontmatter.pubDate).getTime() - new Date(a.frontmatter.pubDate).getTime());
 
-// Filtrar para obtener posts relacionados (puedes usar cualquier criterio, aquí simplemente filtramos por etiquetas)
-const relatedPosts = allPosts.filter(post => 
-  post.frontmatter.tags?.some((tag: string) => tags?.includes(tag))
-).slice(0, 3); // Mostrar solo 3 artículos relacionados
+// Encontrar el índice del post actual
+const currentIndex = allPosts.findIndex(post => post.url === currentUrl);
 
+// Obtener los enlaces anterior y siguiente, si existen
+const previousPost = allPosts[currentIndex + 1]?.url || null;
+const nextPost = allPosts[currentIndex - 1]?.url || null;
 
-// Define las props para SEO
+// Artículos relacionados (basados en etiquetas)
+const relatedPosts = allPosts.filter(post =>
+  post.frontmatter.tags?.some((tag: string) => tags?.includes(tag)) && post.url !== currentUrl
+).slice(0, 3);
+
+// SEO
 const seoProps = {
   title: title || "Título por defecto",
-  description: content || "Descripción por defecto",  // Usamos content para la descripción
+  description: content || "Descripción por defecto",
   keywords: tags?.join(", ") || "palabras clave por defecto",
 };
-
 ---
 
 <Layout {...seoProps}>
@@ -27,9 +33,8 @@ const seoProps = {
     <!-- Contenido del post -->
     <article class="max-w-7xl w-[80%] mx-auto">
       <header class="flex p-[4%] justify-start items-center min-h-72"
-      style={`background-image: url(${image?.src || '/img/2.webp'}), linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)); background-blend-mode: overlay; background-size: cover; background-position: center; background-repeat: no-repeat;`}>
+        style={`background-image: url(${image?.src || '/img/2.webp'}), linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)); background-blend-mode: overlay; background-size: cover; background-position: center; background-repeat: no-repeat;`}>
         <h1 class="text-5xl">{title}</h1>
-        
       </header>
 
       <!-- Imagen destacada (si hay) -->
@@ -41,7 +46,7 @@ const seoProps = {
               {proveedores?.map((proveedor: any) => (
                 <li>
                   <p>
-                    {proveedor.tipo}: 
+                    {proveedor.tipo}:
                     {proveedor.tipo === "Novios" || proveedor.tipo === "Fecha" ? (
                       <span>{proveedor.detalles?.nombres || proveedor.detalles?.fecha}</span>
                     ) : (
@@ -79,34 +84,26 @@ const seoProps = {
           ))}
       </section>
 
-      <!-- Etiquetas (si hay) -->
-      {tags && (
-        <footer class="my-16">
-          <p><strong>Etiquetas:</strong> {tags.join(", ")}</p>
-          <p><strong>Publicado el:</strong> {formattedDate}</p>
-        <p><strong>Autor:</strong> {author}</p>
-        </footer>
-      )}
-
-       <!-- Botones de navegación -->
-       <section class="flex justify-between py-8">
-        <!-- Botón anterior -->
-        <span class="nav-previous">
-          <a href={frontmatter.previousPost} rel="prev">
-            <span class="meta-nav">← </span><span class="nav-label">ARTÍCULO ANTERIOR</span>
-          </a>
-        </span>
-      
-        <!-- Botón siguiente -->
-        <span class="nav-next">
-          <a href={frontmatter.nextPost} rel="next">
-            <span class="nav-label">SIGUIENTE ARTÍCULO</span><span class="meta-nav"> →</span>
-          </a>
-        </span>
+      <!-- Botones de navegación -->
+      <section class="flex justify-between py-8">
+        {previousPost && (
+          <span class="nav-previous">
+            <a href={previousPost} rel="prev">
+              <span class="meta-nav">← </span><span class="nav-label">POST ANTERIOR</span>
+            </a>
+          </span>
+        )}
+        {nextPost && (
+          <span class="nav-next">
+            <a href={nextPost} rel="next">
+              <span class="nav-label">SIGUIENTE POST</span><span class="meta-nav"> →</span>
+            </a>
+          </span>
+        )}
       </section>
 
-       <!-- Artículos Relacionados -->
-       <section class="bg-white py-10">
+      <!-- Artículos Relacionados -->
+      <section class="bg-white py-10">
         <h2 class="text-3xl text-center mb-6">Artículos Relacionados</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[3%] max-w-[1240px] mx-auto p-5">
           {relatedPosts.map((post) => {
@@ -135,8 +132,6 @@ const seoProps = {
           })}
         </div>
       </section>
-
     </article>
   </div>
 </Layout>
-
