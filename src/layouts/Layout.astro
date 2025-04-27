@@ -12,7 +12,7 @@ const { title, description, keywords } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang="es" >
 	<head>
 		<meta charset="UTF-8" />
 		<title>{title}</title>
@@ -23,7 +23,7 @@ const { title, description, keywords } = Astro.props;
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 	</head>
-	<body>
+	<body class="w-screen overflow-x-hidden">
 		<Nav />
 		<slot />
 		<a href="https://wa.me/+34654712346?text=¡Hola%20Ari!%20Me%20gustaría%20saber%20más%20información%20sobre%20" 
@@ -271,5 +271,6 @@ const { title, description, keywords } = Astro.props;
 	.dot.active {
 		background-color: #222;
 	}
+
 
 </style>
