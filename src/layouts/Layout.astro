@@ -89,7 +89,6 @@ const { title, description, keywords } = Astro.props;
 	html{
 		background: #f4f4f6;
 		scroll-behavior: smooth;
-		width: 100vw;
 	}
 	body {
 		font-family: 'Overpass', sans-serif;
@@ -167,6 +166,8 @@ const { title, description, keywords } = Astro.props;
 		background: none;
 	
 	}
+
+	
 	.link-button {
 		font-family: 'Overpass', sans-serif;
 		font-size: 12px;
@@ -273,5 +274,39 @@ const { title, description, keywords } = Astro.props;
 		background-color: #222;
 	}
 
+	/* Estilos para tabletas */
+	@media (max-width: 1024px) {
+	h1 {
+		font-size: 70px;
+	}
+	h2 {
+		font-size: 42px;
+	}
+	h3 {
+		font-size: 28px;
+	}
+	h4 {
+		font-size: 18px;
+	}
+	}
 
+	/* Estilos para móviles */
+	@media (max-width: 768px) {
+	h1 {
+		font-size: 50px;
+		line-height: 0.9em;
+	}
+	h2 {
+		font-size: 38px;
+	}
+	h3 {
+		font-size: 24px;
+	}
+	h4 {
+		font-size: 16px;
+	}
+	p{
+		line-height: normal;
+	}
+	}
 </style>
