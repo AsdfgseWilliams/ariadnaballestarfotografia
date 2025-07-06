@@ -1,54 +1,27 @@
-# Astro Starter Kit: Basics
+# Ariadna Ballestar Fotografía
 
-```sh
-npm create astro@latest -- --template basics
-```
+Bienvenido/a a la página web de **Ariadna Ballestar Fotografía**, un negocio especializado en fotografía de bodas elegantes y clásicas con sede en Barcelona y cobertura en toda España.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## ✨ Descripción
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Esta web está diseñada para reflejar un estilo **documental, auténtico y elegante**, transmitiendo a las parejas la confianza de que sus recuerdos estarán capturados con calidad y sensibilidad artística.
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+Incluye:
 
-## 🚀 Project Structure
+- Información sobre los servicios de fotografía de bodas
+- Galería de trabajos
+- Detalles de los paquetes ofrecidos (Íntimo, Emoción y Extraordinario)
+- Formulario de contacto
+- Información clara y concisa para resolver dudas de las parejas interesadas
 
-Inside of your Astro project, you'll see the following folders and files:
+## 📸 Sobre Ariadna Ballestar
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+Soy fotógrafa especializada en bodas, con un enfoque documental que captura la esencia y autenticidad de cada momento. Mi objetivo es crear recuerdos atemporales que perduren para siempre.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Puedes visitar la web en [ariadnaballestar.com](https://ariadnaballestar.com/).
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+---
 
-Any static assets, like images, can be placed in the `public/` directory.
+✉️ **Contacto**: [info@ariadnaballestar.com](mailto:info@ariadnaballestar.com)
 
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+© 2025 Ariadna Ballestar Fotografía. Todos los derechos reservados.

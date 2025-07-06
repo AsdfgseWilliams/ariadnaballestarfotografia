@@ -2,7 +2,7 @@
 
 @theme {
     --color-grisclarito: #f6f6f4;
-    --font-eb: ['EBGaramond', 'serif'];
-    --font-claster: ['Claster', 'serif'];
-    --font-overpass: ['Overpass', 'sans-serif'];
+    --font-eb: "EBGaramond", "serif";
+    --font-claster: "Claster", "serif";
+    --font-overpass: "Overpass", "sans-serif";
 }
