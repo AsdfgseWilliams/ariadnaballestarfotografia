@@ -8,7 +8,7 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "build:styles": "npx @tailwindcss/cli -i ./input.css -o /styles/output.css --watch"
+    "build:styles": "npx @tailwindcss/cli -i ./input.css -o /public/styles/output.css --content './src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}' --watch"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
