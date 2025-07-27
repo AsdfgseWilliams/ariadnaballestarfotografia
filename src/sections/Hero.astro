@@ -1,4 +1,8 @@
 ---
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <section class="text-center hidden md:block">
@@ -17,7 +21,7 @@
 </section>
     <section class="justify-center items-center text-center mb-40 md:-mt-20 mx-auto max-w-7xl w-[80%]">
         <h1 class="font-medium">
-            Fotógrafa de bodas en Barcelona
+            {t('h1.hero')}
         </h1>
 
         <div class="mt-12 text-xl font-eb italic font-medium">

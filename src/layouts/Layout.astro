@@ -1,18 +1,22 @@
 ---
+import { getLangFromUrl } from 'src/i18n/utils';
 import Footer from 'src/sections/Footer.astro';
 import Nav from 'src/sections/Nav.astro';
+
 interface Props {
 	title: string;
 	description: string;
 	keywords: string;
+	lang?: string; // Hacer opcional para mantener compatibilidad
 }
 
-const { title, description, keywords } = Astro.props;
-
+const { title, description, keywords, lang } = Astro.props;
+// Si no se pasa lang como prop, obtenerlo de la URL (compatibilidad hacia atrás)
+const currentLang = lang || getLangFromUrl(Astro.url);
 ---
 
 <!doctype html>
-<html lang="es" class="w-screen overflow-x-hidden">
+<html lang={currentLang} class="w-screen overflow-x-hidden">
 	<head>
 		<meta charset="UTF-8" />
 		<title>{title}</title>
@@ -21,7 +25,6 @@ const { title, description, keywords } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/cropped-logo.webp" />
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
 	</head>
 	<body class="w-screen overflow-x-hidden">
 		<Nav />
@@ -33,7 +36,6 @@ const { title, description, keywords } = Astro.props;
 			<i class="fa fa-whatsapp" style=""></i>
 			<span class="whatsapp-message">Hola 👋 <br>¿En qué puedo ayudarte?</span>
 		</a>
-
 		<Footer />
 
 		<!-- Script que actualiza el enlace de WhatsApp con el título de la página -->
@@ -49,6 +51,7 @@ const { title, description, keywords } = Astro.props;
 		</script>
 	</body>
 </html>
+
 <style is:global>
 	@font-face {
 		font-family: "Claster";

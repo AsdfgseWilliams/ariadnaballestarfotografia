@@ -1,48 +1,49 @@
 ---
-import HamburgerButton from 'src/components/HamburgerButton.astro'
+import HamburgerButton from 'src/components/HamburgerButton.astro';
+import LanguagePicker from 'src/components/LanguagePicker.astro';
+import { getLangFromUrl, useTranslatedPath, useTranslations } from 'src/i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const translatePath = useTranslatedPath(lang);
+const t = useTranslations(lang);
 ---
 
 <section class="flex flex-col bg-[#f6f6f4] sticky top-0 z-50 overflow-hidden">
     <!-- Top Bar -->
     <div class="flex justify-between items-center py-5 px-[2%] h-[100px]">
         <!-- Logo -->
-        <a href="/" class="pl-3">
+        <a href={translatePath("/")} class="pl-3">
             <img src="/logo-oscuro.webp" alt="Logo" class="max-w-32 md:max-w-48">
         </a>
-
         <!-- Hamburger Button (Mobile Menu) -->
         <HamburgerButton id="hamburgerButton" />
-
         <!-- Desktop Navigation Links -->
         <nav class="font-overpass font-semibold space-x-6 uppercase text-xs tracking-wide lg:flex hidden">
-            <a href="/bodas">Bodas en Barcelona</a>
-            <a href="/sesiones">Sesiones</a>
-            <a href="/sobre-mi">Sobre mí</a>
-            <a href="/contacto">Contacto</a>
-            <a href="/precios">Precios</a>
-            <a href="/blog">Blog</a>
+            <a href={translatePath("/bodas")}>{t('nav.bodas')}</a>
+            <a href={translatePath("/sesiones")}>{t('nav.sesiones')}</a>
+            <a href={translatePath("/sobre-mi")}>{t('nav.sobre-mi')}</a>
+            <a href={translatePath("/contacto")}>{t('nav.contacto')}</a>
+            <a href={translatePath("/precios")}>{t('nav.precios')}</a>
+            <a href={translatePath("/blog")}>{t('nav.blog')}</a>
+            <LanguagePicker />
         </nav>
-
         <!-- Call to Action Button -->
         <div class="pr-3">
-            <a href="/contacto" class="link-button">
-                ¡EMPECEMOS!
+            <a href={translatePath("/contacto")} class="link-button">
+                {t('nav.cta')}
             </a>
         </div>
     </div>
-
     <!-- Mobile Dropdown Menu -->
     <div id="mobileDropdown" class="flex flex-col items-center gap-6 font-overpass font-semibold uppercase text-xs tracking-wide bg-[#f6f6f4] px-6 py-0 max-h-0 overflow-hidden transition-all duration-500 ease-in-out lg:hidden">
-        <a href="/bodas" class="py-2 block">Bodas en Barcelona</a>
-        <a href="/sesiones" class="py-2 block">Sesiones</a>
-        <a href="/sobre-mi" class="py-2 block">Sobre mí</a>
-        <a href="/contacto" class="py-2 block">Contacto</a>
-        <a href="/precios" class="py-2 block">Precios</a>
-        <a href="/blog" class="py-2 block">Blog</a>
+        <a href={translatePath("/bodas")} class="py-2 block">{t('nav.bodas')}</a>
+        <a href={translatePath("/sesiones")} class="py-2 block">{t('nav.sesiones')}</a>
+        <a href={translatePath("/sobre-mi")} class="py-2 block">{t('nav.sobre-mi')}</a>
+        <a href={translatePath("/contacto")} class="py-2 block">{t('nav.contacto')}</a>
+        <a href={translatePath("/precios")} class="py-2 block">{t('nav.precios')}</a>
+        <a href={translatePath("/blog")} class="py-2 block">{t('nav.blog')}</a>
     </div>
 </section>
-
-
 <!-- Styling for Mobile Menu Transition -->
 <style>
     /* Mobile Menu Transition */
@@ -51,14 +52,12 @@ import HamburgerButton from 'src/components/HamburgerButton.astro'
         opacity: 0;
         transition: opacity 0.3s ease, visibility 0s 0.3s;
     }
-
     #mobileMenu.open {
         display: flex;
         opacity: 1;
         visibility: visible;
         transition: opacity 0.3s ease;
     }
-
     /* Hamburger Button active class */
     #hamburgerButton.active + #mobileMenu {
         display: flex;
@@ -66,13 +65,11 @@ import HamburgerButton from 'src/components/HamburgerButton.astro'
         visibility: visible;
     }
 </style>
-
 <!-- Mobile Menu Script -->
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         const hamburgerButton = document.querySelector('#hamburgerButton')!;
         const mobileDropdown = document.getElementById('mobileDropdown')!;
-
         hamburgerButton.addEventListener('click', () => {
             if (mobileDropdown.classList.contains('max-h-0')) {
                 mobileDropdown.classList.remove('max-h-0', 'py-0');
@@ -85,5 +82,3 @@ import HamburgerButton from 'src/components/HamburgerButton.astro'
         });
     });
 </script>
-
-
