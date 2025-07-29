@@ -6,8 +6,10 @@ export const languages = {
 export const defaultLang = "es";
 export const showDefaultLang = false; // Cambiar a false para no mostrar /es
 
-export const ui = {
-    en: {
+
+
+export const ui: Record<string, Record<string, Record<string, string>>> = {
+        en: {
         home: {
             'h1.hero': 'Wedding photographer in Barcelona',
             'hero.p1': 'In the warm embrace of Barcelona, a city that throbs with romance and charm, your wedding memories take on an even more magical dimension.',
