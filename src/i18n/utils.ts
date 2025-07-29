@@ -15,8 +15,21 @@ export function getLangFromUrl(url: URL) {
 
 
 export function useTranslations(lang: keyof typeof ui) {
-  return function t(key: keyof typeof ui[typeof defaultLang]) {
-    return ui[lang][key] || ui[defaultLang][key];
+  return function t(key: string) {
+    const [section, ...rest] = key.split('.');
+    const subKey = rest.join('.');
+    
+    const sectionObj = ui[lang][section];
+    const defaultSectionObj = ui[defaultLang][section];
+
+    if (sectionObj && subKey in sectionObj) {
+      return sectionObj[subKey as keyof typeof sectionObj];
+    }
+    if (defaultSectionObj && subKey in defaultSectionObj) {
+      return defaultSectionObj[subKey as keyof typeof defaultSectionObj];
+    }
+
+    return `[missing translation: ${key}]`;
   }
 }
 

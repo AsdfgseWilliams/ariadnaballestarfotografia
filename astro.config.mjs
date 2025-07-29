@@ -8,12 +8,11 @@ export default defineConfig({
   site: 'https://AsdfgseWilliams.github.io',
   base: '/',
   output: 'server',
-  i18n: {
-    defaultLocale: "es",
-    locales: ["es", "en"],
-    routing: {
-      prefixDefaultLocale: false,
-      redirectToDefaultLocale: false
-    }
-  },
+   i18n: {
+        defaultLocale: 'es',
+        locales: ['es', 'en'],
+        routing: {
+            prefixDefaultLocale: false,
+        }
+    },
 });

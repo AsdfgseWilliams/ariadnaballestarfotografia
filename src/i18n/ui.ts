@@ -4,51 +4,49 @@ export const languages = {
 };
 
 export const defaultLang = "es";
-export const showDefaultLang = true; // Cambiar a false para no mostrar /es
+export const showDefaultLang = false; // Cambiar a false para no mostrar /es
 
 export const ui = {
     en: {
-        'h1.hero': 'Wedding photographer in Barcelona',
-        'site.title': 'Wedding Photographer Barcelona',
-        'site.description': 'Wedding photographer in Barcelona. I capture authentic moments for your special day. Contact for an exceptional reportage.',
-        'site.keywords': 'Elegant wedding photography, wedding photographer in Barcelona, wedding reportages',
-        'page.index.title': 'Wedding photographer in Barcelona - Ariadna Ballestar',
-        'page.index.description': 'Wedding photographer in Barcelona. I capture authentic moments for your special day. Contact for an exceptional reportage.',
-        'page.index.keywords': 'Elegant wedding photography, wedding photographer in Barcelona, wedding reportages',
-        'page.blog.title': 'Blog - Wedding Photography',
-        'page.bodas.title': 'Weddings',
-        'page.contacto.title': 'Contact',
-        'page.precios.title': 'Prices',
-        'page.sesiones.title': 'Sessions',
-        'page.sobre-mi.title': 'About Me',
-        'nav.bodas': 'Weddings in Barcelona',
-        'nav.sesiones': 'Sessions',
-        'nav.sobre-mi': 'About Me',
-        'nav.contacto': 'Contact',
-        'nav.precios': 'Prices',
-        'nav.blog': 'Blog',
-        'nav.cta': "LET'S START!",
+        home: {
+            'h1.hero': 'Wedding photographer in Barcelona',
+            'hero.p1': 'In the warm embrace of Barcelona, a city that throbs with romance and charm, your wedding memories take on an even more magical dimension.',
+            'hero.p2': 'In each memory lies a universe of sensations, laughter, tears, learning and achievements. They are fundamental pillars that support the construction of your own history, shape your experiences and forge your vision of the world.',
+            'hero.p3': 'With every click, we weave a timeless story, transforming fleeting moments into unforgettable memories at weddings in Barcelona.',
+            'hero.cta': 'Contact me!'
+        },
+        nav: {
+            'bodas': 'Weddings in Barcelona',
+            'sesiones': 'Photoshoots',
+            'sobre-mi': 'About Me',
+            'contacto': 'Contact',
+            'precios': 'Prices',
+            'blog': 'Blog',
+            'cta': "LET'S GET STARTED!",
+
+        },
+
+        
     },
     es: {
-        'h1.hero': 'Fotógrafa de bodas en Barcelona',
-        'site.title': 'Fotógrafa de Bodas Barcelona',
-        'site.description': 'Fotógrafa de bodas en Barcelona. Capturo momentos auténticos para tu día especial. Contacta para un reportaje excepcional.',
-        'site.keywords': 'Fotografía de bodas elegante, fotógrafa de bodas en Barcelona, reportajes de bodas',
-        'page.index.title': 'Fotógrafa de bodas en Barcelona - Ariadna Ballestar',
-        'page.index.description': 'Fotógrafa de bodas en Barcelona. Capturo momentos auténticos para tu día especial. Contacta para un reportaje excepcional.',
-        'page.index.keywords': 'Fotografía de bodas elegante, fotógrafa de bodas en Barcelona, reportajes de bodas',
-        'page.blog.title': 'Blog - Fotografía de Bodas',
-        'page.bodas.title': 'Bodas',
-        'page.contacto.title': 'Contacto',
-        'page.precios.title': 'Precios',
-        'page.sesiones.title': 'Sesiones',
-        'page.sobre-mi.title': 'Sobre Mí',
-        'nav.bodas': 'Bodas en Barcelona',
-        'nav.sesiones': 'Sesiones',
-        'nav.sobre-mi': 'Sobre mí',
-        'nav.contacto': 'Contacto',
-        'nav.precios': 'Precios',
-        'nav.blog': 'Blog',
-        'nav.cta': '¡EMPECEMOS!',
+        home: {
+            'h1.hero': 'Fotógrafa de bodas en Barcelona',
+            'hero.p1': 'En el cálido abrazo de Barcelona, una ciudad que palpita con romance y encanto, tus recuerdos de boda cobran una dimensión aún más mágica.',
+            'hero.p2': 'En cada recuerdo yace un universo de sensaciones, risas, lágrimas, aprendizajes y logros. Son pilares fundamentales que sustentan la construcción de tu propia historia, moldean tus experiencias y forjan tu visión del mundo.',
+            'hero.p3': 'En cada clic, tejemos una historia eterna, transformando momentos fugaces en recuerdos inolvidables en las bodas de Barcelona.',
+            'hero.cta': '¡Contacta conmigo!'
+            
+        },
+        nav: {
+            'bodas': 'Bodas en Barcelona',
+            'sesiones': 'Sesiones',
+            'sobre-mi': 'Sobre mí',
+            'contacto': 'Contacto',
+            'precios': 'Precios',
+            'blog': 'Blog',
+            'cta': '¡EMPECEMOS!',
+        },
+
+        
     }
 } as const
