@@ -51,4 +51,4 @@ export const ui: Record<string, Record<string, Record<string, string>>> = {
 
         
     }
-} as const
+} 
