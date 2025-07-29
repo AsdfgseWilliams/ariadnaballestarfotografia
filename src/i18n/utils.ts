@@ -23,10 +23,10 @@ export function useTranslations(lang: keyof typeof ui) {
     const defaultSectionObj = ui[defaultLang][section];
 
     if (sectionObj && subKey in sectionObj) {
-      return sectionObj[subKey as keyof typeof sectionObj];
+      return sectionObj[subKey];
     }
     if (defaultSectionObj && subKey in defaultSectionObj) {
-      return defaultSectionObj[subKey as keyof typeof defaultSectionObj];
+      return defaultSectionObj[subKey];
     }
 
     return `[missing translation: ${key}]`;
