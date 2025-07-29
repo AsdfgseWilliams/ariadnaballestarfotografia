@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import tailwind from "@astrojs/tailwind";
+import vercel from '@astrojs/vercel';
 
 // https://astro.build/config
 export default defineConfig({
@@ -8,11 +9,12 @@ export default defineConfig({
   site: 'https://AsdfgseWilliams.github.io',
   base: '/',
   output: 'server',
-   i18n: {
+  adapter: vercel(),
+  i18n: {
         defaultLocale: 'es',
         locales: ['es', 'en'],
         routing: {
             prefixDefaultLocale: false,
         }
-    },
+  },
 });
