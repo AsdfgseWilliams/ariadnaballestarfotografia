@@ -1,4 +1,13 @@
 ---
+import { getLangFromUrl, useTranslations, useTranslatedPath } from "src/i18n/utils";
+import { getRelativeLocaleUrl } from 'astro:i18n';
+import { slugMap } from 'src/i18n/slug-map';
+
+
+const lang = getLangFromUrl(Astro.url) as 'es' | 'en';
+const translatePath = useTranslatedPath(lang);
+const t = useTranslations(lang);
+
 ---
 
 
@@ -6,14 +15,14 @@
     <div class="grid grid-cols-1 md:grid-cols-3 gap-0 border-double border-y-2 border-white">
         <div class="flex flex-col justify-center items-start py-20 px-14">
             <h3 class="text-5xl">
-                Una recopilación de mis últimos trabajos
+                {t('home.cta.h3')}
             </h3>
             <p class="py-8">
-                Las fotografías no son sólo la prueba de que has vivido; son la prueba de que has amado.
+                {t('home.cta.p')}
             </p>
-            <button class="bg-transparent border-white hover:border-white hover:text-black hover: hover:bg-white">
-                Instagram
-            </button>
+            <a href="https://www.instagram.com/love.captured.by.ari/" class="link-button-dark mt-8">
+        {t('button.ig')}
+    </a>
         </div>
         <div class="bg-cover bg-center bg-no-repeat border-x-2 border-white w-auto" style="background-image: url(/img/boda-5.webp)">
             
@@ -25,9 +34,10 @@
             <p class="py-8">
                 Congelar este momento increíble para que puedas recordarlo siempre con alegría y felicidad.
             </p>
-            <button class="bg-transparent border-white hover:border-white hover:text-black hover: hover:bg-white">
-                Reserva una sesión
-            </button>
+            <a  href={getRelativeLocaleUrl(lang, slugMap['contacto'][lang])} class="link-button-dark mt-8">
+        Reserva una sesión
+    </a>
+            
         </div>
     </div>
 </section>

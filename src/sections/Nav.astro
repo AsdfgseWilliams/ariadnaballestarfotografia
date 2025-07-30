@@ -2,8 +2,10 @@
 import HamburgerButton from 'src/components/HamburgerButton.astro';
 import LanguagePicker from 'src/components/LanguagePicker.astro';
 import { getLangFromUrl, useTranslatedPath, useTranslations } from 'src/i18n/utils';
+import { slugMap } from 'src/i18n/slug-map';
+import { getRelativeLocaleUrl } from 'astro:i18n';
 
-const lang = getLangFromUrl(Astro.url);
+const lang = getLangFromUrl(Astro.url) as 'es' | 'en';
 const translatePath = useTranslatedPath(lang);
 const t = useTranslations(lang);
 ---
@@ -19,12 +21,12 @@ const t = useTranslations(lang);
         <HamburgerButton id="hamburgerButton" />
         <!-- Desktop Navigation Links -->
         <nav class="font-overpass font-semibold space-x-6 uppercase text-xs tracking-wide lg:flex hidden">
-            <a href={translatePath("/bodas")}>{t('nav.bodas')}</a>
-            <a href={translatePath("/sesiones")}>{t('nav.sesiones')}</a>
-            <a href={translatePath("/sobre-mi")}>{t('nav.sobre-mi')}</a>
-            <a href={translatePath("/contacto")}>{t('nav.contacto')}</a>
-            <a href={translatePath("/precios")}>{t('nav.precios')}</a>
-            <a href={translatePath("/blog")}>{t('nav.blog')}</a>
+            <a href={getRelativeLocaleUrl(lang, slugMap['bodas'][lang])}>{t('nav.bodas')}</a>
+            <a href={getRelativeLocaleUrl(lang, slugMap['sesiones'][lang])}>{t('nav.sesiones')}</a>
+            <a href={getRelativeLocaleUrl(lang, slugMap['sobre-mi'][lang])}>{t('nav.sobre-mi')}</a>
+            <a href={getRelativeLocaleUrl(lang, slugMap['contacto'][lang])}>{t('nav.contacto')}</a>
+            <a href={getRelativeLocaleUrl(lang, slugMap['precios'][lang])}>{t('nav.precios')}</a>
+            <a href={getRelativeLocaleUrl(lang, slugMap['blog'][lang])}>{t('nav.blog')}</a>
             <LanguagePicker />
         </nav>
         <!-- Call to Action Button -->
@@ -36,12 +38,13 @@ const t = useTranslations(lang);
     </div>
     <!-- Mobile Dropdown Menu -->
     <div id="mobileDropdown" class="flex flex-col items-center gap-6 font-overpass font-semibold uppercase text-xs tracking-wide bg-[#f6f6f4] px-6 py-0 max-h-0 overflow-hidden transition-all duration-500 ease-in-out lg:hidden">
-        <a href={translatePath("/bodas")} class="py-2 block">{t('nav.bodas')}</a>
-        <a href={translatePath("/sesiones")} class="py-2 block">{t('nav.sesiones')}</a>
-        <a href={translatePath("/sobre-mi")} class="py-2 block">{t('nav.sobre-mi')}</a>
-        <a href={translatePath("/contacto")} class="py-2 block">{t('nav.contacto')}</a>
-        <a href={translatePath("/precios")} class="py-2 block">{t('nav.precios')}</a>
-        <a href={translatePath("/blog")} class="py-2 block">{t('nav.blog')}</a>
+        <a href={getRelativeLocaleUrl(lang, slugMap['bodas'][lang])}>{t('nav.bodas')}</a>
+        <a href={getRelativeLocaleUrl(lang, slugMap['sesiones'][lang])}>{t('nav.sesiones')}</a>
+        <a href={getRelativeLocaleUrl(lang, slugMap['sobre-mi'][lang])}>{t('nav.sobre-mi')}</a>
+        <a href={getRelativeLocaleUrl(lang, slugMap['contacto'][lang])}>{t('nav.contacto')}</a>
+        <a href={getRelativeLocaleUrl(lang, slugMap['precios'][lang])}>{t('nav.precios')}</a>
+        <a href={getRelativeLocaleUrl(lang, slugMap['blog'][lang])}>{t('nav.blog')}</a>
+        <LanguagePicker />
     </div>
 </section>
 <!-- Styling for Mobile Menu Transition -->
