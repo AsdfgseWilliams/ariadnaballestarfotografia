@@ -1,4 +1,11 @@
 ---
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
+import { getRelativeLocaleUrl } from 'astro:i18n';
+import { slugMap } from 'src/i18n/slug-map';
+
+
+const lang = getLangFromUrl(Astro.url) as 'es' | 'en';
+const t = useTranslations(lang);
 ---
 
 <form 
@@ -9,47 +16,47 @@
     style="background-image: url('/img/flor-formulario.png'); background-color: #d1d7d9; background-size: contain; background-position: center; background-repeat: no-repeat;"
 >
     <div class="max-w-7xl w-full">
-        <h2 class="mb-10 text-center text-6xl">FORMULARIO</h2>
+        <h2 class="mb-10 text-center text-6xl">{t('form.title')}</h2>
     
         <div class="grid grid-cols-1 md:grid-cols-2 gap-9">
-            <input type="text" name="nombre" placeholder="Nombre" required class="p-4 border-none outline-none" />
-            <input type="email" name="_replyto" placeholder="Email" required class="p-4 border-none outline-none" />
-            <input type="tel" name="telefono" placeholder="Teléfono" required class="p-4 border-none outline-none" />
+            <input type="text" name="nombre" placeholder={t('form.name')} required class="p-4 border-none outline-none" />
+            <input type="email" name="_replyto" placeholder={t('form.email')} required class="p-4 border-none outline-none" />
+            <input type="tel" name="telefono" placeholder={t('form.phone')} required class="p-4 border-none outline-none" />
             <input type="date" name="fecha_evento" required class="p-4 border-none outline-none" />
             
-            <input type="text" name="lugar_evento" placeholder="¿Dónde será?" required class="p-4 border-none outline-none" />
+            <input type="text" name="lugar_evento" placeholder={t('form.location')} required class="p-4 border-none outline-none" />
             
             <select name="reserva" required class="p-4 border-none outline-none">
-                <option value="">¿Qué quieres reservar?</option>
-                <option value="boda">Boda</option>
-                <option value="sesion_pareja">Sesión de pareja</option>
-                <option value="sesion_individual">Sesión individual</option>
-                <option value="sesion_familiar">Sesión en familia</option>
-                <option value="otros">Otros</option>
+                <option value="">{t('form.reservationPlaceholder')}</option>
+                <option value="boda">{t('form.reservationWedding')}</option>
+                <option value="sesion_pareja">{t('form.reservationCouple')}</option>
+                <option value="sesion_individual">{t('form.reservationIndividual')}</option>
+                <option value="sesion_familiar">{t('form.reservationFamily')}</option>
+                <option value="otros">{t('form.reservationOthers')}</option>
             </select>
     
             <select name="conocido" required class="p-4 border-none outline-none col-span-2">
-                <option value="">¿Dónde me has conocido?</option>
-                <option value="instagram">Instagram</option>
-                <option value="google">Google</option>
-                <option value="recomendacion">Recomendación</option>
+                <option value="">{t('form.knownPlaceholder')}</option>
+                <option value="instagram">{t('form.knownInstagram')}</option>
+                <option value="google">{t('form.knownGoogle')}</option>
+                <option value="recomendacion">{t('form.knownRecommendation')}</option>
             </select>
         </div>
         
         <input type="text" name="_gotcha" style="display:none" />
         
-        <textarea name="detalles" rows="4" placeholder="Cuéntame más detalles" class="mt-6 p-4 w-full border-none outline-none"></textarea>
+        <textarea name="detalles" rows="4" placeholder={t('form.details')} class="mt-6 p-4 w-full border-none outline-none"></textarea>
     
         <div class="mt-6">
             <label>
                 <input type="checkbox" name="politica_privacidad" required class="mr-2" />
-                Por favor, revisa la política de privacidad.
+                {t('form.privacyPolicy')}
             </label>
         </div>
         
         <input type="hidden" name="_next" value="https://ariadnaballestar.com/gracias" />
         
-        <button type="submit" class="mt-6">Enviar</button>
+        <button type="submit" class="mt-6">{t('form.submit')}</button>
     </div>
 </form>
 

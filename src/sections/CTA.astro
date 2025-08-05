@@ -29,13 +29,13 @@ const t = useTranslations(lang);
         </div>
         <div class="flex flex-col justify-center items-end text-end py-20 px-14">
             <h3 class="text-5xl">
-                ¡Permíteme capturar vuestra historia!
+                {t('home.cta.h3.2')}
             </h3>
             <p class="py-8">
-                Congelar este momento increíble para que puedas recordarlo siempre con alegría y felicidad.
+                {t('home.cta.p.2')}
             </p>
             <a  href={getRelativeLocaleUrl(lang, slugMap['contacto'][lang])} class="link-button-dark mt-8">
-        Reserva una sesión
+        {t('button.cta')}
     </a>
             
         </div>

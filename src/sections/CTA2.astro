@@ -1,17 +1,7 @@
 ---
-// Definimos las props que recibirá el componente
 const { backgroundImage, title, paragraph, buttonText } = Astro.props;
 ---
-<!-- <section class="flex items-center justify-center text-center text-white py-8 min-h-[480px] bg-cover bg-center" style="background-image: linear-gradient(rgba(41,55,62,0.41), rgba(41,55,62,0.41)), url('/img/17.webp');">
-    <div>
-        <h2>NO PUEDO ESPERAR PARA CAPTURAR EL DÍA DE VUESTRA BODA</h2>
-        <p class="mb-10 mt-6 font-medium">Inmortalizando vuestra historia de amor con cada clic, capturando momentos llenos de magia y emoción.</p>
-        <button class="bg-transparent border-white hover:border-white hover:text-black hover:bg-white" onclick="document.getElementById('contactForm').scrollIntoView({ behavior: 'smooth' })">
-            Trabajemos juntos
-        </button>
-    </div>
-</section>
--->
+
 
 
 <section 
@@ -19,7 +9,7 @@ const { backgroundImage, title, paragraph, buttonText } = Astro.props;
     style={`background-image: linear-gradient(rgba(41,55,62,0.41), rgba(41,55,62,0.41)), url('${backgroundImage}');`}
 >
     <div class="max-w-[70%]">
-        <h2>{title}</h2>
+        <h2 set:html={title}></h2>
         <p class="mb-6 mt-2 font-medium">{paragraph}</p>
         <button 
             class="bg-transparent border-white hover:border-white hover:text-black hover:bg-white" 

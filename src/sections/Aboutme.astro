@@ -1,4 +1,10 @@
 ---
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url) as 'es' | 'en';
+const t = useTranslations(lang);
+const h2 = t('about.me.h2');
+
 ---
 
 <section class="py-36 bg-white">
@@ -9,15 +15,12 @@
         </div>
         
         <div class="col-span-1 justify-center divide-y divide-black ">
-            <h2 class="text-5xl mb-4">
-                FOTOS DE BODA CLÁSICAS Y ROMÁNTICAS<br>
-                que resistirán el paso del tiempo
-            </h2>
+            <h2 class="text-5xl mb-4" set:html={t('about.me.h2')} />
             <div class="leading-8 font-medium">
-                <p class="font-bold mt-7">A vuestro lado, desde el principio hasta el final.</p>
-                <p class="mt-4">En los momentos más sencillos y en los detalles más pequeños, estaré allí para detener el tiempo y crear recuerdos que os emocionarán y os harán revivir esa felicidad una y otra vez.</p>
-                <p class="mt-4">Mi compromiso es que os sintáis cómodos y en confianza en todo momento, para que podáis ser vosotros mismos y disfrutar al máximo de cada instante. Antes del gran día, hablaremos en profundidad sobre vuestros deseos y expectativas, para que podáis confiar en mí y sentir la tranquilidad de saber que vuestra historia está en buenas manos.</p>
-                <p class="italic mt-4">Cuando veáis las fotografías, podréis revivir esos momentos llenos de emoción y alegría, y sentir cómo el tiempo se detiene por un instante.</p>
+                <p class="font-bold mt-7">{t('about.me.p1')}</p>
+                <p class="mt-4">{t('about.me.p2')}</p>
+                <p class="mt-4">{t('about.me.p3')}</p>
+                <p class="italic mt-4">{t('about.me.p4')}</p>
             </div>
         </div>
     </div>

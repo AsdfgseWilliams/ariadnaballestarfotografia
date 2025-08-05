@@ -1,37 +1,26 @@
 ---
 import 'node_modules/@glidejs/glide/dist/css/glide.core.min.css'
+import { getLangFromUrl, useTranslations, useTranslatedPath } from "src/i18n/utils";
+
+
+const lang = getLangFromUrl(Astro.url) as 'es' | 'en';
+const translatePath = useTranslatedPath(lang);
+const t = useTranslations(lang);
 const OPINIONS = [
   {
-    title: '"Gran profesional y mejor persona"',
-    content: [
-      "Han sido todo facilidades con ella.",
-      "Muy sensible a nuestras necesidades y muy fácil trabajar con ella.",
-      "La hemos recomendado y si volviésemos a necesitar a alguien contaríamos con ella sin dudar.",
-      "Una persona muy dulce que lo refleja en su trabajo.",
-    ],
-    author: "- CRISTINA & TONI -",
+    title: t('opiniones.title1'),
+    content: t('opiniones.content1').split('<br>'),
+    author: t('opiniones.author1'),
   },
   {
-    title: '"Fue muy cercana y profesional, haciéndonos sentir muy cómodos y con total confianza."',
-    content: [
-      "Inmejorable.",
-      "Estamos encantados con Ariadna, supo captar a la perfección nuestro estilo. Fue muy cercana y profesional, haciéndonos sentir muy cómodos y con total confianza. El día de la boda nos tranquilizó y ayudó en todo momento.",
-      "Elegimos tanto fotos como vídeo, y la calidad ha sido inmejorable.",
-      "Nos entregó todo el material muy pronto, precioso y personalizado hasta el más mínimo detalle. Estamos muy agradecidos por todo y la recomendamos 1000%. Esperamos volver a trabajar con ella.",
-      "¡Gracias por formar parte de nuestro gran día!",
-    ],
-    author: "- MARTA & ESMAIL -",
+    title: t('opiniones.title2'),
+    content: t('opiniones.content2').split('<br>'),
+    author: t('opiniones.author2'),
   },
   {
-    title: '"Sentimiento en imágenes"',
-    content: [
-      "Ariadna es comprensiva y atenta.",
-      "No perdió detalle de la boda. Y no notamos que estaba allí.",
-      "Sabe captar el momento exacto y guiarte para que las imágenes describan tu.",
-      "Ve con claridad el ángulo para las fotos y saca a relucir lo mejor del evento en cada imagen.",
-      "Le coges cariño y todo.",
-    ],
-    author: "- DIANA & GEMI –",
+    title: t('opiniones.title3'),
+    content: t('opiniones.content3').split('<br>'),
+    author: t('opiniones.author3'),
   },
 ];
 ---

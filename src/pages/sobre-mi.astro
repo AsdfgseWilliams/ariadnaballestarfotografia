@@ -7,6 +7,11 @@ import Aboutme from 'src/sections/Aboutme.astro';
 import Funfacts from 'src/sections/Funfacts.astro';
 import CTA2 from 'src/sections/CTA2.astro';
 import Timeline from 'src/sections/Timeline.astro';
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 ---
 <Layout title='Conoce a Ariadna Ballestar: Fotógrafa de Bodas en Barcelona' 
 description='Descubre la historia de Ariadna Ballestar, fotógrafa de bodas en Barcelona. Capturando momentos auténticos con pasión.' 
@@ -15,10 +20,12 @@ keywords="sobre mí fotógrafa bodas, biografía Ariadna Ballestar, fotógrafa d
     <Kpis />
     <Aboutme /> 
     <Funfacts />
-    <CTA2  backgroundImage="/img/17.webp" 
-    title="NO PUEDO ESPERAR PARA CAPTURAR EL DÍA DE VUESTRA BODA" 
-    paragraph="Inmortalizando vuestra historia de amor con cada clic, capturando momentos llenos de magia y emoción." 
-    buttonText="Trabajemos juntos" />
+    <CTA2  
+  backgroundImage="/img/17.webp" 
+  title={t('cta2.title')} 
+  paragraph={t('cta2.paragraph')} 
+  buttonText={t('cta2.buttonText')} 
+/>
     <Timeline />    
     <Formcontacto />
 </Layout>

@@ -1,4 +1,11 @@
 ---
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
+import { getRelativeLocaleUrl } from 'astro:i18n';
+import { slugMap } from 'src/i18n/slug-map';
+
+
+const lang = getLangFromUrl(Astro.url) as 'es' | 'en';
+const t = useTranslations(lang);
 ---
 
 <section class="py-24 mx-auto justify-center text-center" style="background-image: url('/img/fondo-1.webp'), linear-gradient(-90deg, #ffffff 59%, rgba(255, 255, 255, 0.7) 67%);
@@ -16,9 +23,9 @@ background-blend-mode: overlay; background-size: cover;">
     </div>
     <!-- Columna 3 -->
     <div class="flex flex-col justify-center items-center -mx-[6vw] ">
-        <h2 class="text-5xl uppercase">Mi fotografía capta conexiones auténticas y mensajes poderosos en imágenes emotivas.</h2>
-        <p class="mt-5 text-base">Mi objetivo es crear imágenes que reflejen la belleza, la emoción y el amor presentes en cada detalle, para que puedan ser atesoradas por la pareja y sus seres queridos por siempre.</p>
-        <button class="mt-5 " onclick="">Mira lo que ofrezco</button>
+        <h2 class="text-5xl uppercase">{t('home.cta3.h2')}</h2>
+        <p class="mt-5 text-base">{t('home.cta3.p')}</p>
+        <a class="link-button mt-8" href={getRelativeLocaleUrl(lang, slugMap['contacto'][lang])}>{t('home.cta3.button')}</a>
     </div>
 </div>
 

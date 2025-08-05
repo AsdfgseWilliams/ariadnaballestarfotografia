@@ -1,110 +1,76 @@
 ---
-interface TimelineItem {
-  year: string;
-  title: string;
-  description: string;
-  imgSrc: string;
-  alignment: 'left' | 'right';
-}
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
 
-const timelineData: TimelineItem[] = [
-  {
-    year: "2012",
-    title: "Compro mi primera cámara.",
-    description: "La necesitaba para la asignatura de fotografía en la universidad. Así empecé a practicar y enamorarme.",
-    imgSrc: "/img/18.webp",
-    alignment: "left",
-  },
-  {
-    year: "2017",
-    title: "Le digo Sí a la fotografía y emprendo mi proyecto.",
-    description: "Finalizo mis estudios en Bellas Artes y decido empezar mi aventura como fotógrafa.",
-    imgSrc: "/img/19-1.webp",
-    alignment: "right",
-  },
-  {
-    year: "2018",
-    title: "De Barcelona a Lleida.",
-    description: "Cambio de ciudad y me instalo como fotógrafa en Lleida, especializada en bodas y parejas, sesiones individuales y con familias.",
-    imgSrc: "/img/20.webp",
-    alignment: "left",
-  },
-  {
-    year: "2023",
-    title: "De vuelta a mi querida Barcelona.",
-    description: "Una pandemia después vuelvo a la ciudad donde todo empezó, con muchas ganas e ilusión.",
-    imgSrc: "/img/21.webp",
-    alignment: "right",
-  },
-  
-];
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const timelineData = [];
+
+for (let i = 1; i <= 4; i++) {
+  timelineData.push({
+    year: t(`about.timeline.year${i}`),
+    title: t(`about.timeline.title${i}`),
+    description: t(`about.timeline.description${i}`),
+    imgSrc: t(`about.timeline.imgSrc${i}`),
+    alignment: t(`about.timeline.alignment${i}`) as 'left' | 'right',
+  });
+}
 ---
 
 <section class="my-40 flex flex-col justify-center items-center w-full">
-    <h2 class="uppercase">MI VIAJE HASTA AHORA</h2>
-    <p>DÓNDE EMPEZÓ TODO Y CÓMO VA AHORA</p>
-  
-    <!-- Timeline -->
-    <div class="my-20 relative">
-      <!-- Vertical Line -->
-      <div class="absolute inset-0 flex justify-center">
-        <div class="w-px bg-gray-500"></div>
-      </div>
-  
-      <!-- Iterar sobre cada elemento del timeline -->
-      {timelineData.map((item, index) => (
-        <div class={`flex gap-x-3 w-full my-10 relative ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
-          <!-- Left or Right Content based on alignment -->
-          {item.alignment === 'left' ? (
-            <>
-              <!-- Left Content -->
-              <div class="w-1/2 flex justify-end pr-6">
-                <img src={item.imgSrc} alt={item.title} class="h-[350px] w-[400px] object-cover object-center" />
-              </div>
-              <!-- Icon -->
-              <div class="relative flex justify-center items-center w-12">
-                <div class="relative z-10 size-7 flex justify-center items-center">
-                  <div class="size-2 rounded-full bg-gray-500"></div>
-                </div>
-                <div class="absolute after:content-[''] after:absolute after:top-7 after:bottom-0 after:w-px after:bg-gray-200 "></div>
-              </div>
-              <!-- Right Content -->
-              <div class="flex flex-col w-1/2 pt-0.5 pb-8 justify-center pl-6">
-                <h3 class="flex gap-x-1.5 ">
-                  {item.year}: {item.title}
-                </h3>
-                <p class="mt-1 ">{item.description}</p>
-              </div>
-            </>
-          ) : (
-            <>
-              <!-- Right Content -->
-              <div class="w-1/2 flex justify-start pl-6">
-                <img src={item.imgSrc} alt={item.title} class="h-[350px] w-[400px] object-cover object-center" />
-              </div>
-              <!-- Icon -->
-              <div class="relative flex justify-center items-center w-12">
-                <div class="relative z-10 size-7 flex justify-center items-center">
-                  <div class="size-2 rounded-full bg-gray-500 "></div>
-                </div>
-                <div class="absolute after:content-[''] after:absolute after:top-7 after:bottom-0 after:w-px after:bg-gray-200 "></div>
-              </div>
-              <!-- Left Content (for Right Alignment) -->
-              <div class="w-1/2 flex flex-col items-end justify-center pr-6">
-                <h3 class="flex gap-x-1.5 text-right"> 
-                  {item.year}: {item.title}
-                </h3>
-                <p class="mt-1 text-right"> 
-                  {item.description}
-                </p>
-              </div>
-            </>
-          )}
-        </div>
-      ))}
+  <h2 class="uppercase">{t('about.timelineTitle') ?? 'MI VIAJE HASTA AHORA'}</h2>
+  <p>{t('about.timelineSubtitle') ?? 'DÓNDE EMPEZÓ TODO Y CÓMO VA AHORA'}</p>
+
+  <!-- Timeline -->
+  <div class="my-20 relative">
+    <div class="absolute inset-0 flex justify-center">
+      <div class="w-px bg-gray-500"></div>
     </div>
-    <!-- End Timeline -->
-  
-    <h3 class="uppercase">2024 & MÁS ALLÁ</h3>
-  </section>
-  
+
+    {timelineData.map((item, index) => (
+      <div class={`flex gap-x-3 w-full my-10 relative ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
+        {item.alignment === 'left' ? (
+          <>
+            <div class="w-1/2 flex justify-end pr-6">
+              <img src={item.imgSrc} alt={item.title} class="h-[350px] w-[400px] object-cover object-center" />
+            </div>
+            <div class="relative flex justify-center items-center w-12">
+              <div class="relative z-10 size-7 flex justify-center items-center">
+                <div class="size-2 rounded-full bg-gray-500"></div>
+              </div>
+              <div class="absolute after:content-[''] after:absolute after:top-7 after:bottom-0 after:w-px after:bg-gray-200 "></div>
+            </div>
+            <div class="flex flex-col w-1/2 pt-0.5 pb-8 justify-center pl-6">
+              <h3 class="flex gap-x-1.5 ">
+                {item.year}: {item.title}
+              </h3>
+              <p class="mt-1 ">{item.description}</p>
+            </div>
+          </>
+        ) : (
+          <>
+            <div class="w-1/2 flex justify-start pl-6">
+              <img src={item.imgSrc} alt={item.title} class="h-[350px] w-[400px] object-cover object-center" />
+            </div>
+            <div class="relative flex justify-center items-center w-12">
+              <div class="relative z-10 size-7 flex justify-center items-center">
+                <div class="size-2 rounded-full bg-gray-500 "></div>
+              </div>
+              <div class="absolute after:content-[''] after:absolute after:top-7 after:bottom-0 after:w-px after:bg-gray-200 "></div>
+            </div>
+            <div class="w-1/2 flex flex-col items-end justify-center pr-6">
+              <h3 class="flex gap-x-1.5 text-right">
+                {item.year}: {item.title}
+              </h3>
+              <p class="mt-1 text-right">
+                {item.description}
+              </p>
+            </div>
+          </>
+        )}
+      </div>
+    ))}
+  </div>
+
+  <h3 class="uppercase">{t('about.timelineFuture') ?? '2024 & MÁS ALLÁ'}</h3>
+</section>

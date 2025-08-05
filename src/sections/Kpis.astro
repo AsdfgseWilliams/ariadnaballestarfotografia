@@ -1,23 +1,28 @@
 ---
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
+
+
+const lang = getLangFromUrl(Astro.url) as 'es' | 'en';
+const t = useTranslations(lang);
 ---
 <section class=" bg-[#313b41] py-16 items-center justify-center">
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto text-center text-white">
 
     <div class="col-span-1 md:border-r-white md:border-r-solid md:border-r-[1px]">
         <p class="text-5xl font-claster"> +8</p>
-        <p class="text-xl font-eb italic font-medium">Años capturando emociones</p>
+        <p class="text-xl font-eb italic font-medium">{t('about.kpi1')}</p>
     </div>
     <div class="col-span-1  lg:border-r-white lg:border-r-solid lg:border-r-[1px]">
         <p class="text-5xl font-claster"> +99</p>
-        <p class="text-xl font-eb italic font-medium">Clientes felices</p>
+        <p class="text-xl font-eb italic font-medium">{t('about.kpi2')}</p>
     </div>
     <div class="col-span-1 md:border-r-white md:border-r-solid md:border-r-[1px]">
         <p class="text-5xl font-claster"> +100</p>
-        <p class="text-xl font-eb italic font-medium">Bodas fotografiadas</p>
+        <p class="text-xl font-eb italic font-medium">{t('about.kpi3')}</p>
     </div>
     <div class="col-span-1">
         <p class="text-5xl font-claster"> 100%</p>
-        <p class="text-xl font-eb italic font-medium">Amor por mi trabajo</p>
+        <p class="text-xl font-eb italic font-medium">{t('about.kpi4')}</p>
     </div>
 
 </div>

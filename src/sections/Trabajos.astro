@@ -1,10 +1,16 @@
 ---
+import { getLangFromUrl, useTranslations, useTranslatedPath } from "src/i18n/utils";
+
+
+const lang = getLangFromUrl(Astro.url) as 'es' | 'en';
+const translatePath = useTranslatedPath(lang);
+const t = useTranslations(lang);
 ---
 <section class="py-32 mx-auto justify-center text-center" style="
     background-image: url('/img/12.webp'), linear-gradient(90deg, #ffffff 59%, rgba(255, 255, 255, 0.7) 67%);
     background-blend-mode: overlay; background-size: cover;
 ">
-<h2>MIS TRABAJOS</h2>
+<h2>{t('home.trabajos.h2')}</h2>
 
     <div class="py-24 max-w-[1024px] mx-auto justify-center" >  
         <div class="grid grid-cols-3 gap-4 pt-2">

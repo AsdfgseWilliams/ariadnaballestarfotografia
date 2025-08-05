@@ -1,7 +1,9 @@
 ---
-import { getLangFromUrl, useTranslations } from "src/i18n/utils";
+import { slugMap } from 'src/i18n/slug-map';
+import { getLangFromUrl, useTranslations } from 'src/i18n/utils';
+import { getRelativeLocaleUrl } from 'astro:i18n';
 
-const lang = getLangFromUrl(Astro.url);
+const lang = getLangFromUrl(Astro.url) as 'es' | 'en';
 const t = useTranslations(lang);
 
 const p4String = t('home.about.p4');
@@ -49,8 +51,7 @@ const p7String = t('home.about.p7');
         </p>
         </div> 
 
-        <a href="/sobre-mi" class="link-button mt-8">
-            {t('button.2')}
+        <a class="link-button mt-8" href={getRelativeLocaleUrl(lang, slugMap['sobre-mi'][lang])}>{t('nav.sobre-mi')}</a>
         </a>
     </div>
 </section>
