@@ -1,0 +1,28 @@
+---
+import Layout from 'src/layouts/Layout.astro';
+import SesionParejas from 'src/sections/SesionParejas.astro';
+import SesionPersonal from 'src/sections/SesionPersonal.astro';
+import SesionFamiliar from 'src/sections/SesionFamiliar.astro';
+import Formcontacto from 'src/sections/Formcontacto.astro';
+import Herosesiones from 'src/sections/Herosesiones.astro';
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout title={t('layout.photoshoot.title')} 
+description={t('layout.photoshoot.description')} 
+keywords={t('layout.photoshoot.keywords')}>
+	<Herosesiones />	s
+	<SesionParejas />
+	<SesionPersonal />
+	<SesionFamiliar />
+	<Formcontacto />
+</Layout>
+
+<style>
+body{
+	background-color: white !important;
+}
+</style>

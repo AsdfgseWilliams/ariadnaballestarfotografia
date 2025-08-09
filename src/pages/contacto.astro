@@ -1,0 +1,18 @@
+---
+import Layout from 'src/layouts/Layout.astro';
+import Datos from 'src/sections/Datos.astro';
+import Formcontacto from 'src/sections/Formcontacto.astro';
+import Faq from 'src/sections/Faq.astro';
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+<Layout title={t('layout.contact.title')} 
+description={t('layout.contact.description')} 
+keywords={t('layout.contact.keywords')}
+>
+    <Datos />
+	<Formcontacto />
+	<Faq />
+</Layout>

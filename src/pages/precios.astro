@@ -1,0 +1,28 @@
+---
+import Layout from 'src/layouts/Layout.astro';
+import Heroprecios from 'src/sections/Heroprecios.astro';
+import PrecioBodas from 'src/sections/PrecioBodas.astro';
+import PrecioSesiones from 'src/sections/PrecioSesiones.astro';
+import CTA2 from 'src/sections/CTA2.astro';
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+<Layout title={t('layout.prices.title')}
+description={t('layout.prices.description')} 
+keywords={t('layout.prices.keywords')}
+>
+	<Heroprecios />
+    <PrecioBodas />
+	<CTA2  backgroundImage="/img/25.webp" 
+    title={t('cta2.precio.title1')} 
+    paragraph={t('cta2.precio.paragraph1')}
+    buttonText={t('cta2.precio.buttonText1')} />
+    <PrecioSesiones  />
+	<CTA2  backgroundImage="/img/24.webp" 
+    title={t('cta2.precio.title2')  } 
+    paragraph={t('cta2.precio.paragraph2')} 
+    buttonText={t('cta2.precio.buttonText2')} />
+</Layout>
+

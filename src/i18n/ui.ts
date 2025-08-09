@@ -11,6 +11,36 @@ export const showDefaultLang = false; // Cambiar a false para no mostrar /es
 export const ui: Record<string, Record<string, Record<string, string>>> = {
     en: {
 
+        layout:{
+            'index.title': 'Wedding photographer in Barcelona - Ariadna Ballestar',
+            'index.description': 'Wedding photographer in Barcelona. Capture authentic moments for your special day. Contact for an exceptional report.',
+            'index.keywords': 'Elegant wedding photography, wedding photographer in Barcelona, wedding reportages',
+
+            'about.title': 'Meet Ariadna Ballestar: Wedding photographer in Barcelona',
+            'about.description': 'Discover the story of Ariadna Ballestar, wedding photographer in Barcelona. Capturing authentic moments with passion.',
+            'about.keywords': 'about me wedding photographer, biography Ariadna Ballestar, wedding photographer in Barcelona',
+
+            'contact.title': 'Contact Ariadna Ballestar Photography in Barcelona',
+            'contact.description': 'Do you have questions about wedding photography or photo shoots? Contact us and let’s discuss your ideas.',
+            'contact.keywords': 'contact wedding photographer Barcelona, photography consultation',
+
+            'blog.title': 'Blog of Ariadna Ballestar Photography',
+            'blog.description': 'Discover the latest news and updates from Ariadna Ballestar Photography. Stay up-to-date with the world of wedding photography.',
+            'blog.keywords': 'wedding photographer blog, latest news, updates',
+
+            'prices.title': 'Prices of Ariadna Ballestar Photography',
+            'prices.description': 'Prices and services for wedding photographers in Barcelona. We capture authentic moments with elegant style.',
+            'prices.keywords': 'wedding photographer prices Barcelona, wedding photographer services Barcelona, wedding photographer Barcelona',
+
+            'photoshoot.title': 'Photoshoots in Barcelona',
+            'photoshoot.description': 'Wedding Photography Sessions in Barcelona. We capture authentic moments with elegant style.',
+            'photoshoot.keywords': 'sesiones fotógrafa bodas Barcelona, fotógrafa de bodas Barcelona, fotógrafa de bodas Barcelona',
+
+            'weddings.title': 'Weddings Wedding Photographer in Barcelonaa',
+            'weddings.description': 'Discover the best weddings in Barcelona. Capture authentic moments for your special day.',
+            'weddings.keywords': 'weddings in barcelona, best weddings, wedding photographer Barcelona',
+        },
+
         nav: {
             'bodas': 'Weddings in Barcelona',
             'sesiones': 'Photoshoots',
@@ -48,9 +78,17 @@ export const ui: Record<string, Record<string, Record<string, string>>> = {
         },
 
         cta2:{
-            title: 'I CAN’T WAIT TO CAPTURE YOUR WEDDING DAY.',
-            paragraph: 'Immortalising your love story with every click, capturing moments full of magic and emotion.',
-            buttonText: 'Work with me',
+            'title': 'I CAN’T WAIT TO CAPTURE YOUR WEDDING DAY.',
+            'paragraph': 'Immortalising your love story with every click, capturing moments full of magic and emotion.',
+            'buttonText': 'Work with me',
+
+            'precio.title1': 'With every click, we weave an eternal story, transforming fleeting moments into unforgettable memories at weddings in Barcelona',
+            'precio.paragraph1': 'Photography captures fleeting moments, but the value of those moments lasts forever in our memories',
+            'precio.buttonText1': 'Let’s work together',
+
+            'precio.title2': 'Ready to get started? Let’s do it!',
+            'precio.paragraph2': 'I’m just an email away',
+            'precio.buttonText2': 'Contact me',
         },
 
         home: {
@@ -182,10 +220,45 @@ export const ui: Record<string, Record<string, Record<string, string>>> = {
             'privacyPolicy': "Please, review the privacy policy.",
 
             'submit': "Submit",
-        }
+        },
+
+        blog: {
+            'h1': 'Blog of a wedding photographer in Barcelona',
+        },
         
     },
     es: {
+
+        layout:{
+            'index.title': 'Fotógrafa de bodas en Barcelona - Ariadna Ballestar',
+            'index.description': 'Fotógrafa de bodas en Barcelona. Capturo momentos auténticos para tu día especial. Contacta para un reportaje excepcional.',
+            'index.keywords': 'Fotografía de bodas elegante, fotógrafa de bodas en Barcelona, reportajes de bodas',
+
+            'about.title': 'Conoce a Ariadna Ballestar: Fotógrafa de Bodas en Barcelona',
+            'about.description': 'Descubre la historia de Ariadna Ballestar, fotógrafa de bodas en Barcelona. Capturando momentos auténticos con pasión.',
+            'about.keywords': 'sobre mí fotógrafa bodas, biografía Ariadna Ballestar, fotógrafa de bodas Barcelona',
+
+            'contact.title': 'Contacta con Ariadna Ballestar Fotografía en Barcelona',
+            'contact.description': '¿Tienes preguntas sobre fotografía de bodas o sesiones? Contáctanos y hablemos de tus ideas.',
+            'contact.keywords': 'contacto fotógrafo bodas Barcelona, consulta fotografía',
+
+            'blog.title': 'Blog de una fotógrafa en Barcelona',
+            'blog.description': 'Fotografía única en Barcelona: sesiones para parejas, familias e individuales. Capturamos momentos auténticos con estilo elegante.',
+            'blog.keywords': 'fotógrafa en Barcelona, sesiones fotográficas Barcelona, fotos de pareja Barcelona, fotografía familiar Barcelona, sesiones de fotos en Barcelona, fotografía de bodas Barcelona, fotos románticas Barcelona, retratos Barcelona',
+
+            'prices.title': 'Precios Fotógrafa de Bodas en Barcelona',
+            'prices.description': 'Precios y servicios de fotógrafa de bodas en Barcelona. Capturamos momentos auténticos con estilo elegante.',
+            'prices.keywords': 'precios fotógrafa bodas Barcelona, servicios fotógrafa bodas Barcelona, fotógrafa de bodas Barcelona',
+
+            'photoshoot.title': 'Sesiones Fotógrafa de Bodas en Barcelona',
+            'photoshoot.description': 'Sesiones Fotógrafa de Bodas en Barcelona. Capturamos momentos auténticos con estilo elegante.',
+            'photoshoot.keywords': 'sesiones fotógrafa bodas Barcelona, fotógrafa de bodas Barcelona, fotógrafa de bodas Barcelona',
+
+            'weddings.title': 'Bodas Fotógrafa de Bodas en Barcelona',
+            'weddings.description': 'Bodas Fotógrafa de Bodas en Barcelona. Capturamos momentos auténticos con estilo elegante.',
+            'weddings.keywords': 'bodas fotógrafa bodas Barcelona, fotógrafa de bodas Barcelona, fotógrafa de bodas Barcelona',
+
+        },
 
          nav: {
             'bodas': 'Bodas en Barcelona',
@@ -222,9 +295,17 @@ export const ui: Record<string, Record<string, Record<string, string>>> = {
         },
 
         cta2:{
-            title: 'NO PUEDO ESPERAR PARA CAPTURAR EL DÍA DE VUESTRA BODA',
-            paragraph: 'Inmortalizando vuestra historia de amor con cada clic, capturando momentos llenos de magia y emoción.',
-            buttonText: 'Trabajemos juntos',
+            'title': 'NO PUEDO ESPERAR PARA CAPTURAR EL DÍA DE VUESTRA BODA',
+            'paragraph': 'Inmortalizando vuestra historia de amor con cada clic, capturando momentos llenos de magia y emoción.',
+            'buttonText': 'Trabajemos juntos',
+
+            'precio.title1': 'En cada clic, tejemos una historia eterna, transformando momentos fugaces en recuerdos inolvidables en las bodas de Barcelona',
+            'precio.paragraph1': 'La fotografía captura instantes efímeros, pero el valor de esos momentos perdura en los recuerdos para siempre',
+            'precio.buttonText1': 'Trabajemos juntos',
+
+            'precio.title2': '¿Lista para empezar? ¡Hagámoslo!',
+            'precio.paragraph2': 'Estoy a un e-mail de distancia',
+            'precio.buttonText2': 'Contáctame',
         },
         home: {
             'hero.h1': 'Fotógrafa de bodas en Barcelona',
@@ -354,10 +435,13 @@ export const ui: Record<string, Record<string, Record<string, string>>> = {
             'privacyPolicy': "Por favor, revisa la política de privacidad.",
 
             'submit': "Enviar",
-        }
+        },
+
+        blog: {
+            'h1': 'Blog de un fotógrafo de bodas en Barcelona',
+        },
 
     
     }
-
         
     }

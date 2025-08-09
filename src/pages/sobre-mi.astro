@@ -13,9 +13,10 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 ---
-<Layout title='Conoce a Ariadna Ballestar: Fotógrafa de Bodas en Barcelona' 
-description='Descubre la historia de Ariadna Ballestar, fotógrafa de bodas en Barcelona. Capturando momentos auténticos con pasión.' 
-keywords="sobre mí fotógrafa bodas, biografía Ariadna Ballestar, fotógrafa de bodas Barcelona">
+<Layout title={t('layout.about.title')} 
+description={t('layout.about.description')} 
+keywords={t('layout.about.keywords')}
+>
     <Heroabout />
     <Kpis />
     <Aboutme /> 

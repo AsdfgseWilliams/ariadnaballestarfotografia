@@ -1,0 +1,32 @@
+---
+import Layout from 'src/layouts/Layout.astro';
+import Herobodas from 'src/sections/Herobodas.astro';
+import Diferente from 'src/sections/Diferente.astro';
+import CTAbodas from 'src/sections/CTAbodas.astro';
+import Proceso from 'src/sections/Proceso.astro';
+import Opinionesbodas from 'src/sections/Opinionesbodas.astro';
+import Faq from 'src/sections/Faq.astro';
+import Formcontacto from 'src/sections/Formcontacto.astro';
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+<Layout title={t('layout.weddings.title')} 
+description={t('layout.weddings.description')} 
+keywords={t('layout.weddings.keywords')}
+>
+	<Herobodas />
+    <Diferente />
+	<CTAbodas />
+    <Proceso />
+    <Opinionesbodas />
+    <Faq />
+    <Formcontacto />
+</Layout>
+
+<style>
+    body {
+        background-color: white !important;
+    }
+</style>
