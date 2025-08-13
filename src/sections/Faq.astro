@@ -1,44 +1,48 @@
 ---
-const faqs = [
+import { getLangFromUrl, useTranslations, useTranslatedPath } from "src/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url) as 'es' | 'en';
+const t = useTranslations(lang);
+const faqs = [ 
   {
-    question: "¿Trabajas con parejas LGBTQIA+?",
-    answer: "Sí, absolutamente. Me enorgullece trabajar con parejas de todas las orientaciones sexuales y de género, y estoy comprometida a crear un ambiente seguro, inclusivo y respetuoso para todos mis clientes, independientemente de su identidad de género u orientación sexual.El amor es amor y mi objetivo es capturar la verdadera esencia de cada pareja, sin importar su identidad o género.",
+    question: t('contact.faq.question1'),
+    answer: t('contact.faq.answer1'),
   },
   {
-    question: "¿Viajas a otras ciudades y países para celebrar bodas?",
-    answer: "Sí, me encanta viajar y estoy disponible para viajar a otras ciudades y países para fotografiar bodas. He tenido la oportunidad de trabajar en diferentes lugares del mundo y siempre me emociona la posibilidad de descubrir nuevos rincones y capturar momentos inolvidables en diferentes escenarios.Si estás planeando una boda fuera de Barcelona, por favor házmelo saber y podremos hablar los detalles para hacer de tu día una experiencia inolvidable.",
+    question: t('contact.faq.question2'),
+    answer: t('contact.faq.answer2'),
   },
   {
-    question: "¿Con cuánto tiempo de antelación debemos ponernos en contacto contigo?",
-    answer: "En general, no hay un tiempo mínimo establecido para ponerse en contacto conmigo, pero siempre es recomendable hacerlo lo antes posible. Para sesiones, unas pocas semanas suelen ser suficientes, pero en el caso de bodas o comuniones, se recomienda hacer la reserva con un año de antelación para garantizar la disponibilidad de fechas y tener todo planificado con suficiente tiempo. Estoy siempre dispuesta a trabajar contigo y hacer que tus recuerdos más importantes se conviertan en fotografías memorables.",
+    question: t('contact.faq.question3'),
+    answer: t('contact.faq.answer3'),
   },
   {
-    question: "¿Qué pasa si no queremos que se publiquen nuestras fotos en tus redes sociales?",
-    answer: "Entiendo y respeto totalmente su decisión de mantener sus fotos en privado. Sin embargo, como fotógrafa, me esfuerzo en crear obras de arte únicas y de calidad, las cuales uso para mostrar mi trabajo a futuros clientes.Por esta razón, si decides mantener tus fotos privadas, el precio del paquete o sesión se incrementará en un 25% para compensar la pérdida de oportunidad de mostrar mi trabajo a otros posibles clientes.",
+    question: t('contact.faq.question4'),
+    answer: t('contact.faq.answer4'),
   },
   {
-    question: "¿Qué pasa si tenemos que cancelar o cambiar la fecha?",
-    answer: "Entiendo que la planificación de una sesión y una boda puede ser impredecible y pueden surgir cambios inesperados. Si ya has reservado mi servicio y necesitas cancelar o cambiar la fecha, mi política establece que el depósito inicial no es reembolsable. Sin embargo, si necesitas cambiar la fecha y estoy disponible para la nueva fecha propuesta, no se requerirá un nuevo depósito. Si no estoy disponible en la nueva fecha, el depósito inicial seguirá siendo no reembolsable.",
+    question: t('contact.faq.question5'),
+    answer: t('contact.faq.answer5'),
   },
   {
-    question: "¿Entregas las fotos originales sin editar?",
-    answer: "No, no lo hago porque la edición es la mitad del proceso/magia que hay detrás de las imágenes, y sin ese enorme paso las imágenes se quedan a medias. Me comprometo a no omitir ninguna foto que quieras/necesites, y si crees que he omitido alguna foto, ¡sólo tienes que pedírmelo! Estaré encantada de revisar mis imágenes y enviártelas. ¡No dejaré que te pierdas ningún recuerdo!",
+    question: t('contact.faq.question6'),
+    answer: t('contact.faq.answer6'),
   },
   {
-    question: "¿Cuándo recibiremos las fotografías?",
-    answer: "El tiempo de edición de las fotos de tu boda variará según el paquete que hayas contratado, pero por lo general oscila entre 6 y 8 semanas desde la fecha del evento. En el caso de las sesiones, el tiempo de entrega es de un máximo de 4 semanas. Si necesitas tus fotos antes de este plazo, también ofrezco la opción de saltarte la cola y recibir tus imágenes en un máximo de una semana. ¡No dudes en preguntarme más sobre estas opciones!"
+    question: t('contact.faq.question7'),
+    answer: t('contact.faq.answer7'),
   },
   {
-    question: "¿Cómo puedo reservar?",
-    answer: `Para las bodas se realizará una paga y señal del 40% del servicio contratado para formalizar la reserva, otro 40% la semana antes de la boda y el 20% restante antes de entregar las fotografías en digital. Para reservar sesiones de fotos se requiere un 50% de anticipo a modo de reserva y el 50% restante se debe pagar el día de la sesión. Acepto transferencia bancaria, bizum y efectivo.`
+    question: t('contact.faq.question8'),
+    answer: t('contact.faq.answer8'),
   },
   {
-    question: "¿Me ayudarás a planificar la sesión?",
-    answer: `Por supuesto! Como fotógrafa experimentada, estoy aquí para ayudarte a planificar tu sesión y asegurarme de que obtengas las fotos que estás buscando. Desde la elección del lugar adecuado hasta la selección del vestuario y la preparación del equipo necesario, estoy aquí para guiarte en cada paso del camino y hacer que tu sesión sea una experiencia inolvidable. Juntas crearemos fotografías hermosas y significativas que capturarán la esencia de tu momento especial.`
+    question: t('contact.faq.question9'),
+    answer: t('contact.faq.answer9'),
   },
   {
-    question: "¿Ofreces servicios adicionales como álbumes de fotos o impresiones?",
-    answer: `Por supuesto, me encanta ofrecer a mis clientes servicios adicionales para que puedan tener recuerdos duraderos y tangibles de sus momentos especiales. Ofrezco la posibilidad de crear álbumes personalizados de alta calidad, impresiones en diferentes tamaños y formatos, así como una hermosa cajita de madera con fotografías impresas y un pendrive con todas las imágenes de la sesión o boda. Estoy segura de que encontrarás algo que se ajuste a tus necesidades.`
+    question: t('contact.faq.question10'),
+    answer: t('contact.faq.answer10'),
   }
 ];
 

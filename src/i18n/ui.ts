@@ -222,6 +222,43 @@ export const ui: Record<string, Record<string, Record<string, string>>> = {
             'submit': "Submit",
         },
 
+        contact:{
+
+            'datos.h1': 'Ask for Ari',
+            'datos.p1': 'I feel very lucky that you are considering me to portray your project!',
+            'datos.p2': 'To start talking about the possibilities, just send me an email or fill in the form below, and I’ll take it from there!',
+            'datos.p3': 'Monday - Friday: 9:00 AM –  9:00 PM',
+            'faq.question1': 'Do you work with LGBTQIA+ couples?',
+            'faq.answer1': 'Yes, absolutely. I am proud to work with couples of all sexual and gender orientations, and I am committed to creating a safe, inclusive and respectful environment for all my clients, regardless of their gender identity or sexual orientation.<br>Love is love and my goal is to capture the true essence of each couple, regardless of their identity or gender.',
+
+            'faq.question2': 'Do you travel to other cities and countries for weddings?',
+            'faq.answer2': 'Yes, I love to travel and I am available to travel to other cities and countries to photograph weddings. I have had the opportunity to work in different places around the world and I am always excited to discover new places and capture unforgettable moments in different settings.<br>If you are planning a wedding outside Barcelona, please let me know and we can discuss the details to make your day an unforgettable experience.',
+
+            'faq.question3': 'How far in advance should we contact you?',
+            'faq.answer3' : 'In general, there is no minimum time limit for contacting me, but it is always advisable to contact me as soon as possible.<br>For sessions, a few weeks are usually enough, but in the case of weddings or communions, it is recommended to book a year in advance to guarantee the availability of dates and to have everything planned in good time.<br>I am always ready to work with you and make your most important memories into memorable photographs.',
+
+            'faq.question4': 'What if we don’t want our photos to be published on your social networks?',
+            'faq.answer4': 'I fully understand and respect your decision to keep your photos private. However, as a photographer, I strive to create unique and quality artwork, which I use to showcase my work to future clients.<br>For this reason, if you decide to keep your photos private, the price of the package or session will be increased by 25% to compensate for the lost opportunity to show my work to other potential clients.',
+
+            'faq.question5': 'What happens if we have to cancel or change the date?',
+            'faq.answer5': 'I understand that planning a shoot and a wedding can be unpredictable and unexpected changes can occur.<br>If you have already booked my service and need to cancel or reschedule, my policy states that the initial deposit is non-refundable.<br>However, if you need to change the date and I am available for the proposed new date, no new deposit will be required.<br>If I am not available on the new date, the initial deposit will remain non-refundable.',
+
+            'faq.question6': 'Do you deliver the original unedited photos?',
+            'faq.answer6': 'No, I don’t, because editing is half the process/magic behind the images, and without that huge step the images are half-finished.<br>I promise not to omit any photos you want/need, and if you think I’ve omitted any photos, just ask me!<br>I’ll be happy to review my images and send them to you - I won’t let you miss any memories!',
+
+            'faq.question7': 'When will we receive the photographs?',
+            'faq.answer7': 'The editing time for your wedding photos will vary depending on the package you have booked, but generally ranges from 6-8 weeks from the date of the event.<br>In the case of sessions, the delivery time is a maximum of 4 weeks.<br>If you need your photos before this deadline, I also offer the option to skip the queue and receive your images within a maximum of one week.<br>Don’t hesitate to ask me more about these options!',
+
+            'faq.question8': 'How can I book?',
+            'faq.answer8': 'For weddings, a deposit of 40% of the contracted service will be made.<br>To formalise the reservation, another 40% the week before the wedding, and the remaining 20% before the digital photos are delivered. To book photo shoots a 50% deposit is required as a reservation and the remaining 50% must be paid on the day of the shoot. <br>I accept bank transfer, bizum and cash.',
+
+            'faq.question9': 'Will you help me plan the session?',
+            'faq.answer9': 'Of course! As an experienced photographer, I’m here to help you plan your session and make sure you get the photos you’re looking for.<br>From choosing the right location to selecting the right wardrobe and preparing the necessary equipment, I am here to guide you every step of the way and make your shoot an unforgettable experience.<br>Together we will create beautiful and meaningful photographs that will capture the essence of your special moment.',
+
+            'faq.question10': 'Do you offer additional services such as photo albums or prints?',
+            'faq.answer10': 'Of course, I love to offer my clients additional services so that they can have lasting and tangible memories of their special moments.<br>I offer the possibility of creating high quality personalised albums, prints in different sizes and formats, as well as a beautiful little wooden box with printed photographs and a pendrive with all the images of the session or wedding.<br>I am sure you will find something to suit your needs.',
+        },
+
         blog: {
             'h1': 'Blog of a wedding photographer in Barcelona',
         },
@@ -435,6 +472,34 @@ export const ui: Record<string, Record<string, Record<string, string>>> = {
             'privacyPolicy': "Por favor, revisa la política de privacidad.",
 
             'submit': "Enviar",
+        },
+
+        contact:{
+
+            'datos.h1': 'Pregunta por Ari',
+            'datos.p1': '¡Me siento muy afortunada de que me estéis considerando para retratar tu proyecto!',
+            'datos.p2': 'Para empezar a hablar de las posibilidades, simplemente envíame un correo o rellena el formulario que aparece abajo, ¡y a partir de ahí, lo manejo yo!',
+            'datos.p3': 'Lunes- Viernes: 9:00 AM –  9:00 PM',
+            'faq.question1': '¿Trabajas con parejas LGBTQIA+?',
+            'faq.answer1': 'Sí, absolutamente. Me enorgullece trabajar con parejas de todas las orientaciones sexuales y de género, y estoy comprometida a crear un ambiente seguro, inclusivo y respetuoso para todos mis clientes, independientemente de su identidad de género u orientación sexual.El amor es amor y mi objetivo es capturar la verdadera esencia de cada pareja, sin importar su identidad o género.',
+            'faq.question2': '¿Viajas a otras ciudades y países para celebrar bodas?',
+            'faq.answer2': 'Sí, me encanta viajar y estoy disponible para viajar a otras ciudades y países para fotografiar bodas. He tenido la oportunidad de trabajar en diferentes lugares del mundo y siempre me emociona la posibilidad de descubrir nuevos rincones y capturar momentos inolvidables en diferentes escenarios.Si estás planeando una boda fuera de Barcelona, por favor házmelo saber y podremos hablar los detalles para hacer de tu día una experiencia inolvidable.',
+            'faq.question3': '¿Con cuánto tiempo de antelación debemos ponernos en contacto contigo?',
+            'faq.answer3' : 'En general, no hay un tiempo mínimo establecido para ponerse en contacto conmigo, pero siempre es recomendable hacerlo lo antes posible. Para sesiones, unas pocas semanas suelen ser suficientes, pero en el caso de bodas o comuniones, se recomienda hacer la reserva con un año de antelación para garantizar la disponibilidad de fechas y tener todo planificado con suficiente tiempo. Estoy siempre dispuesta a trabajar contigo y hacer que tus recuerdos más importantes se conviertan en fotografías memorables.',
+            'faq.question4': '¿Que pasa si no queremos que se publiquen nuestras fotos en tus redes sociales?',
+            'faq.answer4': 'Entiendo y respeto totalmente su decisión de mantener sus fotos en privado. Sin embargo, como fotógrafa, me esfuerzo en crear obras de arte únicas y de calidad, las cuales uso para mostrar mi trabajo a futuros clientes.Por esta razón, si decides mantener tus fotos privadas, el precio del paquete o sesión se incrementará en un 25% para compensar la pérdida de oportunidad de mostrar mi trabajo a otros posibles clientes.',
+            'faq.question5': '¿Qué pasa si tenemos que cancelar o cambiar la fecha?',
+            'faq.answer5': 'Entiendo que la planificación de una sesión y una boda puede ser impredecible y pueden surgir cambios inesperados. Si ya has reservado mi servicio y necesitas cancelar o cambiar la fecha, mi política establece que el depósito inicial no es reembolsable. Sin embargo, si necesitas cambiar la fecha y estoy disponible para la nueva fecha propuesta, no se requerirá un nuevo depósito. Si no estoy disponible en la nueva fecha, el depósito inicial seguirá siendo no reembolsable.',
+            'faq.question6': '¿Entregas las fotos originales sin editar?',
+            'faq.answer6': 'No, no lo hago porque la edición es la mitad del proceso/magia que hay detrás de las imágenes, y sin ese enorme paso las imágenes se quedan a medias. Me comprometo a no omitir ninguna foto que quieras/necesites, y si crees que he omitido alguna foto, ¡sólo tienes que pedírmelo! Estaré encantada de revisar mis imágenes y enviártelas. ¡No dejaré que te pierdas ningún recuerdo!',
+            'faq.question7': '¿Cuándo recibiremos las fotografías?',
+            'faq.answer7': 'El tiempo de edición de las fotos de tu boda variará según el paquete que hayas contratado, pero por lo general oscila entre 6 y 8 semanas desde la fecha del evento. En el caso de las sesiones, el tiempo de entrega es de un máximo de 4 semanas. Si necesitas tus fotos antes de este plazo, también ofrezco la opción de saltarte la cola y recibir tus imágenes en un máximo de una semana. ¡No dudes en preguntarme más sobre estas opciones!',
+            'faq.question8': '¿Como puedo reservar?',
+            'faq.answer8': 'Para las bodas se realizará una paga y señal del 40% del servicio contratado para formalizar la reserva, otro 40% la semana antes de la boda y el 20% restante antes de entregar las fotografías en digital. Para reservar sesiones de fotos se requiere un 50% de anticipo a modo de reserva y el 50% restante se debe pagar el día de la sesión. Acepto transferencia bancaria, bizum y efectivo.',
+            'faq.question9': '¿Me ayudarás a planificar la sesión?',
+            'faq.answer9': 'Por supuesto! Como fotógrafa experimentada, estoy aquí para ayudarte a planificar tu sesión y asegurarme de que obtengas las fotos que estás buscando. Desde la elección del lugar adecuado hasta la selección del vestuario y la preparación del equipo necesario, estoy aquí para guiarte en cada paso del camino y hacer que tu sesión sea una experiencia inolvidable. Juntas crearemos fotografías hermosas y significativas que capturarán la esencia de tu momento especial.',
+            'faq.question10': '¿Ofreces servicios adicionales como álbumes de fotos o impresiones?',
+            'faq.answer10': 'Por supuesto, me encanta ofrecer a mis clientes servicios adicionales para que puedan tener recuerdos duraderos y tangibles de sus momentos especiales. Ofrezco la posibilidad de crear álbumes personalizados de alta calidad, impresiones en diferentes tamaños y formatos, así como una hermosa cajita de madera con fotografías impresas y un pendrive con todas las imágenes de la sesión o boda. Estoy segura de que encontrarás algo que se ajuste a tus necesidades.',
         },
 
         blog: {
