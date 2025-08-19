@@ -1,4 +1,11 @@
 ---
+import { getLangFromUrl, useTranslatedPath, useTranslations } from 'src/i18n/utils';
+import { slugMap } from 'src/i18n/slug-map';
+import { getRelativeLocaleUrl } from 'astro:i18n';
+
+const lang = getLangFromUrl(Astro.url) as 'es' | 'en';
+const translatePath = useTranslatedPath(lang);
+const t = useTranslations(lang);
 ---
 <section class="max-w-[65%] mx-auto mb-40">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-0">
@@ -6,16 +13,13 @@
             <img src="/img/26.webp" class="max-w-[75%] h-auto object-cover">
         </div>
         <div class="p-8 flex flex-col justify-center">
-            <h2>Bodas en Barcelona</h2>
-            <p class="pt-8">En mi página de bodas, encontrarás opciones adaptadas a tus necesidades y deseos. Pero más allá de los números, quiero que sepas que mi compromiso es capturar vuestros recuerdos de boda con la sensibilidad y el arte que se merecen. Cada imagen será un testimonio perdurable de vuestro amor, un legado visual que os acompañará a lo largo de vuestro camino juntos.</p>
-            <p class="py-8">Permitidme ser la guardiana de vuestros momentos más preciosos en vuestra boda en Barcelona. Juntos, crearemos una colección de recuerdos que trascenderán el tiempo, evocarán emociones y te permitirán revivir una y otra vez la magia de ese día inolvidable.</p>
-            <p class="pt-8 font-eb text-xl italic border-t-[1px] border-t-black">La inversión empieza en 997€</p>
-            <a 
-                href="/downloads/Ariadna Ballestar-Guía de precios.pdf" 
-                download="Ariadna_Ballestar_Guia_de_precios.pdf" 
-                class="mt-4 link-button">
-                Descarga la guía de precios
-            </a>
+            <h2>{t('prices.bodas.h2')}</h2>
+            <p class="pt-8">{t('prices.bodas.p1')}</p>
+            <p class="py-8">{t('prices.bodas.p2')}</p>
+            <p class="pt-8 font-eb text-xl italic border-t-[1px] border-t-black">{t('prices.bodas.p3')}</p>
+
+            <a href={getRelativeLocaleUrl(lang, slugMap['priceGuide'][lang])} class="mt-4 link-button">{t('prices.bodas.button')}</a>
+
         </div>
     </div>
 </section>

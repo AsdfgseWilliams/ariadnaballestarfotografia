@@ -247,6 +247,37 @@ export const ui: Record<string, Record<string, Record<string, string>>> = {
 
         },
 
+        photoshoots: {
+            'hero.h1': 'Photoshoot in Barcelona',
+            'hero.h2': 'I’ll be with you in the most special moments of your life<br>to create unforgettable memories.',
+            'hero.button': 'Shall we start?',
+            'slide1.title' : 'asdfasdf',
+        },
+
+        prices: {
+            'hero.h1': 'HOW MUCH ARE YOUR MEMORIES?',
+            'hero.h2': 'Wedding photography prices and packages in Barcelona',
+            'hero.p1': 'Photography, <strong>a noble art capable of transcending the limits of time</strong>, gives us the power to preserve those most precious memories forever. By creating a visual legacy, it stands as the guardian of our most meaningful experiences, allowing us to relive them again and again.',
+            'hero.p2': 'The value of memories lies in the priceless ability to keep them intact over time. However, these visual treasures cannot be measured by a single standard. <strong>Every image tells a unique story, deserving of personalized attention.</strong>',
+            'hero.button': 'Contact me!',
+
+            'bodas.h2': 'Weddings in Barcelona',
+            'bodas.p1': 'On my weddings page, you will find options tailored to your needs and desires. But beyond the numbers, I want you to know that my commitment is to capture your wedding memories with the sensitivity and artistry they deserve. Each image will be a lasting testimony of your love, a visual legacy that will accompany you throughout your journey together.',
+            'bodas.p2': 'Allow me to be the guardian of your most precious moments on your wedding day in Barcelona. Together, we will create a collection of memories that will transcend time, evoke emotions, and let you relive the magic of that unforgettable day again and again.',
+            'bodas.p3': 'Investment starts at 997€',
+            'bodas.button': 'Download the price guide',
+
+            'sesiones.h2': 'Photo Sessions in Barcelona',
+            'sesiones.p1': 'Each memory is a capsule of emotions, a window into lived and shared moments. They are bridges connecting past, present, and future, transporting you to places and people who have left an indelible mark on your life.',
+            'sesiones.p2': 'Within each memory lies a universe of sensations, laughter, tears, lessons, and achievements. They are fundamental pillars that support the construction of your own story, shape your experiences, and forge your worldview.',
+            'sesiones.p3': 'The value of your memories lies in their ability to evoke smiles, deep emotions, and lasting lessons. They are an invaluable gift that accompanies you along the way, nourishing your soul and giving you the strength to move forward.',
+            'sesiones.p4': 'Investment starts at 150€',
+            'sesiones.button': 'See More',
+            
+
+        },
+
+
         form: {
             'title': "CONTACT FORM",
 
@@ -558,6 +589,37 @@ export const ui: Record<string, Record<string, Record<string, string>>> = {
             'paso5.p3': 'Unas semanas después…',
             'paso5.p4': 'Coged un poco de vino y poneos cómodos porque aquí está la revelación final. Conectaos para ver vuestro slide show y la galería.',
   
+        },
+
+        photoshoots: {
+            'hero.h1': 'Sesión de fotos en Barcelona',
+            'hero.h2': 'TE ACOMPAÑO EN LOS MOMENTOS MÁS ESPECIALES DE TU VIDA<br>PARA CREAR RECUERDOS IMBORRABLES.',
+            'hero.button': '¿Comenzamos?',
+            'slide1.title' : 'asdfasdf',
+
+        },
+
+        prices: {
+            'hero.h1': '<span class="inline-block rotate-180">?</span>CUÁNTO VALEN TUS RECUERDOS?',
+            'hero.h2': 'Precios y tarifas fotografo de bodas en Barcelona',
+            'hero.p1': 'La fotografía, <strong>noble arte capaz de trascender las limitaciones temporales</strong>, nos otorga el poder de preservar eternamente aquellos recuerdos más preciados. Al crear un legado visual, se erige como el guardián de nuestras experiencias más significativas, brindándonos la posibilidad de revivirlas una y otra vez.',
+            'hero.p2': 'El precio de los recuerdos radica en la invaluable capacidad de preservarlos intactos a lo largo del tiempo. Sin embargo, estos tesoros visuales no se rigen por una única medida. <strong>Cada imagen cuenta una historia única, merecedora de una atención personalizada.</strong>',
+            'hero.button': '¡Contacta conmigo!',
+
+
+            'bodas.h2': 'Bodas en Barcelona',
+            'bodas.p1': 'En mi página de bodas, encontrarás opciones adaptadas a tus necesidades y deseos. Pero más allá de los números, quiero que sepas que mi compromiso es capturar vuestros recuerdos de boda con la sensibilidad y el arte que se merecen. Cada imagen será un testimonio perdurable de vuestro amor, un legado visual que os acompañará a lo largo de vuestro camino juntos.',
+            'bodas.p2': 'Permitidme ser la guardiana de vuestros momentos más preciosos en vuestra boda en Barcelona. Juntos, crearemos una colección de recuerdos que trascenderán el tiempo, evocarán emociones y te permitirán revivir una y otra vez la magia de ese día inolvidable.',
+            'bodas.p3': 'La inversión empieza en 997€',
+            'bodas.button' : 'Descarga la guía de precios',
+
+            'sesiones.h2': 'Sesiones de fotos en Barcelona',
+            'sesiones.p1': 'Cada recuerdo es una cápsula de emociones, una ventana hacia momentos vividos y compartidos. Son puentes que conectan pasado, presente y futuro, transportándote a lugares y personas que han dejado una marca indeleble en tu existencia.',
+            'sesiones.p2': 'En cada recuerdo yace un universo de sensaciones, risas, lágrimas, aprendizajes y logros. Son pilares fundamentales que sustentan la construcción de tu propia historia, moldean tus experiencias y forjan tu visión del mundo.',
+            'sesiones.p3': 'El valor de tus recuerdos radica en la capacidad de evocar sonrisas, emociones profundas y enseñanzas perdurables. Son un regalo invaluable que te acompaña a lo largo del camino, nutriendo tu alma y brindándote la fortaleza para seguir adelante.',
+            'sesiones.p4': 'La inversión empieza en 150€',
+            'sesiones.button': 'Ver más',
+
         },
 
         form: {

@@ -25,4 +25,9 @@ export const slugMap = {
     es: 'blog',
     en: 'blog',
   },
+
+  priceGuide: {
+    es: '/downloads/Ariadna Ballestar-Guía de precios.pdf',
+    en: '/downloads/Ariadna Ballestar-Pricing Guide-2025.pdf'
+  }
 };
