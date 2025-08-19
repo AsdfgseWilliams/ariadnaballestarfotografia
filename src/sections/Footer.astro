@@ -1,4 +1,8 @@
 ---
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <footer id="footer" class="bg-[#313b41] text-white py-8 px-16">
@@ -6,14 +10,14 @@
   
         <!-- Contact Section -->
         <div class="col-span-2 text-left">
-          <h3 class="text-3xl mb-2 text-gray-100">CONTACTO</h3>
+          <h3 class="text-3xl mb-2 text-gray-100">{t('footer.h3')}</h3>
           <a href="mailto:info@ariadnaballestar.com" class="font-eb italic text-base font-medium">info@ariadnaballestar.com</a>
         </div>
         
         <!-- Central Text Section -->
         <div class="col-span-5 md:border-l md:border-r md:border-white px-4">
           <p class="font-eb text-base italic text-center font-medium mx-8">
-            Mi principal prioridad es crear un espacio seguro para que te sientas cómodo y a gusto, permitiéndote abrirte por completo y entrar en contacto con tu yo más genuino. Creo firmemente que el mejor trabajo se produce de forma natural cuando todo el mundo se siente relajado y pierde el sentido del tiempo.
+            {t('footer.quote')}
           </p>
         </div>
         
@@ -38,7 +42,7 @@
       </div>
     <div class="container mx-auto mt-8 border-t border-white pt-4 text-center text-[8px] font-extrabold uppercase tracking-wider">
       
-      <p class="mt-4">Copyright &copy; <span id="year"></span> ARIADNA BALLESTAR FOTOGRAFÍA</p>
+      <p class="mt-4">Copyright &copy; <span id="year"></span> {t('footer.copyright')}</p>
     </div>
   </footer>
   <script>

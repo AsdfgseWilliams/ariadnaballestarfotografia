@@ -1,96 +1,142 @@
 ---
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url) as "es" | "en";
+const t = useTranslations(lang);
+
+const pasos = {
+  paso1: {
+    numero: "01",
+    titulo: t("weddings.paso1.titulo"),
+    textos: [
+      t("weddings.paso1.p1"),
+      t("weddings.paso1.p2"),
+      t("weddings.paso1.p3"),
+    ],
+  },
+  paso2: {
+    numero: "02",
+    titulo: t("weddings.paso2.titulo"),
+    textos: [
+      t("weddings.paso2.p1"),
+      t("weddings.paso2.p2"),
+      t("weddings.paso2.p3"),
+    ],
+  },
+  paso3: {
+    numero: "03",
+    titulo: t("weddings.paso3.titulo"),
+    textos: [
+      t("weddings.paso3.p1"),
+      t("weddings.paso3.p2"),
+    ],
+  },
+  paso4: {
+    numero: "04",
+    titulo: t("weddings.paso4.titulo"),
+    textos: [
+      t("weddings.paso4.p1"),
+      t("weddings.paso4.p2"),
+      t("weddings.paso4.p3"),
+    ],
+  },
+  paso5: {
+    numero: "05",
+    titulo: t("weddings.paso5.titulo"),
+    textos: [
+      t("weddings.paso5.p1"),
+      t("weddings.paso5.p2"),
+      t("weddings.paso5.p3"),
+      t("weddings.paso5.p4"),
+    ],
+  },
+};
 ---
+
 <section class="py-24 max-w-[80%] mx-auto flex flex-col justify-center">    
-    <div class="text-center uppercase my-[2%]">
-        <h2 class="text-5xl">El Proceso</h2>
-        <p class="font-medium">Desde el principio hasta el final - La experiencia</p>
+  <div class="text-center my-[2%]">
+    <h2 class="text-5xl uppercase">{t('weddings.proceso.h2')}</h2>
+    <p class="font-medium uppercase">{t('weddings.proceso.subtitulo')}</p>
     
-        <!-- Paso 1 -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto my-[5%] text-left">
-            <div class="col-span-1 z-10 mr-[5%] flex flex-col justify-center">
-                <img src="/img/41.webp" class="-mr-12">
-            </div>
-            <div class="col-span-1">
-                <img src="/img/46.webp" class="-ml-16">
-            </div>
-            <div class="col-span-2 flex flex-col gap-3 justify-center">
-                <p class="text-4xl font-claster">01</p>
-                <p class="font-eb italic font-medium text-xl py-4">Paso 1: Conozcámonos</p>
-                <div class="pb-4 ml-2 relative w-1/2 border-t border-gray-800 before:content-[''] before:block before:bg-gray-800 before:h-2 before:w-2 before:absolute before:-left-2 before:-top-1"></div>
-                <p>Una <a style="color: #798a9b;" href="https://ariadnaballestar.com/contacto-fotografo-bodas-barcelona/">consulta gratuita</a> para que os hagáis una idea de cómo será trabajar juntos. Hablaremos de vuestros sueños y visiones y cómo podemos hacer que todo funcione.</p>
-                <p>Durante esta consulta, también tendré la oportunidad de conocer más sobre vuestra historia de amor y así poder personalizar el servicio según vuestras necesidades y gustos.</p>
-                <p>¡Será el primer paso hacia la creación de unas fotografías inolvidables!</p>
-            </div>
-        </div>
-        <!-- Paso 2 -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto my-[4%]">
-            <div class="col-span-2 flex flex-col gap-3 justify-center text-right mr-20">
-                <p class="text-4xl font-claster">02</p>
-                <p class="font-eb italic font-medium text-xl py-4">Paso 2: Reserva la fecha</p>
-                <div class="pb-4 mr-2 relative w-1/2 ml-auto border-t border-gray-800 before:content-[''] before:block before:bg-gray-800 before:h-2 before:w-2 before:absolute before:-right-2 before:-top-1"></div>
-                <p>Finalizaremos su depósito y redactaremos un contrato donde dejaremos especificados todos los detalles de vuestra boda. Rellenarás un cuestionario que me ayudará a organizarlo.</p>
-                <p>Este paso es crucial para asegurarnos de que todo se desarrollará sin contratiempos y para que podáis disfrutar de vuestra boda sin preocupaciones.</p>
-                <p>Estoy aquí para acompañaros en cada paso del camino.</p>
-            </div>
-            
-            <div class="col-span-1 mr-[10%]">
-                <img src="/img/10.webp" class="">
-            </div>
-            <div class="col-span-1 flex flex-col justify-center ">
-                <img src="/img/47.webp" class="">
-            </div>
-        </div>
-        <!-- Paso 3 -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto my-[2%]">
-            <div class="col-span-1 z-10 mr-20 flex flex-col justify-center">
-                <img src="/img/6.webp" class="">
-            </div>
-            <div class="col-span-2 flex flex-col gap-3 justify-center text-left">
-                <p class="text-4xl font-claster">03</p>
-                <p class="font-eb italic font-medium text-xl py-4">Paso 3: Cuidamos los detalles.</p>
-                <div class="pb-4 ml-2 relative w-1/2 border-t border-gray-800 before:content-[''] before:block before:bg-gray-800 before:h-2 before:w-2 before:absolute before:-left-2 before:-top-1"></div>
-                <p>Durante la organización de tu boda, estaré disponibles para vosotros en todo momento, desde encontrar el lugar perfecto hasta afinar cada detalle en tu planificación.</p>
-                <p class="font-semibold">¡Estoy a solo un correo electrónico de distancia!</p>
-            </div>
-        </div>
-        <!-- Paso 4 -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto my-[4%]">
-            <div class="col-span-2 flex flex-col gap-3 justify-center text-right mr-20">
-                <p class="text-4xl font-claster">04</p>
-                <p class="font-eb italic font-medium text-xl py-4">Paso 4: El maravilloso día B</p>
-                <div class="pb-4 mr-2 relative w-1/2 ml-auto border-t border-gray-800 before:content-[''] before:block before:bg-gray-800 before:h-2 before:w-2 before:absolute before:-right-2 before:-top-1"></div>
-                <p>Al fin ha llegado el día tan esperado.</p>
-                <p>Estaré emocionada y lista para fotografiar vuestro gran día sin perder un solo momento. Estaré atenta a cada detalle especial para que podáis disfrutar de vuestro día al máximo.</p>
-                <p>Capturaré cada momento especial de vuestra boda, desde los pequeños detalles hasta los grandes momentos, para que podáis revivirlos una y otra vez a través de las imágenes. Será un honor para mí ser parte de vuestro día especial.</p>
-            </div>
-            
-            <div class="col-span-1 z-10 mr-[5%] flex flex-col justify-center">
-                <img src="/img/48.webp" class="-mr-20">
-            </div>
-            <div class="col-span-1">
-                <img src="/img/49.webp" class="">
-            </div>
-        </div>
-        <!-- Paso 5 -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto my-[4%] text-left">
-            <div class="col-span-1 flex flex-col justify-center mr-12">
-                <img src="/img/52.webp" class="">
-            </div>
-            <div class="col-span-2 flex flex-col gap-3 justify-center mr-20">
-                <p class="text-4xl font-claster">05</p>
-                <p class="font-eb italic font-medium text-xl py-4">Paso 5: Preview& Entrega</p>
-                <div class="pb-4 ml-2 relative w-1/2 border-t border-gray-800 before:content-[''] before:block before:bg-gray-800 before:h-2 before:w-2 before:absolute before:-left-2 before:-top-1"></div>
-                <p>¡Revivid vuestro gran día de nuevo!</p>
-                <p>Sé que no podéis esperar, así que os enviaré 10-15 fotos un par de días después después de la boda.</p>
-                <p>Unas semanas después…</p>
-                <p>Coged un poco de vino y poneos cómodos porque aquí está la revelación final. Conectaos para ver vuestro slide show y la galería.</p>
-            </div> 
-            <div class="col-span-1 flex flex-col justify-center">
-                <img src="/img/51.webp" class="">
-            </div>
-        </div>
-        <a href="#contactForm" class="link-button mt-8">
-            Solicita información para empezar a crear tus recuerdos
-        </a>
+    <!-- Paso 1 -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto my-[5%] text-left">
+      <div class="col-span-1 z-10 mr-[5%] flex flex-col justify-center">
+        <img src="/img/41.webp" class="-mr-12">
+      </div>
+      <div class="col-span-1">
+        <img src="/img/46.webp" class="-ml-16">
+      </div>
+      <div class="col-span-2 flex flex-col gap-3 justify-center">
+        <p class="text-4xl font-claster">{pasos.paso1.numero}</p>
+        <p class="font-eb italic font-medium text-xl py-4 ">{pasos.paso1.titulo}</p>
+        <div class="pb-4 ml-2 relative w-1/2 border-t border-gray-800 before:content-[''] before:block before:bg-gray-800 before:h-2 before:w-2 before:absolute before:-left-2 before:-top-1"></div>
+        {pasos.paso1.textos.map((t) => <p set:html={t}></p>)}
+      </div>
     </div>
+
+    <!-- Paso 2 -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto my-[4%]">
+      <div class="col-span-2 flex flex-col gap-3 justify-center text-right mr-20">
+        <p class="text-4xl font-claster">{pasos.paso2.numero}</p>
+        <p class="font-eb italic font-medium text-xl py-4">{pasos.paso2.titulo}</p>
+        <div class="pb-4 mr-2 relative w-1/2 ml-auto border-t border-gray-800 before:content-[''] before:block before:bg-gray-800 before:h-2 before:w-2 before:absolute before:-right-2 before:-top-1"></div>
+        {pasos.paso2.textos.map((t) => <p set:html={t}></p>)}
+      </div>
+      <div class="col-span-1 mr-[10%]">
+        <img src="/img/10.webp">
+      </div>
+      <div class="col-span-1 flex flex-col justify-center ">
+        <img src="/img/47.webp">
+      </div>
+    </div>
+
+    <!-- Paso 3 -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto my-[2%]">
+      <div class="col-span-1 z-10 mr-20 flex flex-col justify-center">
+        <img src="/img/6.webp">
+      </div>
+      <div class="col-span-2 flex flex-col gap-3 justify-center text-left">
+        <p class="text-4xl font-claster">{pasos.paso3.numero}</p>
+        <p class="font-eb italic font-medium text-xl py-4">{pasos.paso3.titulo}</p>
+        <div class="pb-4 ml-2 relative w-1/2 border-t border-gray-800 before:content-[''] before:block before:bg-gray-800 before:h-2 before:w-2 before:absolute before:-left-2 before:-top-1"></div>
+        {pasos.paso3.textos.map((t) => <p set:html={t}></p>)}
+      </div>
+    </div>
+
+    <!-- Paso 4 -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto my-[4%]">
+      <div class="col-span-2 flex flex-col gap-3 justify-center text-right mr-20">
+        <p class="text-4xl font-claster">{pasos.paso4.numero}</p>
+        <p class="font-eb italic font-medium text-xl py-4">{pasos.paso4.titulo}</p>
+        <div class="pb-4 mr-2 relative w-1/2 ml-auto border-t border-gray-800 before:content-[''] before:block before:bg-gray-800 before:h-2 before:w-2 before:absolute before:-right-2 before:-top-1"></div>
+        {pasos.paso4.textos.map((t) => <p set:html={t}></p>)}
+      </div>
+      <div class="col-span-1 z-10 mr-[5%] flex flex-col justify-center">
+        <img src="/img/48.webp" class="-mr-20">
+      </div>
+      <div class="col-span-1">
+        <img src="/img/49.webp">
+      </div>
+    </div>
+
+    <!-- Paso 5 -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto my-[4%] text-left">
+      <div class="col-span-1 flex flex-col justify-center mr-12">
+        <img src="/img/52.webp">
+      </div>
+      <div class="col-span-2 flex flex-col gap-3 justify-center mr-20">
+        <p class="text-4xl font-claster">{pasos.paso5.numero}</p>
+        <p class="font-eb italic font-medium text-xl py-4">{pasos.paso5.titulo}</p>
+        <div class="pb-4 ml-2 relative w-1/2 border-t border-gray-800 before:content-[''] before:block before:bg-gray-800 before:h-2 before:w-2 before:absolute before:-left-2 before:-top-1"></div>
+        {pasos.paso5.textos.map((t) => <p set:html={t}></p>)}
+      </div> 
+      <div class="col-span-1 flex flex-col justify-center">
+        <img src="/img/51.webp">
+      </div>
+    </div>
+
+    <a href="#contactForm" class="link-button mt-8">
+      {t('weddings.proceso.button')}
+    </a>
+  </div>
 </section>

@@ -1,41 +1,44 @@
 ---
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 <section class="grid grid-cols-1 md:grid-cols-3 gap-0 max-w-7xl mx-auto gap-x-[5%] items-center">
     <div class="border-r-[1px] border-x-black h-full flex flex-col justify-center py-24 pr-7">
-        <h2 class="pb-4"><span class="rotate-180 inline-block ">?</span>QUÉ ME HACE DIFERENTE?</h2>
-        <p class="pb-4">Imágenes que hablan</p>
-        <p class="pb-4">Con mi estilo natural retrataré los complementos, el lugar, la luz… Todas las imágenes cuentan vuestra historia de amor. </p>
-        <p class="pb-4">Vosotros, los protagonistas, y los invitados sois puro sentimiento que eternizaré.</p>
-        <p class="pb-4">Quiero que viváis con intensidad cada minuto del día.</p>
-        <p class="pb-10">Del resto me ocupo yo.</p>
+        <h2 class="pb-4"><span class="rotate-180 inline-block ">?</span>{t('weddings.diferente.h2')}</h2>
+        <p class="pb-4">{t('weddings.diferente.p1')}</p>
+        <p class="pb-4">{t('weddings.diferente.p2')} </p>
+        <p class="pb-4">{t('weddings.diferente.p3')}</p>
+        <p class="pb-4">{t('weddings.diferente.p4')}</p>
+        <p class="pb-10">{t('weddings.diferente.p5')}</p>
         <div class="">
         <div class="flex mb-4">
             <img src="/img/check.png" alt="check" class="h-6 w-6 mr-4">
             <p>
-                Conexión y empatía para capturar vuestra autenticidad en fotos únicas.
+                {t('weddings.diferente.li1')}
             </p>
         </div>
         <div class="flex mb-4">
             <img src="/img/check.png" alt="check" class="h-6 w-6 mr-4">
-            <p>¡
-                Fotografía de bodas de calidad con experiencia y excelencia técnica.
-            </p>
-        </div>
-        <div class="flex mb-4">
-            <img src="/img/check.png" alt="check" class="h-6 w-6 mr-4">
-            <p>
-                Creatividad: Imágenes únicas que reflejen vuestra historia de amor auténtica.
+            <p>{t('weddings.diferente.li2')}
             </p>
         </div>
         <div class="flex mb-4">
             <img src="/img/check.png" alt="check" class="h-6 w-6 mr-4">
             <p>
-                La más importante: Compromiso <br>
-                <span class="underline font-bold">Vuestra satisfacción es mi mayor satisfacción.</span>
+                {t('weddings.diferente.li3')}
             </p>
         </div>
-        <a href="#contacto" class="link-button mt-8">
-            ¡Sí quiero!
+        <div class="flex mb-4">
+            <img src="/img/check.png" alt="check" class="h-6 w-6 mr-4">
+            <p>
+                {t('weddings.diferente.li4')} <br>
+                <span class="underline font-bold">{t('weddings.diferente.li4.1')}</span>
+            </p>
+        </div>
+        <a href="#contactForm" class="link-button mt-8">
+            {t('weddings.diferente.button')}
         </a>
     </div>
 

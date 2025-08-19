@@ -1,4 +1,8 @@
 ---
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <section class="bg-cover bg-center bg-no-repeat py-[6vw] bg-white/70 bg-blend-overlay" style="background-image: url(/img/37.webp);">
@@ -11,14 +15,14 @@
     </div>
     <div class="gap-7">
          
-        <h2 class="leading-none pb-3">VUESTRA HISTORIA DE AMOR SERÁ CAPTURADA Y RECORDADA DURANTE AÑOS</h2>
-        <p>Después de vivir solo hay algo tan poderoso: </p>
+        <h1 class="leading-none pb-3 text-5xl" >{t('weddings.h1')}</h1>
+        <p>{t('weddings.p1')} </p>
 
-        <p class="uppercase font-claster text-3xl py-3">RECORDAR </p>
+        <p class="uppercase font-claster text-3xl py-3">{t('weddings.p2')} </p>
 
-        <p>¿Y qué mejor manera de hacerlo que con unas fotos bonitas y auténticas? </p>
+        <p class="pb-3">{t('weddings.p3')}</p>
 
-        <p> En los momentos más sencillos y en los detalles más pequeños, estaré allí para detener el tiempo y crear recuerdos que os emocionarán y os harán revivir esa felicidad una y otra vez.</p>
+        <p>{t('weddings.p4')}</p>
     </div>
 
 </div>

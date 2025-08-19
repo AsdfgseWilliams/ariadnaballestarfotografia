@@ -194,6 +194,59 @@ export const ui: Record<string, Record<string, Record<string, string>>> = {
             'timelineFuture' : '2024 & BEYOND',
         },
 
+        weddings:{
+            'h1': 'YOUR LOVE STORY WILL BE CAPTURED AND REMEMBERED FOR YEARS TO COME.',
+            'p1': 'After living there is only one thing so powerful:',
+            'p2': 'REMEMBER',
+            'p3': 'And what better way to do this than with beautiful, authentic photos?',
+            'p4': 'In the tiniest moments and in the smallest details, I will be there to stop time and create memories that will thrill you and make you relive that happiness over and over again.',
+            'diferente.h2': 'WHAT MAKES ME DIFFERENT?',
+            'diferente.p1': 'Images that speak',
+            'diferente.p2': 'With my natural style I will portray the accessories, the place, the light... All the images tell your love story.',
+            'diferente.p3': 'You, the protagonists, and the guests are pure feelings that I will eternalise.',
+            'diferente.p4': 'I want you to live every minute of the day with intensity.',
+            'diferente.p5': 'I’ll take care of the rest.',
+            'diferente.li1': 'Connection and empathy to capture your authenticity in unique photos.',
+            'diferente.li2': 'Quality wedding photography with experience and technical excellence.',
+            'diferente.li3': 'Creativity: Unique images that reflect your authentic love story',
+            'diferente.li4': 'The most important: Commitment',
+            'diferente.li4.1':'Your satisfaction is my greatest satisfaction.',
+            'diferente.button': 'Yes, I do!',
+            'cta1':'Your love story is extraordinary',
+            'cta2':'EXPERIENCE IN YOUR WEDDING PHOTOGRAPHY',
+            'cta3':'SHOULD BE, TOO.',
+
+            'proceso.h2': 'THE PROCESS',
+            'proceso.subtitulo':'FROM START TO FINISH - THE EXPERIENCE',
+            'proceso.button':'Request information to start creating your memories',
+
+            'paso1.titulo': 'Step 1: Let’s Get to Know Each Other',
+            'paso1.p1': 'A <a style="color: #798a9b;" href="#contactForm">free consultation</a> so you can get an idea of what it will be like working together. We’ll talk about your dreams and vision, and how we can make it all come to life.',
+            'paso1.p2': 'During this consultation, I’ll also have the chance to learn more about your love story, so I can tailor the service to your needs and style.',
+            'paso1.p3': 'This will be the very first step toward creating unforgettable photographs!',
+
+            'paso2.titulo': 'Step 2: Save the Date',
+            'paso2.p1': 'We’ll finalize your deposit and draw up a contract where all the details of your wedding will be clearly specified. You’ll also fill out a questionnaire that will help me stay organized.',
+            'paso2.p2': 'This step is crucial to ensure everything runs smoothly, allowing you to enjoy your wedding day without any worries.',
+            'paso2.p3': 'I’ll be here to guide you through every step of the way.',
+
+            'paso3.titulo': 'Step 3: Taking Care of the Details',
+            'paso3.p1': 'During the planning of your wedding, I’ll be available for you at all times—from finding the perfect location to refining every last detail of your timeline.',
+            'paso3.p2': '<span class="font-semibold">I’m just one email away!</span>',
+
+            'paso4.titulo': 'Step 4: The Wonderful Big Day',
+            'paso4.p1': 'The long-awaited day has finally arrived.',
+            'paso4.p2': 'I’ll be thrilled and ready to capture your big day without missing a single moment. I’ll pay close attention to every special detail so you can enjoy your day to the fullest.',
+            'paso4.p3': 'I’ll capture every meaningful moment of your wedding—from the little details to the big emotions—so you can relive them over and over again through your images. It will be an honor for me to be part of your special day.',
+
+            'paso5.titulo': 'Step 5: Preview & Delivery',
+            'paso5.p1': 'Relive your big day all over again!',
+            'paso5.p2': 'I know you can’t wait, so I’ll send you 10–15 photos just a couple of days after the wedding.',
+            'paso5.p3': 'A few weeks later…',
+            'paso5.p4': 'Grab a glass of wine and get comfortable, because here comes the final reveal. Log in to enjoy your slideshow and gallery.'
+
+        },
+
         form: {
             'title': "CONTACT FORM",
 
@@ -228,6 +281,8 @@ export const ui: Record<string, Record<string, Record<string, string>>> = {
             'datos.p1': 'I feel very lucky that you are considering me to portray your project!',
             'datos.p2': 'To start talking about the possibilities, just send me an email or fill in the form below, and I’ll take it from there!',
             'datos.p3': 'Monday - Friday: 9:00 AM –  9:00 PM',
+            'faq.h2': 'Frequently asked questions',
+            'faq.subtitle': 'Some answers to frequently asked questions',
             'faq.question1': 'Do you work with LGBTQIA+ couples?',
             'faq.answer1': 'Yes, absolutely. I am proud to work with couples of all sexual and gender orientations, and I am committed to creating a safe, inclusive and respectful environment for all my clients, regardless of their gender identity or sexual orientation.<br>Love is love and my goal is to capture the true essence of each couple, regardless of their identity or gender.',
 
@@ -261,6 +316,12 @@ export const ui: Record<string, Record<string, Record<string, string>>> = {
 
         blog: {
             'h1': 'Blog of a wedding photographer in Barcelona',
+        },
+        
+        footer:{
+            'h3': 'CONTACT',
+            'quote': 'My main priority is to create a safe space for you to feel comfortable and at ease, allowing you to open up completely and get in touch with your most genuine self. I firmly believe that the best work happens naturally when everyone feels relaxed and loses track of time.',
+            'copyright': 'Ariadna Ballestar Photography',
         },
         
     },
@@ -446,6 +507,59 @@ export const ui: Record<string, Record<string, Record<string, string>>> = {
             'timelineFuture' : '2024 & Más allá',
         },
 
+        weddings:{
+            'h1': 'VUESTRA HISTORIA DE AMOR SERÁ CAPTURADA Y RECORDADA DURANTE AÑOS',
+            'p1': 'Después de vivir solo hay algo tan poderoso: ',
+            'p2': 'RECORDAR',
+            'p3': '¿Y qué mejor manera de hacerlo que con unas fotos bonitas y auténticas? ',
+            'p4': ' En los momentos más sencillos y en los detalles más pequeños, estaré allí para detener el tiempo y crear recuerdos que os emocionarán y os harán revivir esa felicidad una y otra vez.',
+            'diferente.h2': 'QUÉ ME HACE DIFERENTE?',
+            'diferente.p1': 'Imágenes que hablan',
+            'diferente.p2': 'Con mi estilo natural retrataré los complementos, el lugar, la luz… Todas las imágenes cuentan vuestra historia de amor.',
+            'diferente.p3': 'Vosotros, los protagonistas, y los invitados sois puro sentimiento que eternizaré.',
+            'diferente.p4': 'Quiero que viváis con intensidad cada minuto del día.',
+            'diferente.p5': 'Del resto me ocupo yo.',
+            'diferente.li1': 'Conexión y empatía para capturar vuestra autenticidad en fotos únicas.',
+            'diferente.li2': 'Fotografía de bodas de calidad con experiencia y excelencia técnica. ',
+            'diferente.li3': 'Creatividad: Imágenes únicas que reflejen vuestra historia de amor auténtica.',
+            'diferente.li4': 'La más importante: Compromiso ',
+            'diferente.li4.1':' Vuestra satisfacción es mi mayor satisfacción.',
+            'diferente.button': '¡Sí quiero!',
+            'cta1':'Vuestra historia de amor es extraordinaria',
+            'cta2':'LA EXPERIENCIA EN LAS FOTOGRAFÍAS DE VUESTRA BODA',
+            'cta3':'DEBERÍA SERLO TAMBIÉN.',
+
+            'proceso.h2': 'El proceso',
+            'proceso.subtitulo': 'Desde el principio hasta el final - La experiencia',
+            'proceso.button': 'Solicita información para empezar a crear tus recuerdos',
+
+            'paso1.titulo':'Paso 1: Conozcámonos',
+            'paso1.p1': 'Una <a style="color: #798a9b;" href="#contactForm">consulta gratuita</a> para que os hagáis una idea de cómo será trabajar juntos. Hablaremos de vuestros sueños y visiones y cómo podemos hacer que todo funcione.',
+            'paso1.p2':'Durante esta consulta, también tendré la oportunidad de conocer más sobre vuestra historia de amor y así poder personalizar el servicio según vuestras necesidades y gustos.',
+            'paso1.p3':'¡Será el primer paso hacia la creación de unas fotografías inolvidables!',
+
+            'paso2.titulo':'Paso 2: Reserva la fecha',
+            'paso2.p1':'Finalizaremos su depósito y redactaremos un contrato donde dejaremos especificados todos los detalles de vuestra boda. Rellenarás un cuestionario que me ayudará a organizarlo.',
+            'paso2.p2':'Este paso es crucial para asegurarnos de que todo se desarrollará sin contratiempos y para que podáis disfrutar de vuestra boda sin preocupaciones.',
+            'paso2.p3':'Estoy aquí para acompañaros en cada paso del camino.',
+
+            'paso3.titulo':'Paso 3: Cuidamos los detalles.',
+            'paso3.p1': 'Durante la organización de tu boda, estaré disponibles para vosotros en todo momento, desde encontrar el lugar perfecto hasta afinar cada detalle en tu planificación.',
+            'paso3.p2': '<span class="font-semibold">¡Estoy a solo un correo electrónico de distancia!</span>',
+
+            'paso4.titulo':'Paso 4: El maravilloso día B',
+            'paso4.p1': 'Al fin ha llegado el día tan esperado.',
+            'paso4.p2': 'Estaré emocionada y lista para fotografiar vuestro gran día sin perder un solo momento. Estaré atenta a cada detalle especial para que podáis disfrutar de vuestro día al máximo.',
+            'paso4.p3': 'Capturaré cada momento especial de vuestra boda, desde los pequeños detalles hasta los grandes momentos, para que podáis revivirlos una y otra vez a través de las imágenes. Será un honor para mí ser parte de vuestro día especial.',
+
+            'paso5.titulo':'Paso 5: Preview& Entrega',
+            'paso5.p1': '¡Revivid vuestro gran día de nuevo!',
+            'paso5.p2': 'Sé que no podéis esperar, así que os enviaré 10-15 fotos un par de días después después de la boda.',
+            'paso5.p3': 'Unas semanas después…',
+            'paso5.p4': 'Coged un poco de vino y poneos cómodos porque aquí está la revelación final. Conectaos para ver vuestro slide show y la galería.',
+  
+        },
+
         form: {
             'title': "FORMULARIO",
 
@@ -480,6 +594,8 @@ export const ui: Record<string, Record<string, Record<string, string>>> = {
             'datos.p1': '¡Me siento muy afortunada de que me estéis considerando para retratar tu proyecto!',
             'datos.p2': 'Para empezar a hablar de las posibilidades, simplemente envíame un correo o rellena el formulario que aparece abajo, ¡y a partir de ahí, lo manejo yo!',
             'datos.p3': 'Lunes- Viernes: 9:00 AM –  9:00 PM',
+            'faq.h2': 'Preguntas frecuentes',
+            'faq.subtitle': 'Algunas respuestas a preguntas frecuentes',
             'faq.question1': '¿Trabajas con parejas LGBTQIA+?',
             'faq.answer1': 'Sí, absolutamente. Me enorgullece trabajar con parejas de todas las orientaciones sexuales y de género, y estoy comprometida a crear un ambiente seguro, inclusivo y respetuoso para todos mis clientes, independientemente de su identidad de género u orientación sexual.El amor es amor y mi objetivo es capturar la verdadera esencia de cada pareja, sin importar su identidad o género.',
             'faq.question2': '¿Viajas a otras ciudades y países para celebrar bodas?',
@@ -504,6 +620,12 @@ export const ui: Record<string, Record<string, Record<string, string>>> = {
 
         blog: {
             'h1': 'Blog de un fotógrafo de bodas en Barcelona',
+        },
+
+        footer:{
+            'h3': 'CONTACTO',
+            'quote': 'Mi principal prioridad es crear un espacio seguro para que te sientas cómodo y a gusto, permitiéndote abrirte por completo y entrar en contacto con tu yo más genuino. Creo firmemente que el mejor trabajo se produce de forma natural cuando todo el mundo se siente relajado y pierde el sentido del tiempo.',
+            'copyright':'ARIADNA BALLESTAR FOTOGRAFÍA',
         },
 
     
