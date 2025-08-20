@@ -11,7 +11,7 @@ export const showDefaultLang = false; // Cambiar a false para no mostrar /es
 export const ui: Record<string, Record<string, Record<string, string>>> = {
     en: {
 
-        layout:{
+        layout: {
             'index.title': 'Wedding photographer in Barcelona - Ariadna Ballestar',
             'index.description': 'Wedding photographer in Barcelona. Capture authentic moments for your special day. Contact for an exceptional report.',
             'index.keywords': 'Elegant wedding photography, wedding photographer in Barcelona, wedding reportages',
@@ -54,18 +54,18 @@ export const ui: Record<string, Record<string, Record<string, string>>> = {
 
         opiniones: {
             'title1': '"Great professional and a better person"."',
-            'content1': 
-            "She has been very easy to work with. <br>Very responsive to our needs and very easy to work with.<br>We have recommended her and if we ever need someone again we would count on her without hesitation.<br>A very sweet person who reflects this in her work.",
+            'content1':
+                "She has been very easy to work with. <br>Very responsive to our needs and very easy to work with.<br>We have recommended her and if we ever need someone again we would count on her without hesitation.<br>A very sweet person who reflects this in her work.",
             'author1': "- CRISTINA & TONI -",
 
             'title2': '"She was very approachable and professional, making us feel very comfortable and confident."',
-            'content2': 
-            "Unbeatable.<br> We are delighted with Ariadna, she knew how to capture our style perfectly. She was very approachable and professional, making us feel very comfortable and confident. On the day of the wedding she reassured us and helped us at all times. <br> We chose both photos and video, and the quality has been unbeatable. <br>You delivered all the material very promptly, beautiful and personalised down to the smallest detail. We are very grateful for everything and highly recommend 1000%. We look forward to working with her again.<br> Thank you for being part of our big day!",
+            'content2':
+                "Unbeatable.<br> We are delighted with Ariadna, she knew how to capture our style perfectly. She was very approachable and professional, making us feel very comfortable and confident. On the day of the wedding she reassured us and helped us at all times. <br> We chose both photos and video, and the quality has been unbeatable. <br>You delivered all the material very promptly, beautiful and personalised down to the smallest detail. We are very grateful for everything and highly recommend 1000%. We look forward to working with her again.<br> Thank you for being part of our big day!",
             "author2": "- MARTA & ESMAIL -",
 
             'title3': '" Feelings in pictures"',
             'content3':
-            "Ariadna is understanding and attentive.<br>He didn't miss any details of the wedding. And we didn't notice he was there.<br>He knows how to capture the exact moment and guide you so that the images describe you.<br>Clearly see the angle for the photos and bring out the best of the event in every image.<br>You get attached to it and everything.",
+                "Ariadna is understanding and attentive.<br>He didn't miss any details of the wedding. And we didn't notice he was there.<br>He knows how to capture the exact moment and guide you so that the images describe you.<br>Clearly see the angle for the photos and bring out the best of the event in every image.<br>You get attached to it and everything.",
             'author3': "- DIANA & GEMI –",
         },
 
@@ -73,11 +73,11 @@ export const ui: Record<string, Record<string, Record<string, string>>> = {
             '1': 'Contact me!',
             '2': 'Get to know me better',
             'ig': 'Instagram',
-            'cta' : 'Book a session',
+            'cta': 'Book a session',
 
         },
 
-        cta2:{
+        cta2: {
             'title': 'I CAN’T WAIT TO CAPTURE YOUR WEDDING DAY.',
             'paragraph': 'Immortalising your love story with every click, capturing moments full of magic and emotion.',
             'buttonText': 'Work with me',
@@ -112,56 +112,56 @@ export const ui: Record<string, Record<string, Record<string, string>>> = {
             'servicio2': 'WEDDINGS',
             'servicio3': 'COUPLES',
 
-            'cta.h3' : 'A compilation of my latest works',
-            'cta.p' : 'Photographs are not only proof that you have lived; they are proof that you have loved.',
-            'cta.h3.2' : 'Let me capture your story!',
-            'cta.p.2' : 'Freeze this incredible moment so that you can always remember it with joy and happiness.',
-            'trabajos.h2' : 'MY WORK',
+            'cta.h3': 'A compilation of my latest works',
+            'cta.p': 'Photographs are not only proof that you have lived; they are proof that you have loved.',
+            'cta.h3.2': 'Let me capture your story!',
+            'cta.p.2': 'Freeze this incredible moment so that you can always remember it with joy and happiness.',
+            'trabajos.h2': 'MY WORK',
 
-            'cta3.h2' : 'My photography captures authentic connections and powerful messages in emotive images.',
-            'cta3.p' : 'My aim is to create images that reflect the beauty, emotion and love present in every detail, so that they can be treasured by the couple and their loved ones forever.',
-            'cta3.button' : 'See what I have to offer',
+            'cta3.h2': 'My photography captures authentic connections and powerful messages in emotive images.',
+            'cta3.p': 'My aim is to create images that reflect the beauty, emotion and love present in every detail, so that they can be treasured by the couple and their loved ones forever.',
+            'cta3.button': 'See what I have to offer',
         },
 
         about: {
 
-            'h1' : 'I AM ARIADNA<br> you and your story are my inspiration',
-            'h2' : 'Living in Barcelona, available worldwide.',
-            'h3' :'I accompany you in the most special moments of your life to create unforgettable memories.',
-            'p1' : 'Each couple is unique. That’s why I believe that the magic of photography is to listen and connect with the people I work with, to capture their uniqueness and to tell with naturalness emotions and experiences that will last forever. ',
-            'p2' : '"When your passion is your work, you give the best of yourself and you transmit enthusiasm and professionalism in every detail"',
-            'p3' : 'In my work I have met wonderful stories and people.',
-            'p4' : 'Together we make a good team: they live and enjoy the experience, and I, behind the camera, narrate in images the happiness of unrepeatable moments.',
-            'p5' : 'More than a photographer, I will be a friend who captures your most special moments.',
-            'p6' : 'Tell me your story and let’s create a memory forever!',
+            'h1': 'I AM ARIADNA<br> you and your story are my inspiration',
+            'h2': 'Living in Barcelona, available worldwide.',
+            'h3': 'I accompany you in the most special moments of your life to create unforgettable memories.',
+            'p1': 'Each couple is unique. That’s why I believe that the magic of photography is to listen and connect with the people I work with, to capture their uniqueness and to tell with naturalness emotions and experiences that will last forever. ',
+            'p2': '"When your passion is your work, you give the best of yourself and you transmit enthusiasm and professionalism in every detail"',
+            'p3': 'In my work I have met wonderful stories and people.',
+            'p4': 'Together we make a good team: they live and enjoy the experience, and I, behind the camera, narrate in images the happiness of unrepeatable moments.',
+            'p5': 'More than a photographer, I will be a friend who captures your most special moments.',
+            'p6': 'Tell me your story and let’s create a memory forever!',
 
-            'kpi1' : 'Years of capturing emotions',
-            'kpi2' : 'Happy customers',
-            'kpi3' : 'Photographed weddings',
-            'kpi4' : 'Love for my work',
+            'kpi1': 'Years of capturing emotions',
+            'kpi2': 'Happy customers',
+            'kpi3': 'Photographed weddings',
+            'kpi4': 'Love for my work',
 
-            'me.h2' : 'CLASSIC AND ROMANTIC WEDDING PHOTOS<br> that will stand the test of time',
-            'me.p1' : 'By your side, from the beginning to the end.',
-            'me.p2' : 'In the tiniest moments and in the smallest details, I will be there to stop time and create memories that will thrill you and make you relive that happiness over and over again.',
-            'me.p3' : 'My commitment is to make you feel comfortable and confident at all times, so that you can be yourself and enjoy every moment to the fullest. Before the big day, we will talk in depth about your wishes and expectations, so that you can trust me and feel the peace of mind of knowing that your story is in good hands.',
-            'me.p4' : 'When you see the photographs, you will be able to relive those moments full of emotion and joy, and feel how time stands still for an instant.',
+            'me.h2': 'CLASSIC AND ROMANTIC WEDDING PHOTOS<br> that will stand the test of time',
+            'me.p1': 'By your side, from the beginning to the end.',
+            'me.p2': 'In the tiniest moments and in the smallest details, I will be there to stop time and create memories that will thrill you and make you relive that happiness over and over again.',
+            'me.p3': 'My commitment is to make you feel comfortable and confident at all times, so that you can be yourself and enjoy every moment to the fullest. Before the big day, we will talk in depth about your wishes and expectations, so that you can trust me and feel the peace of mind of knowing that your story is in good hands.',
+            'me.p4': 'When you see the photographs, you will be able to relive those moments full of emotion and joy, and feel how time stands still for an instant.',
 
-            'f1' : 'GUILTY PLEASURE',
-            'ff1' : 'Naps',
-            'f2' : 'DREAMED JOURNEY',
-            'ff2' : 'Nordic countries',
-            'f3' : 'PASSIONATE ABOUT',
-            'ff3' : 'The animals',
-            'f4' : 'I CAN’T LIVE WITHOUT',
-            'ff4' : 'My cat',
-            'f5' : 'FAVOURITE FILM',
-            'ff5' : 'The Lord of the Rings',
-            'f6' : 'FAVOURITE MUSIC GROUP',
-            'ff6' : 'Guns N’ Roses',
-            'f7' : 'BEACH OR MOUNTAIN',
-            'ff7' : 'Mountain always',
-            'f8' : 'Curious HOBBY',
-            'ff8' : 'Addicted to Sudoku',
+            'f1': 'GUILTY PLEASURE',
+            'ff1': 'Naps',
+            'f2': 'DREAMED JOURNEY',
+            'ff2': 'Nordic countries',
+            'f3': 'PASSIONATE ABOUT',
+            'ff3': 'The animals',
+            'f4': 'I CAN’T LIVE WITHOUT',
+            'ff4': 'My cat',
+            'f5': 'FAVOURITE FILM',
+            'ff5': 'The Lord of the Rings',
+            'f6': 'FAVOURITE MUSIC GROUP',
+            'ff6': 'Guns N’ Roses',
+            'f7': 'BEACH OR MOUNTAIN',
+            'ff7': 'Mountain always',
+            'f8': 'Curious HOBBY',
+            'ff8': 'Addicted to Sudoku',
 
 
             'timelineTitle': 'MY JOURNEY SO FAR',
@@ -191,10 +191,10 @@ export const ui: Record<string, Record<string, Record<string, string>>> = {
             'timeline.imgSrc4': "/img/21.webp",
             'timeline.alignment4': "right",
 
-            'timelineFuture' : '2024 & BEYOND',
+            'timelineFuture': '2024 & BEYOND',
         },
 
-        weddings:{
+        weddings: {
             'h1': 'YOUR LOVE STORY WILL BE CAPTURED AND REMEMBERED FOR YEARS TO COME.',
             'p1': 'After living there is only one thing so powerful:',
             'p2': 'REMEMBER',
@@ -210,15 +210,15 @@ export const ui: Record<string, Record<string, Record<string, string>>> = {
             'diferente.li2': 'Quality wedding photography with experience and technical excellence.',
             'diferente.li3': 'Creativity: Unique images that reflect your authentic love story',
             'diferente.li4': 'The most important: Commitment',
-            'diferente.li4.1':'Your satisfaction is my greatest satisfaction.',
+            'diferente.li4.1': 'Your satisfaction is my greatest satisfaction.',
             'diferente.button': 'Yes, I do!',
-            'cta1':'Your love story is extraordinary',
-            'cta2':'EXPERIENCE IN YOUR WEDDING PHOTOGRAPHY',
-            'cta3':'SHOULD BE, TOO.',
+            'cta1': 'Your love story is extraordinary',
+            'cta2': 'EXPERIENCE IN YOUR WEDDING PHOTOGRAPHY',
+            'cta3': 'SHOULD BE, TOO.',
 
             'proceso.h2': 'THE PROCESS',
-            'proceso.subtitulo':'FROM START TO FINISH - THE EXPERIENCE',
-            'proceso.button':'Request information to start creating your memories',
+            'proceso.subtitulo': 'FROM START TO FINISH - THE EXPERIENCE',
+            'proceso.button': 'Request information to start creating your memories',
 
             'paso1.titulo': 'Step 1: Let’s Get to Know Each Other',
             'paso1.p1': 'A <a style="color: #798a9b;" href="#contactForm">free consultation</a> so you can get an idea of what it will be like working together. We’ll talk about your dreams and vision, and how we can make it all come to life.',
@@ -251,11 +251,104 @@ export const ui: Record<string, Record<string, Record<string, string>>> = {
             'hero.h1': 'Photoshoot in Barcelona',
             'hero.h2': 'I’ll be with you in the most special moments of your life<br>to create unforgettable memories.',
             'hero.button': 'Shall we start?',
-            'slide1.title' : 'asdfasdf',
+            'slide1.title': 'asdfasdf',
+
+            'parejas.h2': 'Couple & Engagement Session',
+            'parejas.button': 'Book your session!',
+
+            'parejas.mini.title': 'Mini session',
+            'parejas.mini.description': 'An anniversary, a birthday, a party or any intimate occasion are special moments you want to celebrate and enjoy. I’d love to join you to make it real!',
+            'parejas.mini.details': JSON.stringify([
+                "30 min",
+                "Online gallery",
+                "One location",
+                "40+ edited photos",
+                "Delivery in two weeks"
+            ]),
+            'parejas.mini.price': '150€',
+
+            'parejas.reportaje.title': 'Photoshoot',
+            'parejas.reportaje.description': 'An anniversary, a birthday, a party or any intimate occasion are special moments you want to celebrate and enjoy. I’d love to join you to make it real!',
+            'parejas.reportaje.details': JSON.stringify([
+                "50-60 min",
+                "Online gallery",
+                "One location",
+                "80+ edited photos",
+                "Delivery in two weeks"
+            ]),
+            'parejas.reportaje.price': '200€',
+
+            'parejas.experiencia.title': 'Experience',
+            'parejas.experiencia.description': 'An anniversary, a birthday, a party or any intimate occasion are special moments you want to celebrate and enjoy. I’d love to join you to make it real!',
+            'parejas.experiencia.details': JSON.stringify([
+                "1.5 hours",
+                "Online gallery",
+                "Two locations",
+                "120+ edited photos",
+                "Delivery in one week"
+            ]),
+            'parejas.experiencia.price': '300€',
+
+
+            'personal.h2': "PERSONAL PHOTO SESSION",
+            'personal.button': "Book your session!",
+            "personal.mini.title": "Mini Session",
+            "personal.mini.description": "Are you a model looking to expand your portfolio? Does your brand need photos for advertising? Do you want to surprise someone with a keepsake of yourself, or simply treat yourself to some beautiful portraits? Get ready to achieve the photos you’ve been dreaming of!",
+            "personal.mini.details": JSON.stringify(["30 min", "Online gallery", "One location", "+40 edited photos", "1 GIF", "Delivery in one week"]),
+            "personal.mini.price": "150€",
+
+            "personal.reportaje.title": "Photoshoot",
+            "personal.reportaje.description": "Are you a model looking to expand your portfolio? Does your brand need photos for advertising? Do you want to surprise someone with a keepsake of yourself, or simply treat yourself to some beautiful portraits? Get ready to achieve the photos you’ve been dreaming of!",
+            "personal.reportaje.details": JSON.stringify(["50-60 min", "Online gallery", "One location", "+80 edited photos", "3 GIFs", "Delivery in one week"]),
+            "personal.reportaje.price": "200€",
+
+            "personal.experiencia.title": "Experience",
+            "personal.experiencia.description": "Are you a model looking to expand your portfolio? Does your brand need photos for advertising? Do you want to surprise someone with a keepsake of yourself, or simply treat yourself to some beautiful portraits? Get ready to achieve the photos you’ve been dreaming of!",
+            "personal.experiencia.details": JSON.stringify(["1.5 hours", "Online gallery", "Two locations", "+120 edited photos", "5 GIFs", "Delivery in one week"]),
+            "personal.experiencia.price": "300€",
+
+
+            'familiar.h2': 'FAMILY PHOTO SESSION',
+            'familiar.button': 'Book your session!',
+            'familiar.mini.title': 'Mini session',
+            'familiar.mini.description':
+            'An afternoon in the park, a birthday, or a cozy moment at home. Natural sessions to capture your bond and affection in lively and spontaneous images.',
+            'familiar.mini.details': JSON.stringify([
+            '30 min',
+            'Online gallery',
+            'One location',
+            '+40 edited photos',
+            'Delivery within two weeks',
+            ]),
+            'familiar.mini.price': '180€',
+
+            'familiar.reportaje.title': 'Reportage',
+            'familiar.reportaje.description':
+            'Enough time to play, hug, and be yourselves without rush. A reportage that tells your story with naturalness and elegance.',
+            'familiar.reportaje.details': JSON.stringify([
+            '50-60 min',
+            'Online gallery',
+            'One location',
+            '+80 edited photos',
+            'Delivery within two weeks',
+            ]),
+            'familiar.reportaje.price': '230€',
+
+            'familiar.experiencia.title': 'Experience',
+            'familiar.experiencia.description':
+            'A complete experience for families who want varied memories: changes of scenery and more time to document your essence.',
+            'familiar.experiencia.details': JSON.stringify([
+            '1.5 hours',
+            'Online gallery',
+            'Two locations',
+            '+120 edited photos',
+            'Delivery within one week',
+            ]),
+            'familiar.experiencia.price': '330€',
         },
 
         prices: {
-            'hero.h1': 'HOW MUCH ARE YOUR MEMORIES?',
+            'hero.h1': 'HOW MUCH ARE YOUR MEMORIES WORTH?',
             'hero.h2': 'Wedding photography prices and packages in Barcelona',
             'hero.p1': 'Photography, <strong>a noble art capable of transcending the limits of time</strong>, gives us the power to preserve those most precious memories forever. By creating a visual legacy, it stands as the guardian of our most meaningful experiences, allowing us to relive them again and again.',
             'hero.p2': 'The value of memories lies in the priceless ability to keep them intact over time. However, these visual treasures cannot be measured by a single standard. <strong>Every image tells a unique story, deserving of personalized attention.</strong>',
@@ -273,7 +366,7 @@ export const ui: Record<string, Record<string, Record<string, string>>> = {
             'sesiones.p3': 'The value of your memories lies in their ability to evoke smiles, deep emotions, and lasting lessons. They are an invaluable gift that accompanies you along the way, nourishing your soul and giving you the strength to move forward.',
             'sesiones.p4': 'Investment starts at 150€',
             'sesiones.button': 'See More',
-            
+
 
         },
 
@@ -306,7 +399,7 @@ export const ui: Record<string, Record<string, Record<string, string>>> = {
             'submit': "Submit",
         },
 
-        contact:{
+        contact: {
 
             'datos.h1': 'Ask for Ari',
             'datos.p1': 'I feel very lucky that you are considering me to portray your project!',
@@ -321,7 +414,7 @@ export const ui: Record<string, Record<string, Record<string, string>>> = {
             'faq.answer2': 'Yes, I love to travel and I am available to travel to other cities and countries to photograph weddings. I have had the opportunity to work in different places around the world and I am always excited to discover new places and capture unforgettable moments in different settings.<br>If you are planning a wedding outside Barcelona, please let me know and we can discuss the details to make your day an unforgettable experience.',
 
             'faq.question3': 'How far in advance should we contact you?',
-            'faq.answer3' : 'In general, there is no minimum time limit for contacting me, but it is always advisable to contact me as soon as possible.<br>For sessions, a few weeks are usually enough, but in the case of weddings or communions, it is recommended to book a year in advance to guarantee the availability of dates and to have everything planned in good time.<br>I am always ready to work with you and make your most important memories into memorable photographs.',
+            'faq.answer3': 'In general, there is no minimum time limit for contacting me, but it is always advisable to contact me as soon as possible.<br>For sessions, a few weeks are usually enough, but in the case of weddings or communions, it is recommended to book a year in advance to guarantee the availability of dates and to have everything planned in good time.<br>I am always ready to work with you and make your most important memories into memorable photographs.',
 
             'faq.question4': 'What if we don’t want our photos to be published on your social networks?',
             'faq.answer4': 'I fully understand and respect your decision to keep your photos private. However, as a photographer, I strive to create unique and quality artwork, which I use to showcase my work to future clients.<br>For this reason, if you decide to keep your photos private, the price of the package or session will be increased by 25% to compensate for the lost opportunity to show my work to other potential clients.',
@@ -348,17 +441,17 @@ export const ui: Record<string, Record<string, Record<string, string>>> = {
         blog: {
             'h1': 'Blog of a wedding photographer in Barcelona',
         },
-        
-        footer:{
+
+        footer: {
             'h3': 'CONTACT',
             'quote': 'My main priority is to create a safe space for you to feel comfortable and at ease, allowing you to open up completely and get in touch with your most genuine self. I firmly believe that the best work happens naturally when everyone feels relaxed and loses track of time.',
             'copyright': 'Ariadna Ballestar Photography',
         },
-        
+
     },
     es: {
 
-        layout:{
+        layout: {
             'index.title': 'Fotógrafa de bodas en Barcelona - Ariadna Ballestar',
             'index.description': 'Fotógrafa de bodas en Barcelona. Capturo momentos auténticos para tu día especial. Contacta para un reportaje excepcional.',
             'index.keywords': 'Fotografía de bodas elegante, fotógrafa de bodas en Barcelona, reportajes de bodas',
@@ -389,7 +482,7 @@ export const ui: Record<string, Record<string, Record<string, string>>> = {
 
         },
 
-         nav: {
+        nav: {
             'bodas': 'Bodas en Barcelona',
             'sesiones': 'Sesiones',
             'sobre-mi': 'Sobre mí',
@@ -401,18 +494,18 @@ export const ui: Record<string, Record<string, Record<string, string>>> = {
 
         opiniones: {
             'title1': '"Gran profesional y mejor persona"',
-            'content1': 
-            "Han sido todo facilidades con ella. <br>Muy sensible a nuestras necesidades y muy fácil trabajar con ella. <br>La hemos recomendado y si volviésemos a necesitar a alguien contaríamos con ella sin dudar.<br>Una persona muy dulce que lo refleja en su trabajo.",
+            'content1':
+                "Han sido todo facilidades con ella. <br>Muy sensible a nuestras necesidades y muy fácil trabajar con ella. <br>La hemos recomendado y si volviésemos a necesitar a alguien contaríamos con ella sin dudar.<br>Una persona muy dulce que lo refleja en su trabajo.",
             'author1': "- CRISTINA & TONI -",
 
             'title2': '"Fue muy cercana y profesional, haciéndonos sentir muy cómodos y con total confianza."',
-            "content2": 
-            "Inmejorable.<br> Estamos encantados con Ariadna, supo captar a la perfección nuestro estilo. Fue muy cercana y profesional, haciéndonos sentir muy cómodos y con total confianza. El día de la boda nos tranquilizó y ayudó en todo momento. <br> Elegimos tanto fotos como vídeo, y la calidad ha sido inmejorable.<br>Nos entregó todo el material muy pronto, precioso y personalizado hasta el más mínimo detalle. Estamos muy agradecidos por todo y la recomendamos 1000%. Esperamos volver a trabajar con ella.<br> ¡Gracias por formar parte de nuestro gran día!",
+            "content2":
+                "Inmejorable.<br> Estamos encantados con Ariadna, supo captar a la perfección nuestro estilo. Fue muy cercana y profesional, haciéndonos sentir muy cómodos y con total confianza. El día de la boda nos tranquilizó y ayudó en todo momento. <br> Elegimos tanto fotos como vídeo, y la calidad ha sido inmejorable.<br>Nos entregó todo el material muy pronto, precioso y personalizado hasta el más mínimo detalle. Estamos muy agradecidos por todo y la recomendamos 1000%. Esperamos volver a trabajar con ella.<br> ¡Gracias por formar parte de nuestro gran día!",
             "author2": "- MARTA & ESMAIL -",
 
             'title3': '"Sentimiento en imágenes"',
             'content3':
-            "Ariadna es comprensiva y atenta.<br>No perdió detalle de la boda. Y no notamos que estaba allí.<br>Sabe captar el momento exacto y guiarte para que las imágenes describan tu.<br>Ve con claridad el ángulo para las fotos y saca a relucir lo mejor del evento en cada imagen.<br>Le coges cariño y todo.",
+                "Ariadna es comprensiva y atenta.<br>No perdió detalle de la boda. Y no notamos que estaba allí.<br>Sabe captar el momento exacto y guiarte para que las imágenes describan tu.<br>Ve con claridad el ángulo para las fotos y saca a relucir lo mejor del evento en cada imagen.<br>Le coges cariño y todo.",
             'author3': "- DIANA & GEMI –",
         },
 
@@ -420,10 +513,10 @@ export const ui: Record<string, Record<string, Record<string, string>>> = {
             '1': '¡Contacta conmigo!',
             '2': 'Conóceme más',
             'ig': 'Instagram',
-            'button.cta' : 'Reserva una sesión',
+            'button.cta': 'Reserva una sesión',
         },
 
-        cta2:{
+        cta2: {
             'title': 'NO PUEDO ESPERAR PARA CAPTURAR EL DÍA DE VUESTRA BODA',
             'paragraph': 'Inmortalizando vuestra historia de amor con cada clic, capturando momentos llenos de magia y emoción.',
             'buttonText': 'Trabajemos juntos',
@@ -457,59 +550,59 @@ export const ui: Record<string, Record<string, Record<string, string>>> = {
             'servicio2': 'BODAS',
             'servicio3': 'PAREJAS',
 
-            'cta.h3' : 'Una recopilación de mis últimos trabajos ',
-            'cta.p' : ' Las fotografías no son sólo la prueba de que has vivido; son la prueba de que has amado. ',
-            'cta.h3.2' : '¡Permíteme capturar vuestra historia!',
-            'cta.p.2' : 'Congelar este momento increíble para que puedas recordarlo siempre con alegría y felicidad.',
-            'trabajos.h2' : 'MIS TRABAJOS',
+            'cta.h3': 'Una recopilación de mis últimos trabajos ',
+            'cta.p': ' Las fotografías no son sólo la prueba de que has vivido; son la prueba de que has amado. ',
+            'cta.h3.2': '¡Permíteme capturar vuestra historia!',
+            'cta.p.2': 'Congelar este momento increíble para que puedas recordarlo siempre con alegría y felicidad.',
+            'trabajos.h2': 'MIS TRABAJOS',
 
-            'cta3.h2' : 'Mi fotografía capta conexiones auténticas y mensajes poderosos en imágenes emotivas.',
-            'cta3.p' : 'Mi objetivo es crear imágenes que reflejen la belleza, la emoción y el amor presentes en cada detalle, para que puedan ser atesoradas por la pareja y sus seres queridos por siempre.',
-            'cta3.button' : 'Mira lo que ofrezco',
+            'cta3.h2': 'Mi fotografía capta conexiones auténticas y mensajes poderosos en imágenes emotivas.',
+            'cta3.p': 'Mi objetivo es crear imágenes que reflejen la belleza, la emoción y el amor presentes en cada detalle, para que puedan ser atesoradas por la pareja y sus seres queridos por siempre.',
+            'cta3.button': 'Mira lo que ofrezco',
         },
 
         about: {
 
-            'h1' : 'SOY ARIADNA<br> tú y tu historia sois mi inspiración.',
-            'h2' : 'Viviendo en Barcelona, disponible en todo el mundo.',
-            'h3' :'Te acompaño en los momentos más especiales de tu vida para crear recuerdos imborrables.',
-            'p1' : 'Cada pareja es única. Por eso creo que la magia de la fotografía es escuchar y conectar con las personas que trabajo, para captar su singularidad y contar con naturalidad emociones y vivencias que perdurarán para siempre.',
-            'p2' : '“Cuando tu pasión es tu trabajo das lo mejor de ti y transmites en cada detalle ilusión y profesionalidad”.',
-            'p3' : 'En mi trabajo he conocido historias y personas maravillosas.',
-            'p4' : 'Juntas formamos un buen equipo: ellas viven y disfrutan la experiencia, y yo, tras la cámara, relato en imágenes la felicidad de momentos irrepetibles.',
-            'p5' : 'Más que una fotógrafa, seré una amiga que captura vuestros momentos más especiales.',
-            'p6' : '¡Contadme vuestra historia y creemos un recuerdo para siempre!',
+            'h1': 'SOY ARIADNA<br> tú y tu historia sois mi inspiración.',
+            'h2': 'Viviendo en Barcelona, disponible en todo el mundo.',
+            'h3': 'Te acompaño en los momentos más especiales de tu vida para crear recuerdos imborrables.',
+            'p1': 'Cada pareja es única. Por eso creo que la magia de la fotografía es escuchar y conectar con las personas que trabajo, para captar su singularidad y contar con naturalidad emociones y vivencias que perdurarán para siempre.',
+            'p2': '“Cuando tu pasión es tu trabajo das lo mejor de ti y transmites en cada detalle ilusión y profesionalidad”.',
+            'p3': 'En mi trabajo he conocido historias y personas maravillosas.',
+            'p4': 'Juntas formamos un buen equipo: ellas viven y disfrutan la experiencia, y yo, tras la cámara, relato en imágenes la felicidad de momentos irrepetibles.',
+            'p5': 'Más que una fotógrafa, seré una amiga que captura vuestros momentos más especiales.',
+            'p6': '¡Contadme vuestra historia y creemos un recuerdo para siempre!',
 
-            'kpi1' : 'Años capturando emociones',
-            'kpi2' : 'Clientes felices',
-            'kpi3' : 'Bodas fotografiadas',
-            'kpi4' : 'Amor por mi trabajo',
+            'kpi1': 'Años capturando emociones',
+            'kpi2': 'Clientes felices',
+            'kpi3': 'Bodas fotografiadas',
+            'kpi4': 'Amor por mi trabajo',
 
-            'me.h2' : 'FOTOS DE BODA CLÁSICAS Y ROMÁNTICAS<br> que resistirán el paso del tiempo',
-            'me.p1' : 'A vuestro lado, desde el principio hasta el final.',
-            'me.p2' : 'En los momentos más sencillos y en los detalles más pequeños, estaré allí para detener el tiempo y crear recuerdos que os emocionarán y os harán revivir esa felicidad una y otra vez.',
-            'me.p3' : 'Mi compromiso es que os sintáis cómodos y en confianza en todo momento, para que podáis ser vosotros mismos y disfrutar al máximo de cada instante. Antes del gran día, hablaremos en profundidad sobre vuestros deseos y expectativas, para que podáis confiar en mí y sentir la tranquilidad de saber que vuestra historia está en buenas manos.',
-            'me.p4' : 'Cuando veáis las fotografías, podréis revivir esos momentos llenos de emoción y alegría, y sentir como el tiempo se detiene por un instante.',
+            'me.h2': 'FOTOS DE BODA CLÁSICAS Y ROMÁNTICAS<br> que resistirán el paso del tiempo',
+            'me.p1': 'A vuestro lado, desde el principio hasta el final.',
+            'me.p2': 'En los momentos más sencillos y en los detalles más pequeños, estaré allí para detener el tiempo y crear recuerdos que os emocionarán y os harán revivir esa felicidad una y otra vez.',
+            'me.p3': 'Mi compromiso es que os sintáis cómodos y en confianza en todo momento, para que podáis ser vosotros mismos y disfrutar al máximo de cada instante. Antes del gran día, hablaremos en profundidad sobre vuestros deseos y expectativas, para que podáis confiar en mí y sentir la tranquilidad de saber que vuestra historia está en buenas manos.',
+            'me.p4': 'Cuando veáis las fotografías, podréis revivir esos momentos llenos de emoción y alegría, y sentir como el tiempo se detiene por un instante.',
 
-            'f1' : 'PLACER CULPABLE',
-            'ff1' : 'Siestas',
-            'f2' : 'Viaje soñado',
-            'ff2' : 'Países nórdicos',
-            'f3' : 'Apasionada por',
-            'ff3' : 'Los animales',
-            'f4' : 'No puedo vivir sin',
-            'ff4' : 'Mi gatita',
-            'f5' : 'Película favorita',
-            'ff5' : 'El señor de los anillos',
-            'f6' : 'Grupo de música favorito',
-            'ff6' : 'Guns N’ Roses',
-            'f7' : 'Playa o montaña',
-            'ff7' : 'Montaña siempre',
-            'f8' : 'Hobby curioso',
-            'ff8' : 'Adicta a los sudokus',
+            'f1': 'PLACER CULPABLE',
+            'ff1': 'Siestas',
+            'f2': 'Viaje soñado',
+            'ff2': 'Países nórdicos',
+            'f3': 'Apasionada por',
+            'ff3': 'Los animales',
+            'f4': 'No puedo vivir sin',
+            'ff4': 'Mi gatita',
+            'f5': 'Película favorita',
+            'ff5': 'El señor de los anillos',
+            'f6': 'Grupo de música favorito',
+            'ff6': 'Guns N’ Roses',
+            'f7': 'Playa o montaña',
+            'ff7': 'Montaña siempre',
+            'f8': 'Hobby curioso',
+            'ff8': 'Adicta a los sudokus',
 
-            'timelineTitle' : 'MI VIAJE HASTA AHORA',
-            'timelineSubtitle' : 'DÓNDE EMPEZÓ TODO Y CÓMO VA AHORA',
+            'timelineTitle': 'MI VIAJE HASTA AHORA',
+            'timelineSubtitle': 'DÓNDE EMPEZÓ TODO Y CÓMO VA AHORA',
 
             'timeline.year1': "2012",
             'timeline.title1': "Compro mi primera cámara.",
@@ -535,10 +628,10 @@ export const ui: Record<string, Record<string, Record<string, string>>> = {
             'timeline.imgSrc4': "/img/21.webp",
             'timeline.alignment4': "right",
 
-            'timelineFuture' : '2024 & Más allá',
+            'timelineFuture': '2024 & Más allá',
         },
 
-        weddings:{
+        weddings: {
             'h1': 'VUESTRA HISTORIA DE AMOR SERÁ CAPTURADA Y RECORDADA DURANTE AÑOS',
             'p1': 'Después de vivir solo hay algo tan poderoso: ',
             'p2': 'RECORDAR',
@@ -554,48 +647,146 @@ export const ui: Record<string, Record<string, Record<string, string>>> = {
             'diferente.li2': 'Fotografía de bodas de calidad con experiencia y excelencia técnica. ',
             'diferente.li3': 'Creatividad: Imágenes únicas que reflejen vuestra historia de amor auténtica.',
             'diferente.li4': 'La más importante: Compromiso ',
-            'diferente.li4.1':' Vuestra satisfacción es mi mayor satisfacción.',
+            'diferente.li4.1': ' Vuestra satisfacción es mi mayor satisfacción.',
             'diferente.button': '¡Sí quiero!',
-            'cta1':'Vuestra historia de amor es extraordinaria',
-            'cta2':'LA EXPERIENCIA EN LAS FOTOGRAFÍAS DE VUESTRA BODA',
-            'cta3':'DEBERÍA SERLO TAMBIÉN.',
+            'cta1': 'Vuestra historia de amor es extraordinaria',
+            'cta2': 'LA EXPERIENCIA EN LAS FOTOGRAFÍAS DE VUESTRA BODA',
+            'cta3': 'DEBERÍA SERLO TAMBIÉN.',
 
             'proceso.h2': 'El proceso',
             'proceso.subtitulo': 'Desde el principio hasta el final - La experiencia',
             'proceso.button': 'Solicita información para empezar a crear tus recuerdos',
 
-            'paso1.titulo':'Paso 1: Conozcámonos',
+            'paso1.titulo': 'Paso 1: Conozcámonos',
             'paso1.p1': 'Una <a style="color: #798a9b;" href="#contactForm">consulta gratuita</a> para que os hagáis una idea de cómo será trabajar juntos. Hablaremos de vuestros sueños y visiones y cómo podemos hacer que todo funcione.',
-            'paso1.p2':'Durante esta consulta, también tendré la oportunidad de conocer más sobre vuestra historia de amor y así poder personalizar el servicio según vuestras necesidades y gustos.',
-            'paso1.p3':'¡Será el primer paso hacia la creación de unas fotografías inolvidables!',
+            'paso1.p2': 'Durante esta consulta, también tendré la oportunidad de conocer más sobre vuestra historia de amor y así poder personalizar el servicio según vuestras necesidades y gustos.',
+            'paso1.p3': '¡Será el primer paso hacia la creación de unas fotografías inolvidables!',
 
-            'paso2.titulo':'Paso 2: Reserva la fecha',
-            'paso2.p1':'Finalizaremos su depósito y redactaremos un contrato donde dejaremos especificados todos los detalles de vuestra boda. Rellenarás un cuestionario que me ayudará a organizarlo.',
-            'paso2.p2':'Este paso es crucial para asegurarnos de que todo se desarrollará sin contratiempos y para que podáis disfrutar de vuestra boda sin preocupaciones.',
-            'paso2.p3':'Estoy aquí para acompañaros en cada paso del camino.',
+            'paso2.titulo': 'Paso 2: Reserva la fecha',
+            'paso2.p1': 'Finalizaremos su depósito y redactaremos un contrato donde dejaremos especificados todos los detalles de vuestra boda. Rellenarás un cuestionario que me ayudará a organizarlo.',
+            'paso2.p2': 'Este paso es crucial para asegurarnos de que todo se desarrollará sin contratiempos y para que podáis disfrutar de vuestra boda sin preocupaciones.',
+            'paso2.p3': 'Estoy aquí para acompañaros en cada paso del camino.',
 
-            'paso3.titulo':'Paso 3: Cuidamos los detalles.',
+            'paso3.titulo': 'Paso 3: Cuidamos los detalles.',
             'paso3.p1': 'Durante la organización de tu boda, estaré disponibles para vosotros en todo momento, desde encontrar el lugar perfecto hasta afinar cada detalle en tu planificación.',
             'paso3.p2': '<span class="font-semibold">¡Estoy a solo un correo electrónico de distancia!</span>',
 
-            'paso4.titulo':'Paso 4: El maravilloso día B',
+            'paso4.titulo': 'Paso 4: El maravilloso día B',
             'paso4.p1': 'Al fin ha llegado el día tan esperado.',
             'paso4.p2': 'Estaré emocionada y lista para fotografiar vuestro gran día sin perder un solo momento. Estaré atenta a cada detalle especial para que podáis disfrutar de vuestro día al máximo.',
             'paso4.p3': 'Capturaré cada momento especial de vuestra boda, desde los pequeños detalles hasta los grandes momentos, para que podáis revivirlos una y otra vez a través de las imágenes. Será un honor para mí ser parte de vuestro día especial.',
 
-            'paso5.titulo':'Paso 5: Preview& Entrega',
+            'paso5.titulo': 'Paso 5: Preview& Entrega',
             'paso5.p1': '¡Revivid vuestro gran día de nuevo!',
             'paso5.p2': 'Sé que no podéis esperar, así que os enviaré 10-15 fotos un par de días después después de la boda.',
             'paso5.p3': 'Unas semanas después…',
             'paso5.p4': 'Coged un poco de vino y poneos cómodos porque aquí está la revelación final. Conectaos para ver vuestro slide show y la galería.',
-  
+
         },
 
         photoshoots: {
             'hero.h1': 'Sesión de fotos en Barcelona',
             'hero.h2': 'TE ACOMPAÑO EN LOS MOMENTOS MÁS ESPECIALES DE TU VIDA<br>PARA CREAR RECUERDOS IMBORRABLES.',
             'hero.button': '¿Comenzamos?',
-            'slide1.title' : 'asdfasdf',
+            'slide1.title': 'asdfasdf',
+
+            'parejas.h2': 'Sesión de parejas y compromisos',
+            'parejas.button': '¡Reservad vuestra sesión!',
+
+            'parejas.mini.title': 'Mini sesión',
+            'parejas.mini.description': 'Un aniversario, un cumpleaños, una fiesta o cualquier motivo íntimo son momentos especiales que os queréis regalar y disfrutar. ¡Quiero acompañaros para hacerlo realidad!',
+            'parejas.mini.details': JSON.stringify([
+                "30 min",
+                "Galería online",
+                "Una localización",
+                "+40 fotos editadas",
+                "Entrega en dos semanas"
+            ]),
+            'parejas.mini.price': '150€',
+
+            'parejas.reportaje.title': 'Reportaje',
+            'parejas.reportaje.description': 'Un aniversario, un cumpleaños, una fiesta o cualquier motivo íntimo son momentos especiales que os queréis regalar y disfrutar. ¡Quiero acompañaros para hacerlo realidad!',
+            'parejas.reportaje.details': JSON.stringify([
+                "50-60 min",
+                "Galería online",
+                "Una localización",
+                "+80 fotos editadas",
+                "Entrega en dos semanas"
+            ]),
+            'parejas.reportaje.price': '200€',
+
+            'parejas.experiencia.title': 'Experiencia',
+            'parejas.experiencia.description': 'Un aniversario, un cumpleaños, una fiesta o cualquier motivo íntimo son momentos especiales que os queréis regalar y disfrutar. ¡Quiero acompañaros para hacerlo realidad!',
+            'parejas.experiencia.details': JSON.stringify([
+                "1.5 horas",
+                "Galería online",
+                "Dos localizaciones",
+                "+120 fotos editadas",
+                "Entrega en una semana"
+            ]),
+            'parejas.experiencia.price': '300€',
+
+
+            'personal.h2': "SESIÓN DE FOTOS PERSONAL",
+            'personal.button': "¡Reserva tu sesión!",
+            "personal.mini.title": "Mini Sesión",
+            "personal.mini.description": "¿Eres modelo y quieres ampliar tu book? ¿Tu marca necesita fotos para publicidad? ¿Quieres sorprender a alguien con un recuerdo tuyo o simplemente te apetece concederte el deseo de tener unas fotos bonitas? ¡Prepárate para conseguir las fotos con las que sueñas!",
+            "personal.mini.details": JSON.stringify([
+                "30 min", "Galería online", 
+                "Una localización", 
+                "+40 fotos editadas", 
+                "Entrega en dos semanas"]),
+            "personal.mini.price": "150€",
+
+            "personal.reportaje.title": "Reportaje",
+            "personal.reportaje.description": "¿Eres modelo y quieres ampliar tu book? ¿Tu marca necesita fotos para publicidad? ¿Quieres sorprender a alguien con un recuerdo tuyo o simplemente te apetece concederte el deseo de tener unas fotos bonitas? ¡Prepárate para conseguir las fotos con las que sueñas!",
+            "personal.reportaje.details": JSON.stringify(["50-60 min", "Galería online", "Una localización", "+80 fotos editadas", "Entrega en dos semanas"]),
+            "personal.reportaje.price": "200€",
+
+            "personal.experiencia.title": "Experiencia",
+            "personal.experiencia.description": "¿Eres modelo y quieres ampliar tu book? ¿Tu marca necesita fotos para publicidad? ¿Quieres sorprender a alguien con un recuerdo tuyo o simplemente te apetece concederte el deseo de tener unas fotos bonitas? ¡Prepárate para conseguir las fotos con las que sueñas!",
+            "personal.experiencia.details": JSON.stringify(["1,5 horas", "Galería online", "Dos localizaciones", "+120 fotos editadas", "Entrega en una semana"]),
+            "personal.experiencia.price": "300€",
+
+
+            'familiar.h2': 'SESIÓN DE FOTOS FAMILIAR',
+            'familiar.button': '¡Reservad vuestra sesión!',
+            'familiar.mini.title': 'Mini sesión',
+            'familiar.mini.description':
+            'Una tarde en el parque, un cumpleaños o un momento en casa. Sesiones naturales para guardar vuestra complicidad y cariño en imágenes vivas y espontáneas.',
+            'familiar.mini.details': JSON.stringify([
+            '30 min',
+            'Galería online',
+            'Una localización',
+            '+40 fotos editadas',
+            'Entrega en dos semanas',
+            ]),
+            'familiar.mini.price': '180€',
+
+            'familiar.reportaje.title': 'Reportaje',
+            'familiar.reportaje.description':
+            'Tiempo suficiente para jugar, abrazaros y ser vosotros mismos sin prisas. Un reportaje que narra vuestra historia con naturalidad y elegancia.',
+            'familiar.reportaje.details': JSON.stringify([
+            '50-60 min',
+            'Galería online',
+            'Una localización',
+            '+80 fotos editadas',
+            'Entrega en dos semanas',
+            ]),
+            'familiar.reportaje.price': '230€',
+
+            'familiar.experiencia.title': 'Experiencia',
+            'familiar.experiencia.description':
+            'Una experiencia completa para familias que quieren recuerdos variados: cambios de ambiente y más momentos para documentar vuestra esencia.',
+            'familiar.experiencia.details': JSON.stringify([
+            '1,5 horas',
+            'Galería online',
+            'Dos localizaciones',
+            '+120 fotos editadas',
+            'Entrega en una semana',
+            ]),
+            'familiar.experiencia.price': '330€',
+
 
         },
 
@@ -611,7 +802,7 @@ export const ui: Record<string, Record<string, Record<string, string>>> = {
             'bodas.p1': 'En mi página de bodas, encontrarás opciones adaptadas a tus necesidades y deseos. Pero más allá de los números, quiero que sepas que mi compromiso es capturar vuestros recuerdos de boda con la sensibilidad y el arte que se merecen. Cada imagen será un testimonio perdurable de vuestro amor, un legado visual que os acompañará a lo largo de vuestro camino juntos.',
             'bodas.p2': 'Permitidme ser la guardiana de vuestros momentos más preciosos en vuestra boda en Barcelona. Juntos, crearemos una colección de recuerdos que trascenderán el tiempo, evocarán emociones y te permitirán revivir una y otra vez la magia de ese día inolvidable.',
             'bodas.p3': 'La inversión empieza en 997€',
-            'bodas.button' : 'Descarga la guía de precios',
+            'bodas.button': 'Descarga la guía de precios',
 
             'sesiones.h2': 'Sesiones de fotos en Barcelona',
             'sesiones.p1': 'Cada recuerdo es una cápsula de emociones, una ventana hacia momentos vividos y compartidos. Son puentes que conectan pasado, presente y futuro, transportándote a lugares y personas que han dejado una marca indeleble en tu existencia.',
@@ -650,7 +841,7 @@ export const ui: Record<string, Record<string, Record<string, string>>> = {
             'submit': "Enviar",
         },
 
-        contact:{
+        contact: {
 
             'datos.h1': 'Pregunta por Ari',
             'datos.p1': '¡Me siento muy afortunada de que me estéis considerando para retratar tu proyecto!',
@@ -663,7 +854,7 @@ export const ui: Record<string, Record<string, Record<string, string>>> = {
             'faq.question2': '¿Viajas a otras ciudades y países para celebrar bodas?',
             'faq.answer2': 'Sí, me encanta viajar y estoy disponible para viajar a otras ciudades y países para fotografiar bodas. He tenido la oportunidad de trabajar en diferentes lugares del mundo y siempre me emociona la posibilidad de descubrir nuevos rincones y capturar momentos inolvidables en diferentes escenarios.Si estás planeando una boda fuera de Barcelona, por favor házmelo saber y podremos hablar los detalles para hacer de tu día una experiencia inolvidable.',
             'faq.question3': '¿Con cuánto tiempo de antelación debemos ponernos en contacto contigo?',
-            'faq.answer3' : 'En general, no hay un tiempo mínimo establecido para ponerse en contacto conmigo, pero siempre es recomendable hacerlo lo antes posible. Para sesiones, unas pocas semanas suelen ser suficientes, pero en el caso de bodas o comuniones, se recomienda hacer la reserva con un año de antelación para garantizar la disponibilidad de fechas y tener todo planificado con suficiente tiempo. Estoy siempre dispuesta a trabajar contigo y hacer que tus recuerdos más importantes se conviertan en fotografías memorables.',
+            'faq.answer3': 'En general, no hay un tiempo mínimo establecido para ponerse en contacto conmigo, pero siempre es recomendable hacerlo lo antes posible. Para sesiones, unas pocas semanas suelen ser suficientes, pero en el caso de bodas o comuniones, se recomienda hacer la reserva con un año de antelación para garantizar la disponibilidad de fechas y tener todo planificado con suficiente tiempo. Estoy siempre dispuesta a trabajar contigo y hacer que tus recuerdos más importantes se conviertan en fotografías memorables.',
             'faq.question4': '¿Que pasa si no queremos que se publiquen nuestras fotos en tus redes sociales?',
             'faq.answer4': 'Entiendo y respeto totalmente su decisión de mantener sus fotos en privado. Sin embargo, como fotógrafa, me esfuerzo en crear obras de arte únicas y de calidad, las cuales uso para mostrar mi trabajo a futuros clientes.Por esta razón, si decides mantener tus fotos privadas, el precio del paquete o sesión se incrementará en un 25% para compensar la pérdida de oportunidad de mostrar mi trabajo a otros posibles clientes.',
             'faq.question5': '¿Qué pasa si tenemos que cancelar o cambiar la fecha?',
@@ -684,13 +875,13 @@ export const ui: Record<string, Record<string, Record<string, string>>> = {
             'h1': 'Blog de un fotógrafo de bodas en Barcelona',
         },
 
-        footer:{
+        footer: {
             'h3': 'CONTACTO',
             'quote': 'Mi principal prioridad es crear un espacio seguro para que te sientas cómodo y a gusto, permitiéndote abrirte por completo y entrar en contacto con tu yo más genuino. Creo firmemente que el mejor trabajo se produce de forma natural cuando todo el mundo se siente relajado y pierde el sentido del tiempo.',
-            'copyright':'ARIADNA BALLESTAR FOTOGRAFÍA',
+            'copyright': 'ARIADNA BALLESTAR FOTOGRAFÍA',
         },
 
-    
+
     }
-        
-    }
+
+}

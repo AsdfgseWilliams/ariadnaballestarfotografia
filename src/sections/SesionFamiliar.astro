@@ -1,33 +1,63 @@
 ---
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
 
+const lang = getLangFromUrl(Astro.url) as "es" | "en";
+const t = useTranslations(lang);
+
+const slides = [
+  {
+    title: t("photoshoots.familiar.mini.title"),
+    description: t("photoshoots.familiar.mini.description"),
+    details: JSON.parse(t("photoshoots.familiar.mini.details")),
+    price: t("photoshoots.familiar.mini.price"),
+  },
+  {
+    title: t("photoshoots.familiar.reportaje.title"),
+    description: t("photoshoots.familiar.reportaje.description"),
+    details: JSON.parse(t("photoshoots.familiar.reportaje.details")),
+    price: t("photoshoots.familiar.reportaje.price"),
+  },
+  {
+    title: t("photoshoots.familiar.experiencia.title"),
+    description: t("photoshoots.familiar.experiencia.description"),
+    details: JSON.parse(t("photoshoots.familiar.experiencia.details")),
+    price: t("photoshoots.familiar.experiencia.price"),
+  },
+];
 ---
 
-<section class="bg-cover bg-no-repeat py-24 bg-center" style="background-image: url('/img/32.webp'), linear-gradient(-90deg, rgba(255,255,255,0.65) 50%, #ffffff 50%); background-blend-mode: overlay;">
+<section class="bg-cover bg-no-repeat py-24 bg-center"
+  style="background-image: url('/img/32.webp'), linear-gradient(-90deg, rgba(255,255,255,0.65) 50%, #ffffff 50%); background-blend-mode: overlay;">
   <div class="max-w-7xl mx-auto">
     <section class="grid grid-cols-1 md:grid-cols-3 gap-10 p-8">
       <div class="flex justify-center items-start">
         <img src="/img/34.webp" alt="Ariadna" class="w-full h-auto">
       </div>
+
       <div>
-        <h2>SESIÓN DE FOTOS FAMILIAR</h2>
+        <h2 class="uppercase">{t('photoshoots.familiar.h2')}</h2>
         <img src="/img/33.webp" alt="Ariadna" class="w-full h-auto">
       </div>
+
       <div class="flex flex-col justify-center items-center text-sm">
         <div class="relative w-full max-w-3xl h-auto">
           <!-- Slides -->
-          <div class="slider" id="slider-familiar">
-            <!-- Aquí se generarán los slides dinámicamente desde JS -->
-          </div>
+          <div
+            class="slider"
+            id="slider-familiar"
+            data-slides={JSON.stringify(slides)}
+          ></div>
+
           <a href="#contactForm" class="link-button mt-8">
-            ¡Reservad vuestra sesión!
+            {t('photoshoots.familiar.button')}
           </a>
 
           <!-- Navigation Arrows -->
-          <button class="absolute top-1/2 left-2 transform -translate-y-1/2" id="prevFamiliar">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 6l-6 6l6 6" /></svg>
+          <button class="absolute top-1/2 left-2 transform -translate-y-1/2" id="prevFamiliar" aria-label="Anterior">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 6l-6 6l6 6" /></svg>
           </button>
-          <button class="absolute top-1/2 right-2 transform -translate-y-1/2" id="nextFamiliar">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
+          <button class="absolute top-1/2 right-2 transform -translate-y-1/2" id="nextFamiliar" aria-label="Siguiente">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
           </button>
         </div>
       </div>
@@ -35,103 +65,65 @@
   </div>
 </section>
 
-
 <style>
   .slider {
     position: relative;
     width: 100%;
-    height: auto;  /* Aseguramos que el alto sea automático */
-    overflow: hidden; /* Esto asegura que las diapositivas fuera de la vista no se muestren */
+    height: auto;
+    overflow: hidden;
   }
-
   .slider .fade {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0; /* Las diapositivas no activas están ocultas */
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    opacity: 0;
     transition: opacity 0.5s ease-in-out;
-    display: none; /* Por defecto no se muestran */
+    display: none;
   }
-
   .slider .active {
-    opacity: 1; /* La diapositiva activa es visible */
-    display: block; /* Solo se muestra la diapositiva activa */
+    opacity: 1;
+    display: block;
   }
 </style>
 
-<script>
-  const slides = [
-    {
-      title: "Mini sesión",
-      description: "Un aniversario, un cumpleaños, una fiesta o cualquier motivo íntimo son momentos especiales que os queréis regalar y disfrutar. ¡Quiero acompañaros para hacerlo realidad!",
-      details: ["30 min", "Galería online", "Una localización", "+40 fotos editadas", "1 GIF", "Entrega en dos semanas"],
-      price: "150€",
-    },
-    {
-      title: "Reportaje",
-      description: "Un aniversario, un cumpleaños, una fiesta o cualquier motivo íntimo son momentos especiales que os queréis regalar y disfrutar. ¡Quiero acompañaros para hacerlo realidad!",
-      details: ["50-60 min", "Galería online", "Una localización", "+80 fotos editadas", "3 GIFs", "Entrega en dos semanas"],
-      price: "200€",
-    },
-    {
-      title: "Experiencia",
-      description: "Un aniversario, un cumpleaños, una fiesta o cualquier motivo íntimo son momentos especiales que os queréis regalar y disfrutar. ¡Quiero acompañaros para hacerlo realidad!",
-      details: ["1.5 horas", "Galería online", "Dos localizaciones", "+120 fotos editadas", "5 GIFs", "Entrega en dos semanas"],
-      price: "300€",
-    },
-  ];
+<script type="module">
+  const sliderFamiliar = document.getElementById("slider-familiar");
+  const raw = sliderFamiliar?.dataset.slides || "[]";
+  const slides = JSON.parse(raw);
 
-  const sliderFamiliar = document.getElementById("slider-familiar")!; // ¡Aquí usamos el operador de aserción no nulo!
+  slides.forEach((slide) => {
+    const slideDiv = document.createElement("div");
+    slideDiv.classList.add("fade", "flex", "flex-col", "justify-center", "text-gray-800", "p-4");
+    slideDiv.innerHTML = `
+      <h3 class="text-5xl">${slide.title}</h3>
+      <p class="mt-4">${slide.description}</p>
+      <ul class="mt-4">
+        ${slide.details.map((detail) => `<li>• ${detail}</li>`).join("")}
+      </ul>
+      <hr class="my-4 bg-slate-900">
+      <p class="font-claster text-4xl">${slide.price}</p>
+    `;
+    sliderFamiliar.appendChild(slideDiv);
+  });
 
-    slides.forEach((slide, index: number) => {
-      const slideDiv = document.createElement("div");
-      slideDiv.classList.add("fade", "flex", "flex-col", "justify-center", "text-gray-800", "p-4");
+  let currentSlide = 0;
+  const slidesEls = sliderFamiliar.querySelectorAll(".fade");
 
-      slideDiv.innerHTML = `
-        <h3 class="text-5xl">${slide.title}</h3>
-        <p class="mt-4">${slide.description}</p>
-        <ul class="mt-4">
-          ${slide.details.map(detail => `<li>• ${detail}</li>`).join('')}
-        </ul>
-        <hr class="my-4 bg-slate-900">
-        <p class="font-claster text-4xl">${slide.price}</p>
-      `;
+  // init
+  slidesEls.forEach((el, i) => {
+    el.classList.toggle("active", i === 0);
+    el.style.display = i === 0 ? "block" : "none";
+  });
 
-      sliderFamiliar.appendChild(slideDiv);
-    });
+  function showSlide(index) {
+    const nodes = sliderFamiliar.querySelectorAll(".fade");
+    nodes[currentSlide].classList.remove("active");
+    nodes[currentSlide].style.display = "none";
+    currentSlide = (index + nodes.length) % nodes.length;
+    nodes[currentSlide].classList.add("active");
+    nodes[currentSlide].style.display = "block";
+  }
 
-    let currentSlide = 0;
-
-    const slidesElements = sliderFamiliar.querySelectorAll(".fade");
-    slidesElements.forEach((slide, index: number) => {
-      if (index === 0) {
-        slide.classList.add("active");
-        (slide as HTMLElement).style.display = "block";
-      } else {
-        slide.classList.remove("active");
-        (slide as HTMLElement).style.display = "none";
-      }
-    });
-
-    function showSlide(index: number) {
-      const slides = sliderFamiliar.querySelectorAll(".fade");
-      (slides[currentSlide] as HTMLElement).classList.remove("active");
-      (slides[currentSlide] as HTMLElement).style.display = "none"; // Ocultar el slide actual
-      currentSlide = (index + slides.length) % slides.length;
-      (slides[currentSlide] as HTMLElement).classList.add("active");
-      (slides[currentSlide] as HTMLElement).style.display = "block"; // Mostrar el nuevo slide
-    }
-
-    const prevFamiliarButton = document.getElementById("prevFamiliar");
-    const nextFamiliarButton = document.getElementById("nextFamiliar");
-
-    if (prevFamiliarButton) {
-      prevFamiliarButton.addEventListener("click", () => showSlide(currentSlide - 1));
-    }
-
-    if (nextFamiliarButton) {
-      nextFamiliarButton.addEventListener("click", () => showSlide(currentSlide + 1));
-    }
+  document.getElementById("prevFamiliar")?.addEventListener("click", () => showSlide(currentSlide - 1));
+  document.getElementById("nextFamiliar")?.addEventListener("click", () => showSlide(currentSlide + 1));
 </script>

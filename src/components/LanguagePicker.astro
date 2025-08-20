@@ -1,14 +1,53 @@
 ---
 import { languages } from '../i18n/ui';
-import { getLangFromUrl, useTranslatedPath } from '../i18n/utils';
+import { getLangFromUrl } from '../i18n/utils';
+import { slugMap } from '../i18n/slug-map';
 
-const lang = getLangFromUrl(Astro.url) ?? "";
-const translatedPath = useTranslatedPath(lang as any);
+const currentLang = getLangFromUrl(Astro.url) ?? 'es';
+const currentPath = Astro.url.pathname;
+
+// Mapeo de banderas
+const flags: Record<string, string> = {
+  es: '/img/es_ES.webp',
+  en: '/img/en_GB.webp',
+};
+
+function getTranslatedPath(path: string, targetLang: string) {
+  const segments = path.split('/').filter(Boolean);
+
+  // Eliminamos el prefijo de idioma si existe (solo si no es español)
+  if (segments[0] && segments[0] in languages && segments[0] !== 'es') {
+    segments.shift();
+  }
+
+  const translatedSegments = segments.map(seg => {
+    for (const key of Object.keys(slugMap) as (keyof typeof slugMap)[]) {
+      const mapEntry = slugMap[key];
+      if ((mapEntry as Record<string, string>)[currentLang] === seg) {
+        return (mapEntry as Record<string, string>)[targetLang] ?? seg;
+      }
+    }
+    return seg;
+  });
+
+  const newPath = '/' + translatedSegments.join('/');
+  // Español por defecto: no prefijo, otro idioma: agregamos prefijo
+  return targetLang === 'es' ? newPath : `/${targetLang}${newPath}`;
+}
 ---
-<ul>
-  {Object.entries(languages).map(([lang, label]) => (
-    <li>
-      <a href={translatedPath("/", lang)}>{label}</a>
-    </li>
-  ))}
+
+<ul class="flex gap-2">
+  {Object.entries(languages)
+    .filter(([lang]) => lang !== currentLang) // ocultamos el idioma actual
+    .map(([lang, label]) => (
+      <li>
+        <a href={getTranslatedPath(currentPath, lang)} title={label}>
+          <img
+            src={flags[lang]}
+            alt={label}
+            class="border-transparent transition-transform duration-200 hover:scale-110"
+          />
+        </a>
+      </li>
+    ))}
 </ul>

@@ -1,4 +1,5 @@
 import { defaultLang, ui, showDefaultLang } from "./ui";
+import { slugMap } from './slug-map';
 
 
 
@@ -38,3 +39,4 @@ export function useTranslatedPath(lang: keyof typeof ui) {
     return !showDefaultLang && l === defaultLang ? path : `/${l}${path}`
   }
 }
+

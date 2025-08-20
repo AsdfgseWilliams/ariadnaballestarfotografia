@@ -1,7 +1,10 @@
 ---
-import { getLangFromUrl, useTranslations } from "src/i18n/utils";
+import { getLangFromUrl, useTranslatedPath, useTranslations } from 'src/i18n/utils';
+import { slugMap } from 'src/i18n/slug-map';
+import { getRelativeLocaleUrl } from 'astro:i18n';
 
-const lang = getLangFromUrl(Astro.url);
+const lang = getLangFromUrl(Astro.url) as 'es' | 'en';
+const translatePath = useTranslatedPath(lang);
 const t = useTranslations(lang);
 ---
 
@@ -24,7 +27,9 @@ const t = useTranslations(lang);
     <br>
     <p set:html={t('prices.hero.p2')}></p>
     
-    <a href="/contactForm" class="link-button mt-8">
+    <a 
+        href={getRelativeLocaleUrl(lang, slugMap['contacto'][lang])}
+        class="mt-4 link-button">
         {t('prices.hero.button')}
     </a>
 </div>

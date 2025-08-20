@@ -29,15 +29,14 @@ const currentLang = lang || getLangFromUrl(Astro.url);
 	<body class="w-screen overflow-x-hidden">
 		<Nav />
 		<slot />
-		<a href="https://wa.me/+34654712346?text=¡Hola%20Ari!%20Me%20gustaría%20saber%20más%20información%20sobre%20" 
+		<a href="https://wa.me/+34654712346?text=..." 
 			id="btn-whatsapp" 
 			class="float-wa" 
 			target="_blank">
-			<i class="fa fa-whatsapp" style=""></i>
+			<i class="fa fa-whatsapp"></i>
 			<span class="whatsapp-message">Hola 👋 <br>¿En qué puedo ayudarte?</span>
 		</a>
 		<Footer />
-
 		<!-- Script que actualiza el enlace de WhatsApp con el título de la página -->
 		<script>
 			// Obtén el título de la página actual
@@ -256,6 +255,24 @@ const currentLang = lang || getLangFromUrl(Astro.url);
 	.fa-whatsapp {
 		font-size: 30px;
 	}
+
+	/* Forzar nav fixed */
+	.nav-container {
+		position: fixed !important;
+		top: 0 !important;
+		left: 0;
+		right: 0;
+		z-index: 9999 !important;
+		width: 100%;
+		background: #f6f6f4 !important;
+	}
+
+
+/* Para que el contenido debajo no se tape */
+body {
+    padding-top: 100px; /* igual que la altura del nav */
+}
+
 
 	#prevFamiliar, #prevParejas, #prevPersonal {
 		position: absolute;
