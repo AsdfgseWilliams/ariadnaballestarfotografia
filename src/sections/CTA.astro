@@ -13,28 +13,28 @@ const t = useTranslations(lang);
 
 <section class="flex items-center justify-center bg-[#313b41] text-white py-8 min-h-[480px]">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-0 border-double border-y-2 border-white">
-        <div class="flex flex-col justify-center items-start py-20 px-14">
-            <h3 class="text-5xl">
+        <div class="flex flex-col justify-center text-center md:text-left items-center md:items-start py-20 px-14">
+            <h3 class="text-4xl md:text-5xl ">
                 {t('home.cta.h3')}
             </h3>
-            <p class="py-8">
+            <p class="py-3 md:py-8 ">
                 {t('home.cta.p')}
             </p>
-            <a href="https://www.instagram.com/love.captured.by.ari/" class="link-button-dark mt-8">
+            <a href="https://www.instagram.com/love.captured.by.ari/" class="link-button-dark mt-3 md:mt-8">
         {t('button.ig')}
     </a>
         </div>
-        <div class="bg-cover bg-center bg-no-repeat border-x-2 border-white w-auto" style="background-image: url(/img/boda-5.webp)">
+        <div class="bg-cover bg-center h-80 md:h-full bg-no-repeat border-x-2 border-white w-auto" style="background-image: url(/img/boda-5.webp)">
             
         </div>
-        <div class="flex flex-col justify-center items-end text-end py-20 px-14">
-            <h3 class="text-5xl">
+        <div class="flex flex-col justify-center items-center text-center md:items-end md:text-end py-20 px-14">
+            <h3 class="text-4xl md:text-5xl">
                 {t('home.cta.h3.2')}
             </h3>
-            <p class="py-8">
+            <p class="py-3 md:py-8">
                 {t('home.cta.p.2')}
             </p>
-            <a  href={getRelativeLocaleUrl(lang, slugMap['contacto'][lang])} class="link-button-dark mt-8">
+            <a  href={getRelativeLocaleUrl(lang, slugMap['contacto'][lang])} class="link-button-dark mt-3 md:mt-8">
         {t('button.cta')}
     </a>
             

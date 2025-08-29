@@ -107,6 +107,7 @@ export const ui: Record<string, Record<string, Record<string, string>>> = {
             'about.p6': 'I love exploring new ideas through photography. I am most inspired by everyday things. For me, inspiration comes in the smallest forms: shadows, movement, light, lines and conversations. My work is a celebration of life, and I want to bring sunshine into your everyday.',
             'about.p7': 'My approach to photography is <strong>capturing the beauty of the ordinary and transforming it into something exceptional.</strong> Each image tells a unique story and I seek to capture the essence of each moment. I work with couples who are looking to capture their love and connection in a setting that reflects their personality and style.',
             'about.p8': 'I am passionate about the opportunity to travel and discover new cultures, and I love to incorporate cultural and artistic elements into my photo shoots. My goal is to create images that speak for themselves and make you feel something special every time you see them.',
+            'about.button': 'Get to know me better',
 
             'servicio1': 'PORTRAITS',
             'servicio2': 'WEDDINGS',
@@ -513,7 +514,7 @@ export const ui: Record<string, Record<string, Record<string, string>>> = {
             '1': '¡Contacta conmigo!',
             '2': 'Conóceme más',
             'ig': 'Instagram',
-            'button.cta': 'Reserva una sesión',
+            'cta': 'Reserva una sesión',
         },
 
         cta2: {
@@ -545,6 +546,7 @@ export const ui: Record<string, Record<string, Record<string, string>>> = {
             'about.p6': 'Me encanta explorar nuevas ideas a través de la fotografía. Lo que más me inspira son las cosas cotidianas. Para mí, la inspiración viene en las formas más pequeñas: sombras, movimiento, luz, líneas y conversaciones. Mi trabajo es una celebración de la vida, y quiero llevar el sol a tu día a día.',
             'about.p7': 'Mi enfoque en la fotografía es <strong>capturar la belleza de lo ordinario y transformarlo en algo excepcional.</strong> Cada imagen cuenta una historia única y busco plasmar la esencia de cada momento. Trabajo con parejas que buscan capturar su amor y su conexión en un entorno que refleje su personalidad y estilo.',
             'about.p8': 'Me apasiona la oportunidad de viajar y descubrir nuevas culturas, y me encanta incorporar elementos culturales y artísticos en mis sesiones de fotos. Mi objetivo es crear imágenes que hablen por sí solas y que te hagan sentir algo especial cada vez que las veas.',
+            'about.button': 'Conóceme más',
 
             'servicio1': 'RETRATOS',
             'servicio2': 'BODAS',
@@ -788,7 +790,7 @@ export const ui: Record<string, Record<string, Record<string, string>>> = {
             'familiar.experiencia.price': '330€',
 
 
-        },
+        }, 
 
         prices: {
             'hero.h1': '<span class="inline-block rotate-180">?</span>CUÁNTO VALEN TUS RECUERDOS?',

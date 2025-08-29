@@ -12,10 +12,10 @@ const t = useTranslations(lang);
 
 <section class="nav-container flex flex-col bg-[#f6f6f4] overflow-hidden">
     <!-- Top Bar -->
-    <div class="flex justify-between items-center py-5 px-[2%] h-[100px]">
+    <div class="flex justify-between items-center py-5 md:px-[2%] h-[100px]">
         <!-- Logo -->
         <a href={translatePath("/")} class="pl-3">
-            <img src="/logo-oscuro.webp" alt="Logo" class="max-w-32 md:max-w-48">
+            <img src="/logo-oscuro.webp" alt="Logo" class="max-w-40 md:max-w-48">
         </a>
         <!-- Hamburger Button (Mobile Menu) -->
         <HamburgerButton id="hamburgerButton" />
@@ -31,7 +31,7 @@ const t = useTranslations(lang);
         </nav>
         <!-- Call to Action Button -->
         <div class="pr-3">
-            <a href={translatePath("/contacto")} class="link-button">
+            <a href={translatePath("/contacto")} class="link-button !py-2 !px-3 !md:py-3 !md:px-6">
                 {t('nav.cta')}
             </a>
         </div>

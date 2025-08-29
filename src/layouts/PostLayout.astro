@@ -32,10 +32,10 @@ const seoProps = {
   <div class="bg-white py-[4%]">
     <!-- Contenido del post -->
     <article class="max-w-7xl w-[80%] mx-auto">
-      <header class="hero" style={image ? `--bg-url: url('${image.src}')` : undefined}>
-        <h1 class="text-5xl text-slate-800">{title}</h1>
+      <header class="flex p-[4%] justify-start items-center min-h-72"
+        style={`background-image: url(${image?.src || '/img/2.webp'}), linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)); background-blend-mode: overlay; background-size: cover; background-position: center; background-repeat: no-repeat;`}>
+        <h1 class="text-5xl">{title}</h1>
       </header>
-
 
       <!-- Imagen destacada (si hay) -->
       <section class="grid grid-cols-1 md:grid-cols-4 gap-10">
@@ -135,12 +135,3 @@ const seoProps = {
     </article>
   </div>
 </Layout>
-<style>
-  .hero {
-    background-image: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)), var(--bg-url);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-blend-mode: overlay;
-  }
-</style>
